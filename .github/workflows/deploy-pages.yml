@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - claude/setup-github-pages-EGTj1
   workflow_dispatch:
 
 permissions:
