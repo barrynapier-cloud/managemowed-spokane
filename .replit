@@ -1,0 +1,12 @@
+run = "npx serve . -l 3000 --no-clipboard --single"
+entrypoint = "index.html"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npx serve . -l 3000 --no-clipboard --single"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
