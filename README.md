@@ -1,4 +1,4 @@
-# ManageMowed — Greater Seattle Landing Page
+# ManageMowed — Spokane Landing Page
 
 Dark-themed, high-impact landing page for ManageMowed's commercial landscaping services in the Greater Seattle area.
 
