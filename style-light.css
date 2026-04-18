@@ -1,0 +1,330 @@
+/* ========================================
+   ManageMowed Spokane — Light Theme
+   Loads AFTER style.css and overrides selectively.
+
+   Design philosophy:
+   - Warm paper-white base (#fafaf5) — never sterile pure white
+   - Chartreuse (#ccff00) stays as signature brand accent
+   - Deep accent (#5a7a00) for accent-colored TEXT (readability on light)
+   - Image overlay sections (hero, snow-break, visual-break, guarantees,
+     areas) stay cinematic dark — this hybrid is a premium magazine pattern
+   - Footer stays dark — classic grounding anchor
+   - Crisp soft shadows replace dark-theme glow effects
+   ======================================== */
+
+:root {
+  /* Surfaces — warm, layered off-whites */
+  --bg: #fafaf5;
+  --surface: #ffffff;
+  --surface-2: #f4f3ed;
+  --surface-3: #e8e6dd;
+  --border: rgba(10,15,20,0.08);
+  --border-hover: rgba(10,15,20,0.18);
+
+  /* Text — uses dark theme's old bg as primary text for brand DNA */
+  --text: #0a0f14;
+  --text-muted: #3a4452;
+  --text-faint: #6b7785;
+
+  /* Accent — chartreuse stays (signature brand color) */
+  --accent: #ccff00;
+  --accent-hover: #b8e600;
+  --accent-dim: rgba(204,255,0,0.18);
+  --accent-glow: rgba(204,255,0,0.35);
+  --accent-deep: #5a7a00; /* for accent text on light bg — readable */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Selection — warmer, more visible on light */
+::selection {
+  background: rgba(204,255,0,0.45);
+  color: var(--text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track { background: var(--surface-2); }
+::-webkit-scrollbar-thumb { background: #c8c6bd; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-deep); }
+
+/* === BUTTONS === */
+.btn-primary {
+  background: var(--accent);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(204,255,0,0.25);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 6px 24px rgba(204,255,0,0.45), 0 2px 6px rgba(10,15,20,0.08);
+}
+.btn-outline {
+  color: var(--text);
+  border: 1px solid var(--border-hover);
+}
+.btn-outline:hover {
+  background: rgba(10,15,20,0.04);
+  border-color: var(--accent-deep);
+}
+
+/* === SECTION LABELS === */
+/* Use deep accent so small caps labels are legible on light bg */
+.section-label { color: var(--accent-deep); }
+.label-line { background: var(--accent-deep); }
+
+/* === NAVBAR === */
+.navbar {
+  background: rgba(250,250,245,0.88);
+  border-bottom: 1px solid var(--border);
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(10,15,20,0.06);
+}
+.logo-text { color: var(--text); }
+/* Nav "Mowed" accent — needs readability on light nav */
+.navbar .accent { color: var(--accent-deep); }
+.nav-links a { color: var(--text-muted); }
+.nav-links a:hover { color: var(--text); }
+.nav-phone { color: var(--text-muted); }
+.nav-phone .material-symbols-outlined { color: var(--accent-deep); }
+.nav-phone:hover { color: var(--accent-deep); }
+.mobile-toggle span { background: var(--text); }
+.mobile-menu { border-top: 1px solid var(--border); }
+.mobile-menu a { color: var(--text-muted); }
+.mobile-menu a:hover { color: var(--accent-deep); }
+.mobile-phone { color: var(--accent-deep) !important; }
+
+/* === HERO — keep cinematic dark overlay (looks premium with photos) === */
+.hero-overlay {
+  background:
+    linear-gradient(135deg, rgba(10,15,20,0.88) 0%, rgba(10,15,20,0.6) 50%, rgba(10,15,20,0.38) 100%),
+    linear-gradient(to top, rgba(250,250,245,1) 0%, transparent 35%);
+}
+/* Hero content stays bright-on-dark */
+.hero-title { color: #ffffff; }
+.hero-description { color: rgba(255,255,255,0.9); }
+.hero-badge {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--accent);
+}
+.trust-item { color: rgba(255,255,255,0.85); }
+.scroll-text { color: #ffffff; }
+
+/* === TRUST BANNER — warm cream with chartreuse glow === */
+.trust-banner {
+  background: linear-gradient(135deg, #f7f5ea 0%, #fafaef 40%, #f7f5ea 100%);
+  border-top: 1px solid rgba(204,255,0,0.3);
+  border-bottom: 1px solid rgba(204,255,0,0.25);
+}
+.trust-banner::before {
+  background: radial-gradient(ellipse at 50% 0%, rgba(204,255,0,0.14) 0%, transparent 70%);
+}
+.trust-banner-label { color: var(--accent-deep); }
+/* Trust logo pills already chartreuse — enhance shadow for light bg */
+.trust-logo-item {
+  box-shadow: 0 3px 14px rgba(204,255,0,0.35), 0 1px 3px rgba(10,15,20,0.08), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+.trust-logo-item:hover {
+  box-shadow: 0 8px 28px rgba(204,255,0,0.5), 0 2px 6px rgba(10,15,20,0.12), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* === SERVICES — light with crisp cards === */
+.services {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.services::before {
+  background: radial-gradient(ellipse at top right, rgba(204,255,0,0.18), transparent 70%);
+}
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(10,15,20,0.04), 0 1px 2px rgba(10,15,20,0.03);
+}
+.service-card:hover {
+  box-shadow: 0 20px 50px rgba(10,15,20,0.1), 0 4px 16px rgba(10,15,20,0.05);
+  border-color: var(--border-hover);
+}
+.service-card.featured {
+  border-color: rgba(204,255,0,0.5);
+  background: linear-gradient(180deg, #fbfde3 0%, var(--surface) 60%);
+  box-shadow: 0 4px 20px rgba(204,255,0,0.12), 0 2px 6px rgba(10,15,20,0.04);
+}
+.featured-badge {
+  background: var(--accent);
+  color: var(--text);
+}
+.service-card p { color: var(--text-muted); }
+.service-number { color: var(--text-faint); }
+.service-features li { border-bottom: 1px solid var(--border); color: var(--text-muted); }
+.service-icon-bg { background: var(--accent-dim); }
+.service-icon-bg .material-symbols-outlined { color: var(--accent-deep); }
+.service-card:hover .service-icon-bg { background: var(--accent); }
+.service-card:hover .service-icon-bg .material-symbols-outlined { color: var(--text); }
+.service-cta { color: var(--text); }
+.service-cta:hover { color: var(--accent-deep); }
+.service-sub h4 {
+  color: var(--accent-deep);
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+/* === ABOUT SECTION — light content column === */
+.about-content-col {
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+}
+.about-description { color: var(--text-muted); }
+.about-image-overlay { background: rgba(10,15,20,0.2); }
+.about-section:hover .about-image-overlay { background: rgba(10,15,20,0.08); }
+.about-image-border { border: 1px solid rgba(255,255,255,0.25); }
+.about-feature strong { color: var(--text); }
+.about-feature span { color: var(--text-muted); }
+.feature-dot { border: 1px solid rgba(204,255,0,0.45); }
+
+/* === SNOW BREAK — keep cinematic dark (photography looks great) === */
+/* No overrides — stays dramatic dark-overlay section */
+
+/* === PROCESS — warm subtle surface === */
+.process {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.step-num {
+  background: rgba(204,255,0,0.22);
+  color: var(--accent-deep);
+  border: 2px solid var(--accent-deep);
+}
+.step-connector {
+  background: linear-gradient(180deg, var(--accent-deep) 0%, rgba(204,255,0,0.25) 100%);
+}
+.step-body h3 { color: var(--text); }
+.step-body p { color: var(--text-muted); }
+
+/* === SERVICE AREAS — keep cinematic dark overlay === */
+/* Area bg photo with dark overlay works beautifully — no changes */
+
+/* === TESTIMONIALS — light airy inversion === */
+.testimonials {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+}
+.testimonials-bg-overlay {
+  background:
+    linear-gradient(135deg, rgba(244,243,237,0.97) 0%, rgba(244,243,237,0.92) 50%, rgba(244,243,237,0.97) 100%);
+}
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(10,15,20,0.04);
+}
+.testimonial-card:hover {
+  border-color: var(--border-hover);
+  border-left-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(10,15,20,0.08);
+}
+.quote-mark { color: rgba(10,15,20,0.05); }
+.testimonial-card:hover .quote-mark { color: rgba(204,255,0,0.35); }
+.testimonial-card > p { color: var(--text-muted); font-style: italic; }
+.testimonial-author { border-top: 1px solid var(--border); }
+.author-avatar {
+  background: var(--accent-dim);
+  color: var(--accent-deep);
+}
+.testimonial-author strong { color: var(--text); }
+.testimonial-author span { color: var(--accent-deep); }
+
+/* === VISUAL BREAK — keep cinematic dark === */
+/* No overrides */
+
+/* === GUARANTEES — keep cinematic dark === */
+/* No overrides */
+
+/* === CONTACT — light form with dark info sidebar === */
+.contact {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.contact-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 40px rgba(10,15,20,0.06), 0 2px 6px rgba(10,15,20,0.03);
+}
+/* Contact-info stays dark — dramatic split with form */
+.contact-info {
+  background: linear-gradient(180deg, #0a0f14 0%, #141d28 100%);
+}
+
+/* Form inputs — light surface */
+.form-group label { color: var(--text-muted); }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: #faf9f3;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent-deep);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  background: var(--surface);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-faint); }
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236b7785' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.form-disclaimer { color: var(--text-faint); }
+
+/* === NEWS / PR — warm cream with chartreuse accents === */
+.news-section {
+  background: linear-gradient(170deg, #faf9ef 0%, #f5f7e0 40%, #fafaec 70%, #faf9ef 100%);
+  border-top: 2px solid rgba(204,255,0,0.3);
+  border-bottom: 2px solid rgba(204,255,0,0.2);
+}
+.news-section::before {
+  background: radial-gradient(ellipse at center, rgba(204,255,0,0.14) 0%, transparent 60%);
+}
+.news-section::after {
+  background: radial-gradient(ellipse at center, rgba(204,255,0,0.1) 0%, transparent 55%);
+}
+.news-card-featured {
+  background: linear-gradient(160deg, #ffffff 0%, #fbfce3 100%);
+  border: 1px solid rgba(204,255,0,0.35);
+  box-shadow: 0 4px 24px rgba(204,255,0,0.12), 0 2px 6px rgba(10,15,20,0.04);
+}
+.news-card-featured:hover {
+  border-color: rgba(204,255,0,0.55);
+  box-shadow: 0 14px 40px rgba(204,255,0,0.2), 0 4px 12px rgba(10,15,20,0.06);
+}
+.news-card-featured h3 { color: var(--text); }
+.news-card-featured p { color: var(--text-muted); }
+.news-quote-attr { color: var(--accent-deep); }
+.news-card-compact {
+  background: linear-gradient(160deg, #ffffff 0%, #f7f6ee 100%);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 2px 10px rgba(10,15,20,0.04);
+}
+.news-card-compact:hover {
+  border-color: var(--border-hover);
+  border-left-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(10,15,20,0.08);
+}
+.news-card-compact h3 { color: var(--text); }
+.news-card-compact p { color: var(--text-muted); }
+.news-link { color: var(--accent-deep); }
+
+/* === FOOTER — keep dark (premium grounding) === */
+/* No overrides — footer stays dark by design */
+
+/* === FORM SUCCESS === */
+.form-success h3 { color: var(--text); }
+.form-success p { color: var(--text-muted); }
+.form-success .material-symbols-outlined { color: var(--accent-deep); }
