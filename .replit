@@ -1,5 +1,6 @@
 run = "npx serve . -l 3000 --no-clipboard --single"
 entrypoint = "index.html"
+modules = ["python-3.11"]
 
 [nix]
 channel = "stable-24_05"
@@ -10,3 +11,31 @@ run = ["sh", "-c", "npx serve . -l 3000 --no-clipboard --single"]
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 -m http.server 5000"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"

@@ -1,5 +1,5 @@
 /* ========================================
-   ManageMowed Seattle — App JS
+   ManageMowed Spokane — App JS
    ======================================== */
 
 // === NAVBAR SCROLL BEHAVIOR ===

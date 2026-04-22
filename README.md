@@ -1,6 +1,6 @@
 # ManageMowed — Spokane Landing Page
 
-Dark-themed, high-impact landing page for ManageMowed's commercial landscaping services in the Greater Seattle area.
+Light-themed, high-contrast landing page for ManageMowed's commercial landscaping services in the greater Spokane area and the Inland Northwest.
 
 ## Stack
 
@@ -10,30 +10,27 @@ Dark-themed, high-impact landing page for ManageMowed's commercial landscaping s
 
 ## Running Locally
 
-Any static file server works:
+The configured workflow serves the site on port 5000:
 
 ```bash
-# Using npx serve
-npx serve . -l 3000
-
-# Using Python
-python -m http.server 3000
+python3 -m http.server 5000
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+Then open the preview.
 
 ## Structure
 
 ```
 ├── index.html       # Full single-page site
-├── style.css        # All styles (CSS custom properties, responsive)
+├── style.css        # All styles (CSS custom properties, light theme, responsive)
 ├── app.js           # GSAP animations, scroll triggers, interactivity
 └── assets/          # Images (hero, about, action shots, logos, backgrounds)
 ```
 
 ## Brand
 
-- **Primary accent:** `#ccff00` (lime/chartreuse)
-- **Background:** `#0e1117` (dark)
+- **Primary accent:** `#6b9a00` (deep lime — accessible on light surfaces, paired with the brand chartreuse for fills)
+- **Background:** `#f6f8f1` (warm off-white)
 - **Phone:** (866) 531-4448
 - **Email:** info@managemowed.com
+- **Market:** Spokane, Spokane Valley, Coeur d'Alene, Liberty Lake, Cheney, Pullman, and the surrounding Inland Northwest
