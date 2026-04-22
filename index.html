@@ -28,6 +28,7 @@
 
 <!-- Fonts -->
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
 <!-- GSAP -->
@@ -271,6 +272,37 @@
   </div>
 </section>
 
+
+<!-- BEFORE / AFTER SLIDER -->
+<section class="before-after-section" id="transformation">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label"><span class="label-line"></span> The Transformation</span>
+      <h2 class="section-title">See the ManageMowed Difference</h2>
+      <p class="section-subtitle">Drag the slider to reveal how ManageMowed transforms neglected commercial properties into pristine, well-maintained landscapes.</p>
+    </div>
+    <div class="ba-slider-wrapper">
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-image ba-after">
+          <img src="./assets/after-property.png" alt="Property after ManageMowed service" loading="lazy">
+          <span class="ba-label ba-label-after"><span class="material-symbols-outlined">check_circle</span> After</span>
+        </div>
+        <div class="ba-image ba-before">
+          <img src="./assets/before-property.png" alt="Property before ManageMowed service" loading="lazy">
+          <span class="ba-label ba-label-before"><span class="material-symbols-outlined">warning</span> Before</span>
+        </div>
+        <div class="ba-handle" id="baHandle">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <span class="material-symbols-outlined">drag_indicator</span>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+      <p class="ba-hint"><span class="material-symbols-outlined">swipe</span> Drag to compare</p>
+    </div>
+  </div>
+</section>
 
 <!-- CONTACT FORM -->
 <section class="contact" id="contact">
