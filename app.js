@@ -115,20 +115,6 @@
     ease: 'power3.out'
   });
 
-  // Process steps
-  gsap.from('.process-step', {
-    scrollTrigger: {
-      trigger: '.process-grid',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 30,
-    duration: 0.7,
-    stagger: 0.2,
-    ease: 'power3.out'
-  });
-
   // Area groups
   gsap.from('.area-group', {
     scrollTrigger: {
@@ -140,20 +126,6 @@
     y: 30,
     duration: 0.6,
     stagger: 0.1,
-    ease: 'power3.out'
-  });
-
-  // Testimonials
-  gsap.from('.testimonial-card', {
-    scrollTrigger: {
-      trigger: '.testimonials-grid',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 30,
-    duration: 0.7,
-    stagger: 0.15,
     ease: 'power3.out'
   });
 
@@ -206,10 +178,10 @@
     ease: 'power3.out'
   });
 
-  // Guarantee cards
-  gsap.from('.guarantee-card', {
+  // News cards (dynamic layout)
+  gsap.from('.news-card-featured, .news-card-compact', {
     scrollTrigger: {
-      trigger: '.guarantees-grid',
+      trigger: '.news-grid-dynamic',
       start: 'top 80%',
       toggleActions: 'play none none none'
     },
@@ -217,32 +189,6 @@
     y: 30,
     duration: 0.7,
     stagger: 0.15,
-    ease: 'power3.out'
-  });
-
-  // News cards
-  gsap.from('.news-card', {
-    scrollTrigger: {
-      trigger: '.news-grid',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    opacity: 0,
-    y: 30,
-    duration: 0.7,
-    stagger: 0.2,
-    ease: 'power3.out'
-  });
-
-  // CTA banner
-  gsap.from('.cta-inner', {
-    scrollTrigger: {
-      trigger: '.cta-banner',
-      start: 'top 80%'
-    },
-    opacity: 0,
-    y: 20,
-    duration: 0.8,
     ease: 'power3.out'
   });
 
