@@ -1343,7 +1343,7 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 .contact-info > .contact-info-inner > p {
   font-size: var(--text-sm);
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.85);
   line-height: 1.6;
   margin-bottom: var(--space-10);
 }
