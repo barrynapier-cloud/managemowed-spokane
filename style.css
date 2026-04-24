@@ -233,15 +233,15 @@ input, textarea, select { font: inherit; color: inherit; }
   gap: var(--space-3);
 }
 .nav-logo-img {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: var(--radius-md);
+  height: 2.25rem;
+  width: auto;
   object-fit: contain;
   background: transparent;
   padding: 0;
   flex-shrink: 0;
   transition: transform var(--transition);
 }
+.footer-logo-img { height: 1.75rem; }
 .logo-link:hover .nav-logo-img { transform: scale(1.05); }
 .logo-text {
   font-family: var(--font-display);
