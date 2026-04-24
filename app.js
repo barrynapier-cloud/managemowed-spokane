@@ -329,3 +329,25 @@ document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     runAnimation();
   }
 })();
+
+/* ==================== FAQ ACCORDION ==================== */
+(function () {
+  var faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var isActive = item.classList.contains('active');
+      faqItems.forEach(function (other) {
+        other.classList.remove('active');
+        var otherBtn = other.querySelector('.faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();

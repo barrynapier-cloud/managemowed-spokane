@@ -1,0 +1,206 @@
+Build Brief: Expandable FAQ Accordion
+A vertical stack of clickable questions. Click one to slide its answer open, click again (or click another) to collapse. Lime accent on the chevron icon (rotates 180° when open) and a subtle lime border around the active card.
+
+1. Dependencies
+<!-- Google Material Symbols (for the expand_more chevron) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+
+No JS libraries required.
+
+2. HTML
+Each Q&A is a .faq-item. Add or remove items freely; the JS auto-binds.
+
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label"><span class="label-line"></span> Common Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How quickly can you start servicing my property?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>After your free site assessment, we typically begin service within 7–10 business days. For urgent needs like storm cleanup or safety hazards, we can mobilize crews within 24–48 hours.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you require long-term contracts?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>No. We earn your business every month. Our 92% client retention rate speaks for itself — clients stay because they love the results, not because they're locked in. We offer flexible month-to-month and annual agreements.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What's included in the free site assessment?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>Your dedicated Account Manager will conduct a comprehensive walk-through evaluating turf health, irrigation systems, tree and shrub conditions, hardscape areas, safety concerns, and curb appeal. You'll receive a detailed report with photos, recommendations, and a custom maintenance plan tailored to your budget.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How do you handle the Pacific Northwest weather?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>Our crews are built for PNW conditions. We operate in rain, wind, and cold. During ice and snow events, we provide 24/7 monitoring and proactive de-icing. Your Account Manager communicates schedule adjustments in advance so you're never left wondering.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can you manage multiple properties across different locations?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely — that's one of our core strengths. With 24 locations nationwide and a centralized management structure, we provide consistent quality across all your properties with a single point of contact and unified reporting.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What types of commercial properties do you service?</span>
+          <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </button>
+        <div class="faq-answer">
+          <p>We service office complexes, retail centers, industrial parks, apartment communities, property management portfolios, medical facilities, hospitality properties, and more. If it's commercial, we manage it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+3. CSS
+Uses these CSS variables — define globally on :root or hardcode the literal values.
+
+:root {
+  --bg: #0a0f14;
+  --surface: #111820;
+  --border: #1c2632;
+  --accent: #ccff00;
+  --text: #f0f2f5;
+  --text-muted: #a0aab8;
+  --radius-lg: 16px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Optional shared helpers used by the markup */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-header.center { text-align: center; margin-bottom: 48px; }
+.section-label { display: inline-flex; align-items: center; gap: 12px; color: var(--accent); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; }
+.label-line { display: inline-block; width: 32px; height: 1px; background: var(--accent); }
+.section-title { color: var(--text); font-size: clamp(1.75rem, 3vw, 2.5rem); margin: 16px 0; }
+/* Reset for the question button */
+.faq-question { background: transparent; border: 0; cursor: pointer; font-family: inherit; }
+/* === FAQ === */
+.faq-section {
+  padding: clamp(var(--space-16), 8vw, var(--space-24)) 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-out);
+}
+.faq-item.active {
+  border-color: rgba(204,255,0,0.25);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  text-align: left;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  transition: color var(--transition);
+}
+.faq-question:hover { color: var(--accent); }
+.faq-icon {
+  color: var(--accent);
+  font-size: 1.5rem;
+  transition: transform 0.3s var(--ease-out);
+  flex-shrink: 0;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out), padding 0.4s var(--ease-out);
+}
+.faq-item.active .faq-answer {
+  max-height: 600px;        /* large enough for any long answer */
+}
+.faq-answer p {
+  padding: 0 var(--space-6) var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+Tip: if you have answers longer than ~6 lines, bump max-height: 600px higher (e.g., 1000px). It just needs to be larger than the tallest answer.
+
+4. JavaScript
+Vanilla — place at the end of <body> or inside a DOMContentLoaded handler.
+
+<script>
+(function () {
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.faq-question');
+    btn.addEventListener('click', function () {
+      var isActive = item.classList.contains('active');
+      // Close all other items (accordion behavior — only one open at a time)
+      faqItems.forEach(function (other) {
+        other.classList.remove('active');
+        var otherBtn = other.querySelector('.faq-question');
+        otherBtn.setAttribute('aria-expanded', 'false');
+      });
+      // Toggle the clicked one
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
+
+5. How it works
+Each card starts collapsed (max-height: 0, aria-expanded="false").
+Click the question → JS adds .active to that .faq-item, which triggers two CSS transitions: the max-height opens to 600px (smooth slide-down), and the chevron rotates 180°.
+Clicking another question first removes .active from the open one, so only one answer is visible at a time (classic accordion behavior). Click the same question again to close it.
+aria-expanded is kept in sync for screen readers.
+6. Customizing
+More/fewer questions — just add or remove .faq-item blocks. JS handles them automatically.
+Allow multiple open at once — delete the inner faqItems.forEach(...) loop in the JS.
+Different brand color — change --accent (chevron color, hover color, active border).
+Wider container — change max-width: 800px on .faq-grid.
+That's the complete drop-in package.
