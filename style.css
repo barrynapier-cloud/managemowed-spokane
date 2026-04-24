@@ -404,6 +404,15 @@ input, textarea, select { font: inherit; color: inherit; }
   text-shadow: 0 2px 18px rgba(0,0,0,0.55);
 }
 .hero-title .line { display: block; }
+.hero-title .line-eyebrow {
+  color: #c8ee3a;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 40px rgba(182,226,58,0.4), 0 2px 14px rgba(0,0,0,0.55);
+}
 .hero-title .line-3 {
   color: #c8ee3a;
   text-shadow: 0 0 40px rgba(182,226,58,0.45), 0 2px 14px rgba(0,0,0,0.55);
