@@ -1,6 +1,6 @@
 # ManageMowed Spokane
 
-Static single-page marketing site for ManageMowed's Spokane / Inland Northwest market. This is the **light-theme** counterpart to the existing dark-theme Seattle landing page; markup, structure, and copy were adapted for the Spokane region.
+Static single-page marketing site for ManageMowed's Spokane-area market. This is the **light-theme** counterpart to the existing dark-theme Seattle landing page; markup, structure, and copy were adapted for the Spokane region.
 
 ## Tech
 

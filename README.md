@@ -1,6 +1,6 @@
 # ManageMowed — Spokane Landing Page
 
-Light-themed, high-contrast landing page for ManageMowed's commercial landscaping services in the greater Spokane area and the Inland Northwest.
+Light-themed, high-contrast landing page for ManageMowed's commercial landscaping services in the greater Spokane area.
 
 ## Stack
 
@@ -33,4 +33,4 @@ Then open the preview.
 - **Background:** `#f6f8f1` (warm off-white)
 - **Phone:** (866) 531-4448
 - **Email:** info@managemowed.com
-- **Market:** Spokane, Spokane Valley, Coeur d'Alene, Liberty Lake, Cheney, Pullman, and the surrounding Inland Northwest
+- **Market:** Spokane, Spokane Valley, Coeur d'Alene, Liberty Lake, Cheney, Pullman, and the surrounding Spokane region
