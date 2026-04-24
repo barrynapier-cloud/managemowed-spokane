@@ -294,3 +294,40 @@ document.querySelectorAll('a[href^="#"]').forEach(function (a) {
   window.addEventListener('mouseup',  function () { isDragging = false; });
   window.addEventListener('touchend', function () { isDragging = false; });
 })();
+
+// === ANIMATED STAT COUNTERS ===
+(function () {
+  var counters = document.querySelectorAll('.stat-number');
+  if (!counters.length) return;
+  var animated = false;
+  function animateCounters() {
+    if (animated) return;
+    var section = document.querySelector('.stats-counter');
+    if (!section) return;
+    var rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.85) {
+      animated = true;
+      counters.forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 2000;
+        var startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(eased * target);
+          el.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  }
+  window.addEventListener('scroll', animateCounters, { passive: true });
+  animateCounters();
+})();
