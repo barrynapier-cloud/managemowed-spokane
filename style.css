@@ -224,7 +224,7 @@ input, textarea, select { font: inherit; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.5rem;
+  height: 5.25rem;
 }
 
 .logo-link {
@@ -233,15 +233,16 @@ input, textarea, select { font: inherit; color: inherit; }
   gap: var(--space-3);
 }
 .nav-logo-img {
-  height: 2.25rem;
+  height: 3.25rem;
   width: auto;
   object-fit: contain;
   background: transparent;
   padding: 0;
   flex-shrink: 0;
   transition: transform var(--transition);
+  filter: drop-shadow(0 2px 6px rgba(15,26,20,0.18));
 }
-.footer-logo-img { height: 1.75rem; }
+.footer-logo-img { height: 2rem; filter: none; }
 .logo-link:hover .nav-logo-img { transform: scale(1.05); }
 .logo-text {
   font-family: var(--font-display);
