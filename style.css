@@ -43,6 +43,7 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
@@ -1062,43 +1063,6 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 
 /* Areas feature image CTA */
-.areas-feature-image {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.areas-feature-image > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 60%;
-}
-.areas-feature-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15,26,20,0.35) 0%, rgba(15,26,20,0.65) 100%);
-}
-.areas-feature-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-.areas-feature-content p {
-  font-size: var(--text-base);
-  color: rgba(255,255,255,0.95);
-  margin-bottom: var(--space-4);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
-}
-@media (max-width: 768px) {
-  .areas-feature-image { height: 220px; }
-}
-
 @media (max-width: 900px) {
   .areas-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -2104,4 +2068,100 @@ a.contact-value:hover { color: var(--accent); }
 @media (max-width: 600px) {
   .faq-question { padding: var(--space-4) var(--space-5, 1.25rem); font-size: 1rem; }
   .faq-answer p { padding: 0 var(--space-5, 1.25rem) var(--space-5, 1.25rem); }
+}
+
+/* === "YOUR PROPERTY DESERVES BETTER" CTA BANNER === */
+.deserves-cta {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.deserves-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.deserves-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.deserves-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(8,16,12,0.78) 0%, rgba(8,16,12,0.55) 100%);
+}
+.deserves-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: clamp(var(--space-12), 8vw, var(--space-20)) var(--space-6);
+  text-align: center;
+  color: #ffffff;
+}
+.deserves-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 var(--space-5) 0;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+}
+.deserves-content .accent-bright {
+  color: #c8ee3a;
+}
+.deserves-content p {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+  margin: 0 auto var(--space-8) auto;
+  max-width: 560px;
+}
+
+/* === "DON'T SEE YOUR AREA" CTA STRIP === */
+.dontsee-cta {
+  background: var(--surface-2);
+  padding: var(--space-12) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.dontsee-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-10);
+  box-shadow: 0 6px 24px rgba(15,26,20,0.06);
+}
+.dontsee-copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin: 0 0 var(--space-2) 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.dontsee-copy p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .dontsee-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--space-6);
+  }
 }
