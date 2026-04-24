@@ -2118,11 +2118,13 @@ a.contact-value:hover { color: var(--accent); }
   color: #c8ee3a;
 }
 .deserves-content p {
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.88);
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.55;
+  font-weight: 500;
+  color: #ffffff;
   margin: 0 auto var(--space-8) auto;
-  max-width: 560px;
+  max-width: 640px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 2px 12px rgba(0,0,0,0.7);
 }
 
 /* === "DON'T SEE YOUR AREA" CTA STRIP === */
