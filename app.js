@@ -239,12 +239,42 @@
 
     if (!valid) return;
 
+    // Build mailto with form contents addressed to Cort, James, and Peter
+    var recipients = [
+      'Cort.f@managemowed.com',
+      'james.j@managemowed.com',
+      'peter.r@managemowed.com'
+    ].join(',');
+
+    var fields = {
+      'Name':           form.querySelector('#fullName').value.trim(),
+      'Email':          form.querySelector('#email').value.trim(),
+      'Phone':          form.querySelector('#phone').value.trim(),
+      'Company':        form.querySelector('#company').value.trim(),
+      'Property Type':  form.querySelector('#propertyType').value.trim(),
+      'Service':        form.querySelector('#service').value.trim(),
+      'Details':        form.querySelector('#details').value.trim()
+    };
+
+    var bodyLines = ['New quote request from managemowedspokane.com', ''];
+    Object.keys(fields).forEach(function (k) {
+      bodyLines.push(k + ': ' + (fields[k] || '—'));
+    });
+
+    var subject = 'New Quote Request — ' + (fields['Company'] || fields['Name']);
+    var mailto  = 'mailto:' + recipients +
+                  '?subject=' + encodeURIComponent(subject) +
+                  '&body='    + encodeURIComponent(bodyLines.join('\n'));
+
+    // Open default mail client with the message pre-filled to all three recipients
+    window.location.href = mailto;
+
     // Show success
     var col = form.parentElement;
     col.innerHTML = '<div class="form-success">' +
       '<span class="material-symbols-outlined">check_circle</span>' +
-      '<h3>Assessment Requested</h3>' +
-      '<p>Thank you! A ManageMowed landscape consultant will reach out within 24 hours to schedule your free site assessment.</p>' +
+      '<h3>Quote Request Ready</h3>' +
+      '<p>Your email app should open with your request pre-filled and addressed to your Spokane account team. Just hit send and Cort will be in touch within 24 hours.</p>' +
       '</div>';
   });
 })();
