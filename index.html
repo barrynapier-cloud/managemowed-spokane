@@ -473,19 +473,19 @@
         <form class="contact-form" id="leadForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="fullName">Full Name</label>
+              <label for="fullName">Full Name *</label>
               <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
             </div>
             <div class="form-group">
-              <label for="email">Work Email</label>
-              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+              <label for="email">Email *</label>
+              <input type="text" id="email" name="email" placeholder="john@company.com" required inputmode="email" autocomplete="email">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(509) 555-0123">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" placeholder="(509) 555-0123" inputmode="tel" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="company">Company / Property</label>
@@ -497,30 +497,30 @@
             <div class="form-group">
               <label for="propertyType">Property Type</label>
               <select id="propertyType" name="propertyType">
-                <option value="">Select Property Type</option>
-                <option value="office">Office Complex</option>
-                <option value="retail">Retail Center</option>
-                <option value="industrial">Industrial / Warehouse</option>
-                <option value="hoa">HOA / Multi-Family</option>
-                <option value="medical">Medical Facility</option>
-                <option value="hospitality">Hospitality / Hotel</option>
-                <option value="other">Other Commercial</option>
+                <option value="">Select...</option>
+                <option>Office Complex</option>
+                <option>Retail Center</option>
+                <option>Apartment Community</option>
+                <option>Industrial Park</option>
+                <option>Medical / Hospitality</option>
+                <option>Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="service">Primary Service Interest</label>
+              <label for="service">Service Interest</label>
               <select id="service" name="service">
-                <option value="">Select Service</option>
-                <option value="maintenance">Maintenance</option>
-                <option value="enhancements">Enhancements</option>
-                <option value="seasonal">Seasonal Services</option>
-                <option value="multiple">Multiple Services</option>
+                <option value="">Select...</option>
+                <option>Full Service Maintenance</option>
+                <option>Landscape Enhancement</option>
+                <option>Snow &amp; Ice Management</option>
+                <option>Irrigation</option>
+                <option>One-Time Cleanup</option>
               </select>
             </div>
           </div>
 
           <div class="form-group full">
-            <label for="details">Property Details / Specific Needs</label>
+            <label for="details">Property Details</label>
             <textarea id="details" name="details" rows="4" placeholder="Tell us about your property — location, acreage, current challenges, or specific needs..."></textarea>
           </div>
 

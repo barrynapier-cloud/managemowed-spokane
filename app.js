@@ -212,71 +212,66 @@
 
 // === FORM HANDLING ===
 (function () {
-  const form = document.getElementById('leadForm');
+  var form = document.getElementById('leadForm');
   if (!form) return;
+  var submitBtn  = form.querySelector('button[type="submit"]');
+  var submitText = submitBtn ? submitBtn.querySelector('span:first-child') : null;
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    // Simple validation
-    var name = form.querySelector('#fullName');
+    var name  = form.querySelector('#fullName');
     var email = form.querySelector('#email');
     var valid = true;
 
-    if (!name.value.trim()) {
-      name.style.borderColor = '#ff4444';
-      valid = false;
-    } else {
-      name.style.borderColor = '';
-    }
-
-    if (!email.value.trim() || !email.value.includes('@')) {
-      email.style.borderColor = '#ff4444';
-      valid = false;
-    } else {
-      email.style.borderColor = '';
-    }
-
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      el.style.borderColor = '';
+    });
+    if (!name.value.trim())                              { name.style.borderColor  = '#ff4444'; valid = false; }
+    if (!email.value.trim() || !email.value.includes('@')) { email.style.borderColor = '#ff4444'; valid = false; }
     if (!valid) return;
 
-    var btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.innerHTML = '<span>Sending…</span>';
+    if (submitBtn)  submitBtn.disabled = true;
+    if (submitText) submitText.textContent = 'Submitting...';
 
-    var payload = {
+    var data = {
       fullName:     form.querySelector('#fullName').value.trim(),
       email:        form.querySelector('#email').value.trim(),
-      phone:        form.querySelector('#phone').value.trim(),
-      company:      form.querySelector('#company').value.trim(),
-      propertyType: form.querySelector('#propertyType').value.trim(),
-      service:      form.querySelector('#service').value.trim(),
-      details:      form.querySelector('#details').value.trim()
+      phone:        form.querySelector('#phone')        ? form.querySelector('#phone').value.trim()        : '',
+      company:      form.querySelector('#company')      ? form.querySelector('#company').value.trim()      : '',
+      propertyType: form.querySelector('#propertyType') ? form.querySelector('#propertyType').value        : '',
+      service:      form.querySelector('#service')      ? form.querySelector('#service').value             : '',
+      details:      form.querySelector('#details')      ? form.querySelector('#details').value.trim()      : ''
     };
 
-    fetch('/api/quote', {
+    fetch('/api/leads', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(payload)
+      body:    JSON.stringify(data)
     })
-    .then(function (res) { return res.json(); })
-    .then(function (data) {
-      if (data.success) {
+    .then(function (res) {
+      if (!res.ok && res.status === 429) throw new Error('Too many requests. Please wait a minute and try again.');
+      return res.json();
+    })
+    .then(function (result) {
+      if (result.success) {
         var col = form.parentElement;
-        col.innerHTML = '<div class="form-success">' +
-          '<span class="material-symbols-outlined">check_circle</span>' +
-          '<h3>Quote Request Sent</h3>' +
-          '<p>Your request has been delivered to Cort and the Spokane team. Expect a response within 24 hours.</p>' +
+        col.innerHTML =
+          '<div class="form-success">' +
+            '<span class="material-symbols-outlined">check_circle</span>' +
+            '<h3>Request Received!</h3>' +
+            '<p>Thank you, ' + data.fullName.split(' ')[0] +
+            '! A ManageMowed representative will reach out within 24 hours.</p>' +
           '</div>';
       } else {
-        btn.disabled = false;
-        btn.innerHTML = '<span>Request a Quote</span><span class="material-symbols-outlined btn-icon">send</span>';
-        alert('Something went wrong: ' + (data.error || 'please try again'));
+        if (submitBtn)  submitBtn.disabled = false;
+        if (submitText) submitText.textContent = 'Request a Quote';
+        alert(result.error || 'Something went wrong. Please try again.');
       }
     })
-    .catch(function () {
-      btn.disabled = false;
-      btn.innerHTML = '<span>Request a Quote</span><span class="material-symbols-outlined btn-icon">send</span>';
-      alert('Network error — please try again or email Cort.f@managemowed.com directly.');
+    .catch(function (err) {
+      if (submitBtn)  submitBtn.disabled = false;
+      if (submitText) submitText.textContent = 'Request a Quote';
+      alert(err.message || 'Connection error. Please try again or call (509) 259-2933.');
     });
   });
 })();
