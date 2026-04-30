@@ -134,7 +134,7 @@ app.post('/api/leads', async (req, res) => {
 
       // 1) SALES NOTIFICATION to the team
       if (NOTIFICATION_EMAILS.length) {
-        await resend.emails.send({
+        const salesResp = await resend.emails.send({
           from:     fromEmail,
           to:       NOTIFICATION_EMAILS,
           reply_to: cleanEmail,
@@ -163,13 +163,17 @@ app.post('/api/leads', async (req, res) => {
               </div>
             </div>`
         });
-        console.log(`Sales notification sent for lead #${lead.id}`);
+        if (salesResp.error) {
+          console.error(`Sales notification FAILED for lead #${lead.id}:`, salesResp.error);
+        } else {
+          console.log(`Sales notification sent for lead #${lead.id} (id: ${salesResp.data?.id})`);
+        }
       }
 
       // 2) PROSPECT CONFIRMATION
       const firstName     = cleanName.split(' ')[0] || 'there';
       const safeFirstName = escapeHtml(firstName);
-      await resend.emails.send({
+      const confirmResp = await resend.emails.send({
         from:     fromEmail,
         to:       [cleanEmail],
         reply_to: NOTIFICATION_EMAILS[0] || undefined,
@@ -197,7 +201,11 @@ app.post('/api/leads', async (req, res) => {
             </div>
           </div>`
       });
-      console.log(`Confirmation email sent to ${cleanEmail} for lead #${lead.id}`);
+      if (confirmResp.error) {
+        console.error(`Confirmation email FAILED for lead #${lead.id}:`, confirmResp.error);
+      } else {
+        console.log(`Confirmation email sent to ${cleanEmail} for lead #${lead.id} (id: ${confirmResp.data?.id})`);
+      }
     } catch (emailErr) {
       // Lead is already saved — don't fail the response over an email error
       console.error('Email error:', emailErr.message);
