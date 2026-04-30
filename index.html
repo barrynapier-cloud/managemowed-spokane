@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMB · Three Directions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: oklch(97% 0.008 80);
+      --ink: oklch(18% 0.012 270);
+      --quiet: oklch(92% 0.006 80);
+      --mark: oklch(45% 0.16 28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Geist', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem) 0;
+    }
+    .wordmark {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-variation-settings: "opsz" 144;
+      letter-spacing: -0.01em;
+      font-size: 1.25rem;
+    }
+    .wordmark .dot { color: var(--mark); }
+    main {
+      flex: 1;
+      display: grid;
+      gap: clamp(2rem, 5vw, 4rem);
+      padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .lede {
+      max-width: 60ch;
+    }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mark);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "opsz" 144;
+      font-weight: 500;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .lede p {
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      color: oklch(35% 0.012 270);
+      max-width: 55ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1px;
+      background: var(--quiet);
+      border: 1px solid var(--quiet);
+    }
+    .card {
+      background: var(--paper);
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s ease;
+      min-height: 380px;
+    }
+    .card:hover {
+      background: oklch(99% 0.005 80);
+    }
+    .card .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--mark);
+    }
+    .card h2 {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "opsz" 144;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .card .meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      color: oklch(40% 0.012 270);
+      display: grid;
+      gap: 0.25rem;
+    }
+    .card .meta span { display: block; }
+    .card .meta b { font-weight: 500; color: var(--ink); }
+    .card .desc {
+      font-size: 0.95rem;
+      color: oklch(32% 0.012 270);
+      max-width: 45ch;
+    }
+    .card .arrow {
+      margin-top: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      letter-spacing: 0.05em;
+      color: var(--mark);
+    }
+    footer {
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      border-top: 1px solid var(--quiet);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: oklch(50% 0.012 270);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wordmark">BMB<span class="dot">.</span></div>
+  </header>
+  <main>
+    <div class="lede">
+      <div class="eyebrow">Three directions · pick one</div>
+      <h1>The same site, three ways of being.</h1>
+      <p>Each mock honors the same product brief and the same voice. They differ on color strategy, theme, and motion — three legitimate answers to "what should BMB feel like." Open each, react, then pick the one that calls.</p>
+    </div>
+
+    <div class="grid">
+      <a href="./mocks/1-practice/" class="card">
+        <span class="num">01</span>
+        <h2>Practice</h2>
+        <div class="meta">
+          <span><b>Color</b> Committed · oxblood</span>
+          <span><b>Theme</b> Light</span>
+          <span><b>Motion</b> Still</span>
+        </div>
+        <p class="desc">Modern medical brand at rest. Confidence comes from composition and specificity, not movement. Lowest risk, most credible-by-default.</p>
+        <span class="arrow">→ Open Direction 1</span>
+      </a>
+      <a href="./mocks/2-protocol/" class="card">
+        <span class="num">02</span>
+        <h2>Protocol</h2>
+        <div class="meta">
+          <span><b>Color</b> Drenched · copper + chartreuse</span>
+          <span><b>Theme</b> Dark</span>
+          <span><b>Motion</b> Alive · kinetic</span>
+        </div>
+        <p class="desc">Clinical performance, alive in the dark. Drenched copper drench, scroll choreography, the modern frontier energy. Highest ceiling.</p>
+        <span class="arrow">→ Open Direction 2</span>
+      </a>
+      <a href="./mocks/3-press/" class="card">
+        <span class="num">03</span>
+        <h2>Press</h2>
+        <div class="meta">
+          <span><b>Color</b> Full palette · cinnabar accent</span>
+          <span><b>Theme</b> Duotone</span>
+          <span><b>Motion</b> Hybrid</span>
+        </div>
+        <p class="desc">Medical journal redesigned for now. Editorial layouts, asymmetric type rhythm, deliberate dark feature sections. Most distinctive if it lands.</p>
+        <span class="arrow">→ Open Direction 3</span>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <span>BMB · Body Mind Business</span>
+    <span>Pre-build · Direction Selection · v0.1</span>
+  </footer>
+</body>
+</html>
