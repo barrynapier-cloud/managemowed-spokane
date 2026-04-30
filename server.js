@@ -140,26 +140,28 @@ app.post('/api/leads', async (req, res) => {
           reply_to: cleanEmail,
           subject:  `New Lead: ${safeName} — ${safeCompany || 'No Company'}`,
           html: `
-            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#0a0f14;color:#f0f2f5;padding:32px;border-radius:12px;">
-              <div style="border-bottom:2px solid #c8ee3a;padding-bottom:16px;margin-bottom:24px;">
-                <h1 style="color:#c8ee3a;margin:0;font-size:24px;">New Lead Submission</h1>
-                <p style="color:#8892a2;margin:4px 0 0;">ManageMowed ${safeLocation}</p>
-              </div>
-              <table style="width:100%;border-collapse:collapse;">
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;width:140px;">Name</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#f0f2f5;font-weight:600;">${safeName}</td></tr>
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;">Email</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;"><a href="mailto:${safeEmail}" style="color:#c8ee3a;">${safeEmail}</a></td></tr>
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;">Phone</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#f0f2f5;">${safePhone || 'Not provided'}</td></tr>
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;">Company</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#f0f2f5;">${safeCompany || 'Not provided'}</td></tr>
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;">Property Type</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#f0f2f5;">${safePropertyType || 'Not selected'}</td></tr>
-                <tr><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#8892a2;">Service Interest</td><td style="padding:12px 0;border-bottom:1px solid #1c2632;color:#f0f2f5;">${safeService || 'Not selected'}</td></tr>
-              </table>
-              ${safeDetails ? `
-              <div style="margin-top:24px;padding:16px;background:#111820;border-radius:8px;border-left:3px solid #c8ee3a;">
-                <p style="color:#8892a2;margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;">Property Details</p>
-                <p style="color:#f0f2f5;margin:0;line-height:1.6;">${safeDetails}</p>
-              </div>` : ''}
-              <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1c2632;text-align:center;">
-                <p style="color:#8892a2;font-size:12px;margin:0;">Lead #${lead.id} | ${new Date(lead.created_at).toLocaleString('en-US')}</p>
+            <div style="font-family:Arial,sans-serif;background:#f6f8f1;padding:32px 16px;">
+              <div style="max-width:600px;margin:0 auto;background:#ffffff;color:#0f1a14;padding:32px;border-radius:12px;border:1px solid #e0e6dc;">
+                <div style="border-bottom:2px solid #6b9a00;padding-bottom:16px;margin-bottom:24px;">
+                  <h1 style="color:#0f1a14;margin:0;font-size:24px;">New Lead Submission</h1>
+                  <p style="color:#6b7a70;margin:4px 0 0;">ManageMowed ${safeLocation}</p>
+                </div>
+                <table style="width:100%;border-collapse:collapse;">
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;width:140px;">Name</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#0f1a14;font-weight:600;">${safeName}</td></tr>
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;">Email</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;"><a href="mailto:${safeEmail}" style="color:#6b9a00;text-decoration:none;">${safeEmail}</a></td></tr>
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;">Phone</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#0f1a14;">${safePhone || 'Not provided'}</td></tr>
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;">Company</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#0f1a14;">${safeCompany || 'Not provided'}</td></tr>
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;">Property Type</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#0f1a14;">${safePropertyType || 'Not selected'}</td></tr>
+                  <tr><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#6b7a70;">Service Interest</td><td style="padding:12px 0;border-bottom:1px solid #e0e6dc;color:#0f1a14;">${safeService || 'Not selected'}</td></tr>
+                </table>
+                ${safeDetails ? `
+                <div style="margin-top:24px;padding:16px;background:#eef3e3;border-radius:8px;border-left:3px solid #6b9a00;">
+                  <p style="color:#3a4a40;margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;">Property Details</p>
+                  <p style="color:#0f1a14;margin:0;line-height:1.6;">${safeDetails}</p>
+                </div>` : ''}
+                <div style="margin-top:32px;padding-top:16px;border-top:1px solid #e0e6dc;text-align:center;">
+                  <p style="color:#6b7a70;font-size:12px;margin:0;">Lead #${lead.id} | ${new Date(lead.created_at).toLocaleString('en-US')}</p>
+                </div>
               </div>
             </div>`
         });
@@ -179,25 +181,27 @@ app.post('/api/leads', async (req, res) => {
         reply_to: NOTIFICATION_EMAILS[0] || undefined,
         subject:  'Thanks for reaching out to ManageMowed',
         html: `
-          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#0a0f14;color:#f0f2f5;padding:32px;border-radius:12px;">
-            <div style="border-bottom:2px solid #c8ee3a;padding-bottom:16px;margin-bottom:24px;">
-              <h1 style="color:#c8ee3a;margin:0;font-size:26px;">Request Received</h1>
-              <p style="color:#8892a2;margin:4px 0 0;">ManageMowed ${safeLocation}</p>
-            </div>
-            <p style="color:#f0f2f5;font-size:16px;line-height:1.6;margin:0 0 16px;">Hi ${safeFirstName},</p>
-            <p style="color:#f0f2f5;font-size:16px;line-height:1.6;margin:0 0 16px;">
-              Thank you for reaching out to <strong style="color:#c8ee3a;">ManageMowed</strong>. We've received your request and a member of our team will be in touch within <strong>24 hours</strong> to discuss your property and put together a tailored plan.
-            </p>
-            <p style="color:#f0f2f5;font-size:16px;line-height:1.6;margin:0 0 24px;">
-              In the meantime, if you have any questions or want to share more details about your property, just reply to this email.
-            </p>
-            <div style="margin-top:24px;padding:20px;background:#111820;border-radius:8px;border-left:3px solid #c8ee3a;">
-              <p style="color:#8892a2;margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;">What's Next</p>
-              <p style="color:#f0f2f5;margin:0;line-height:1.6;font-size:15px;">A ManageMowed representative will reach out to schedule a complimentary walkthrough of your property.</p>
-            </div>
-            <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1c2632;text-align:center;">
-              <p style="color:#8892a2;font-size:13px;margin:0;">ManageMowed — Commercial Landscape Management</p>
-              <p style="color:#8892a2;font-size:12px;margin:4px 0 0;">${safeLocation}</p>
+          <div style="font-family:Arial,sans-serif;background:#f6f8f1;padding:32px 16px;">
+            <div style="max-width:600px;margin:0 auto;background:#ffffff;color:#0f1a14;padding:32px;border-radius:12px;border:1px solid #e0e6dc;">
+              <div style="border-bottom:2px solid #6b9a00;padding-bottom:16px;margin-bottom:24px;">
+                <h1 style="color:#0f1a14;margin:0;font-size:26px;">Request Received</h1>
+                <p style="color:#6b7a70;margin:4px 0 0;">ManageMowed ${safeLocation}</p>
+              </div>
+              <p style="color:#0f1a14;font-size:16px;line-height:1.6;margin:0 0 16px;">Hi ${safeFirstName},</p>
+              <p style="color:#3a4a40;font-size:16px;line-height:1.6;margin:0 0 16px;">
+                Thank you for reaching out to <strong style="color:#6b9a00;">ManageMowed</strong>. We've received your request and a member of our team will be in touch within <strong style="color:#0f1a14;">24 hours</strong> to discuss your property and put together a tailored plan.
+              </p>
+              <p style="color:#3a4a40;font-size:16px;line-height:1.6;margin:0 0 24px;">
+                In the meantime, if you have any questions or want to share more details about your property, just reply to this email.
+              </p>
+              <div style="margin-top:24px;padding:20px;background:#eef3e3;border-radius:8px;border-left:3px solid #6b9a00;">
+                <p style="color:#3a4a40;margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;">What's Next</p>
+                <p style="color:#0f1a14;margin:0;line-height:1.6;font-size:15px;">A ManageMowed representative will reach out to schedule a complimentary walkthrough of your property.</p>
+              </div>
+              <div style="margin-top:32px;padding-top:16px;border-top:1px solid #e0e6dc;text-align:center;">
+                <p style="color:#3a4a40;font-size:13px;margin:0;font-weight:600;">ManageMowed — Commercial Landscape Management</p>
+                <p style="color:#6b7a70;font-size:12px;margin:4px 0 0;">${safeLocation}</p>
+              </div>
             </div>
           </div>`
       });
