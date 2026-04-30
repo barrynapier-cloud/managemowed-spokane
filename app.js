@@ -239,43 +239,45 @@
 
     if (!valid) return;
 
-    // Build mailto with form contents addressed to Cort, James, and Peter
-    var recipients = [
-      'Cort.f@managemowed.com',
-      'james.j@managemowed.com',
-      'peter.r@managemowed.com'
-    ].join(',');
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.innerHTML = '<span>Sending…</span>';
 
-    var fields = {
-      'Name':           form.querySelector('#fullName').value.trim(),
-      'Email':          form.querySelector('#email').value.trim(),
-      'Phone':          form.querySelector('#phone').value.trim(),
-      'Company':        form.querySelector('#company').value.trim(),
-      'Property Type':  form.querySelector('#propertyType').value.trim(),
-      'Service':        form.querySelector('#service').value.trim(),
-      'Details':        form.querySelector('#details').value.trim()
+    var payload = {
+      fullName:     form.querySelector('#fullName').value.trim(),
+      email:        form.querySelector('#email').value.trim(),
+      phone:        form.querySelector('#phone').value.trim(),
+      company:      form.querySelector('#company').value.trim(),
+      propertyType: form.querySelector('#propertyType').value.trim(),
+      service:      form.querySelector('#service').value.trim(),
+      details:      form.querySelector('#details').value.trim()
     };
 
-    var bodyLines = ['New quote request from managemowedspokane.com', ''];
-    Object.keys(fields).forEach(function (k) {
-      bodyLines.push(k + ': ' + (fields[k] || '—'));
+    fetch('/api/quote', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.success) {
+        var col = form.parentElement;
+        col.innerHTML = '<div class="form-success">' +
+          '<span class="material-symbols-outlined">check_circle</span>' +
+          '<h3>Quote Request Sent</h3>' +
+          '<p>Your request has been delivered to Cort and the Spokane team. Expect a response within 24 hours.</p>' +
+          '</div>';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Request a Quote</span><span class="material-symbols-outlined btn-icon">send</span>';
+        alert('Something went wrong: ' + (data.error || 'please try again'));
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.innerHTML = '<span>Request a Quote</span><span class="material-symbols-outlined btn-icon">send</span>';
+      alert('Network error — please try again or email Cort.f@managemowed.com directly.');
     });
-
-    var subject = 'New Quote Request — ' + (fields['Company'] || fields['Name']);
-    var mailto  = 'mailto:' + recipients +
-                  '?subject=' + encodeURIComponent(subject) +
-                  '&body='    + encodeURIComponent(bodyLines.join('\n'));
-
-    // Open default mail client with the message pre-filled to all three recipients
-    window.location.href = mailto;
-
-    // Show success
-    var col = form.parentElement;
-    col.innerHTML = '<div class="form-success">' +
-      '<span class="material-symbols-outlined">check_circle</span>' +
-      '<h3>Quote Request Ready</h3>' +
-      '<p>Your email app should open with your request pre-filled and addressed to your Spokane account team. Just hit send and Cort will be in touch within 24 hours.</p>' +
-      '</div>';
   });
 })();
 

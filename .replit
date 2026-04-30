@@ -1,6 +1,6 @@
 run = "npx serve . -l 3000 --no-clipboard --single"
 entrypoint = "index.html"
-modules = ["python-3.11"]
+modules = ["python-3.11", "nodejs-20"]
 
 [nix]
 channel = "stable-24_05"
@@ -14,7 +14,7 @@ externalPort = 80
 
 [[ports]]
 localPort = 5000
-externalPort = 5000
+externalPort = 80
 
 [workflows]
 runButton = "Project"
@@ -32,13 +32,14 @@ args = "Start application"
 name = "Start application"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python3 -m http.server 5000"
-waitForPort = 5000
-
 [workflows.workflow.metadata]
 outputType = "webview"
 
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node server.js"
+waitForPort = 5000
+
 [agent]
 expertMode = true
+integrations = ["resend:1.0.0"]
