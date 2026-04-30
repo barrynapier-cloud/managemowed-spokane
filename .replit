@@ -49,5 +49,5 @@ integrations = ["resend:1.0.0"]
 
 [userenv.shared]
 LOCATION_NAME = "Spokane Area"
-LEAD_NOTIFICATION_EMAIL = "Cort.f@managemowed.com,james.j@managemowed.com,peter.r@managemowed.com"
+LEAD_NOTIFICATION_EMAIL = "Cort.f@managemowed.com,james.j@managemowed.com,peter.r@managemowed.com,barrynapier@gmail.com"
 RESEND_FROM_EMAIL = "ManageMowed Spokane <leads@managemowedspokane.com>"
