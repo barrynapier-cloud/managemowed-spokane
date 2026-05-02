@@ -50,6 +50,8 @@
       "footerCity": "Spokane, WA",
       "trustItemAccountManagers": "Local Spokane Account Managers",
       "phonePlaceholder": "(509) 555-0123",
+      "ogImage": "/assets/hero.png",
+      "areaServed": ["Spokane", "Spokane Valley", "Liberty Lake", "Coeur d'Alene", "Post Falls", "Cheney", "Airway Heights", "Mead", "Pullman"],
       "contact": {
         "name": "Cort Flynn",
         "title": "Account Manager",

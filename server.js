@@ -1,61 +1,94 @@
-const express = require('express');
-const path    = require('path');
-const { Pool }   = require('pg');
-const { Resend } = require('resend');
-const { resolveLocation, resolveLocationStrict, allLocations } = require('./lib/locations');
+const express     = require('express');
+const path        = require('path');
+const helmet      = require('helmet');
+const compression = require('compression');
+const rateLimit   = require('express-rate-limit');
+const { Pool }    = require('pg');
+const { Resend }  = require('resend');
+const {
+  resolveLocation,
+  resolveLocationStrict,
+  allLocations
+} = require('./lib/locations');
 
 const app  = express();
 const PORT = process.env.PORT || 5000;
 
-// EJS templating
+// Replit deployment is behind a proxy; trust the first hop so req.ip is the
+// real client IP (otherwise everyone shares the proxy IP and rate limits break)
+app.set('trust proxy', 1);
+
+// Templating
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.json({ limit: '10kb' }));
+// ───── Middleware ─────
 
-// Static assets — everything in /assets, plus style.css and app.js at the root
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname), {
-  index: false, // do NOT serve any index.html automatically — we render through EJS
-  setHeaders: (res, filePath) => {
-    if (filePath.endsWith('.html') || filePath.endsWith('.js') || filePath.endsWith('.css')) {
-      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-      res.setHeader('Pragma', 'no-cache');
-      res.setHeader('Expires', '0');
-    }
-  }
+// Security headers. CSP is left off by default because the page uses inline
+// styles and 3rd-party CDN scripts (GSAP, fonts) — turning it on requires
+// a tuned policy. Frameguard, HSTS, nosniff, referrer-policy still apply.
+app.use(helmet({
+  contentSecurityPolicy: false,
+  crossOriginEmbedderPolicy: false,
+  // Allow images from external sources for OG previews etc
+  crossOriginResourcePolicy: { policy: 'cross-origin' }
 }));
 
+// gzip/brotli compression
+app.use(compression());
+
+// JSON body parser with strict size limit
+app.use(express.json({ limit: '10kb' }));
+
+// Long-lived cache headers for versioned static assets (cache-bust via ?v=)
+const STATIC_CACHE = 'public, max-age=31536000, immutable';
+function setStaticCache(res, filePath) {
+  if (/\.(css|js|png|jpe?g|webp|svg|ico|woff2?)$/i.test(filePath)) {
+    res.setHeader('Cache-Control', STATIC_CACHE);
+  }
+}
+
+app.use('/assets', express.static(path.join(__dirname, 'assets'), {
+  setHeaders: setStaticCache,
+  maxAge:     '1y',
+  immutable:  true
+}));
+app.use(express.static(path.join(__dirname), {
+  index: false, // never auto-serve index.html — render through EJS
+  setHeaders: setStaticCache
+}));
+
+// Public lead-form rate limit — uses real client IP (trust proxy is set)
+const leadLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max:      5,
+  standardHeaders: true,
+  legacyHeaders:   false,
+  message: { error: 'Too many requests. Please try again in a minute.' }
+});
+
+// ───── DB ─────
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false
+  ssl: false,
+  max: 10
+});
+pool.on('error', (err) => {
+  console.error('[pg] unexpected pool error:', err);
 });
 
 const ADMIN_KEY = process.env.ADMIN_API_KEY || '';
 
 // ───── Helpers ─────
 function escapeHtml(str) {
-  if (!str) return '';
+  if (str === null || str === undefined) return '';
   return String(str)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
 }
 function truncate(str, max) { return str ? String(str).substring(0, max) : ''; }
 
-// Per-IP rate limit: 5 submissions per minute
-const rateLimit = {};
-function checkRateLimit(ip) {
-  const now = Date.now();
-  const windowMs = 60 * 1000;
-  const maxRequests = 5;
-  if (!rateLimit[ip]) rateLimit[ip] = [];
-  rateLimit[ip] = rateLimit[ip].filter(t => now - t < windowMs);
-  if (rateLimit[ip].length >= maxRequests) return false;
-  rateLimit[ip].push(now);
-  return true;
-}
-
-// Build a Resend client for a specific location
+// Per-location Resend client
 function getResendForLocation(loc) {
   const envName = loc.resend?.apiKeyEnv;
   if (!envName) {
@@ -74,24 +107,48 @@ function getResendForLocation(loc) {
 
 // ───── Routes ─────
 
-// Render the landing page using the per-domain location config
-app.get('/', (req, res) => {
-  const loc = resolveLocation(req.headers.host);
-  if (!loc) return res.status(500).send('No location configured');
-  res.render('index', { loc });
+// Health check — used by Replit deploy + uptime monitors
+app.get('/healthz', async (req, res) => {
+  try {
+    await pool.query('SELECT 1');
+    res.json({ status: 'ok', locations: Object.keys(allLocations()).length });
+  } catch (err) {
+    res.status(503).json({ status: 'degraded', error: 'database unreachable' });
+  }
 });
 
-// POST /api/leads — main lead capture
-app.post('/api/leads', async (req, res) => {
-  try {
-    const ip = req.ip || req.connection.remoteAddress || 'unknown';
-    if (!checkRateLimit(ip)) {
-      return res.status(429).json({ error: 'Too many requests. Please try again in a minute.' });
-    }
+// robots.txt — allow all, point at sitemap (per-host)
+app.get('/robots.txt', (req, res) => {
+  const host = (req.headers.host || '').split(':')[0];
+  res.type('text/plain').send(
+    `User-agent: *\nAllow: /\n\nSitemap: https://${host}/sitemap.xml\n`
+  );
+});
 
-    // STRICT host match for lead capture — never fall back to a default
-    // location, otherwise unknown/spoofed hosts could misroute leads to the
-    // wrong team and contaminate the per-tenant database.
+// sitemap.xml — minimal single-page sitemap per host
+app.get('/sitemap.xml', (req, res) => {
+  const host = (req.headers.host || '').split(':')[0];
+  const url  = `https://${host}/`;
+  res.type('application/xml').send(
+    `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${url}</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+</urlset>`
+  );
+});
+
+// Render the landing page
+function renderLanding(req, res) {
+  const loc = resolveLocation(req.headers.host);
+  if (!loc) return res.status(500).send('No location configured');
+  const host = (req.headers.host || '').split(':')[0];
+  res.render('index', { loc, host });
+}
+app.get('/', renderLanding);
+
+// POST /api/leads — strict host match, rate-limited
+app.post('/api/leads', leadLimiter, async (req, res) => {
+  try {
     const loc = resolveLocationStrict(req.headers.host);
     if (!loc) {
       console.warn(`Lead submission rejected — unknown host: "${req.headers.host}"`);
@@ -116,7 +173,6 @@ app.post('/api/leads', async (req, res) => {
       return res.status(400).json({ error: 'Invalid email address' });
     }
 
-    // Save lead — with location key
     const result = await pool.query(
       `INSERT INTO leads (full_name, email, phone, company, property_type, service_interest, details, location)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
@@ -126,7 +182,7 @@ app.post('/api/leads', async (req, res) => {
     );
     const lead = result.rows[0];
 
-    // Fire emails — failures here don't fail the request
+    // Fire emails — failures don't fail the request
     try {
       const { client: resend, fromEmail, toEmails } = getResendForLocation(loc);
       const safeName         = escapeHtml(cleanName);
@@ -140,11 +196,26 @@ app.post('/api/leads', async (req, res) => {
 
       // 1) Sales notification
       if (toEmails.length) {
+        const salesText = [
+          `New Lead Submission — ManageMowed ${loc.city}`,
+          ``,
+          `Name:            ${cleanName}`,
+          `Email:           ${cleanEmail}`,
+          `Phone:           ${cleanPhone || 'Not provided'}`,
+          `Company:         ${cleanCompany || 'Not provided'}`,
+          `Property Type:   ${cleanPropertyType || 'Not selected'}`,
+          `Service:         ${cleanService || 'Not selected'}`,
+          ``,
+          cleanDetails ? `Details:\n${cleanDetails}\n` : '',
+          `Lead #${lead.id} — ${new Date(lead.created_at).toLocaleString('en-US')}`
+        ].join('\n');
+
         const salesResp = await resend.emails.send({
           from:     fromEmail,
           to:       toEmails,
           reply_to: cleanEmail,
-          subject:  `New Lead (${loc.city}): ${safeName} — ${safeCompany || 'No Company'}`,
+          subject:  `New Lead (${loc.city}): ${cleanName} — ${cleanCompany || 'No Company'}`,
+          text:     salesText,
           html: `
             <div style="font-family:Arial,sans-serif;background:#f6f8f1;padding:32px 16px;">
               <div style="max-width:600px;margin:0 auto;background:#ffffff;color:#0f1a14;padding:32px;border-radius:12px;border:1px solid #e0e6dc;">
@@ -181,11 +252,21 @@ app.post('/api/leads', async (req, res) => {
       // 2) Prospect confirmation
       const firstName     = cleanName.split(' ')[0] || 'there';
       const safeFirstName = escapeHtml(firstName);
+      const confirmText = [
+        `Hi ${firstName},`,
+        ``,
+        `Thank you for reaching out to ManageMowed. We've received your request and a member of our team will be in touch within 24 hours to discuss your property and put together a tailored plan.`,
+        ``,
+        `If you have any questions in the meantime, just reply to this email.`,
+        ``,
+        `— ManageMowed ${loc.city}`
+      ].join('\n');
       const confirmResp = await resend.emails.send({
         from:     fromEmail,
         to:       [cleanEmail],
         reply_to: toEmails[0] || undefined,
         subject:  'Thanks for reaching out to ManageMowed',
+        text:     confirmText,
         html: `
           <div style="font-family:Arial,sans-serif;background:#f6f8f1;padding:32px 16px;">
             <div style="max-width:600px;margin:0 auto;background:#ffffff;color:#0f1a14;padding:32px;border-radius:12px;border:1px solid #e0e6dc;">
@@ -227,7 +308,7 @@ app.post('/api/leads', async (req, res) => {
   }
 });
 
-// GET /api/leads — admin endpoint (requires ADMIN_API_KEY); optional ?location=spokane
+// GET /api/leads — admin only
 app.get('/api/leads', async (req, res) => {
   const authHeader = req.headers.authorization;
   if (!ADMIN_KEY || authHeader !== `Bearer ${ADMIN_KEY}`) {
@@ -245,15 +326,33 @@ app.get('/api/leads', async (req, res) => {
   }
 });
 
-// Catch-all: render the landing page for any other GET request (preserves SPA-like behavior)
-app.get('*', (req, res) => {
-  const loc = resolveLocation(req.headers.host);
-  if (!loc) return res.status(500).send('No location configured');
-  res.render('index', { loc });
-});
+// Catch-all → render landing page
+app.get('*', renderLanding);
 
-app.listen(PORT, '0.0.0.0', () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   const locs = Object.keys(allLocations());
   console.log(`ManageMowed multi-tenant server running on port ${PORT}`);
   console.log(`Loaded ${locs.length} location(s): ${locs.join(', ')}`);
 });
+
+// Graceful shutdown — drain in-flight requests, close DB pool
+function shutdown(signal) {
+  console.log(`Received ${signal}, shutting down gracefully...`);
+  server.close((err) => {
+    if (err) { console.error('Error closing server:', err); process.exit(1); }
+    pool.end().then(() => {
+      console.log('Server + DB pool closed cleanly. Exiting.');
+      process.exit(0);
+    }).catch((e) => {
+      console.error('Error closing pool:', e);
+      process.exit(1);
+    });
+  });
+  // Force-exit if shutdown takes too long
+  setTimeout(() => {
+    console.warn('Forced shutdown after 10s timeout');
+    process.exit(1);
+  }, 10000).unref();
+}
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT',  () => shutdown('SIGINT'));

@@ -58,6 +58,23 @@ leads (
 ```
 Indexed on `location`.
 
+## Hardening (2026-05-02)
+- `helmet` adds HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy. CSP intentionally disabled (inline GSAP/styles + CDN scripts).
+- `compression` enables gzip.
+- `app.set('trust proxy', 1)` so `req.ip` reflects the real client IP behind Replit's proxy.
+- `express-rate-limit` (5/min per IP) protects POST `/api/leads`. Replaces the old in-memory map.
+- Static assets (`/assets`, `/style.css`, `/app.js`) sent with `Cache-Control: public, max-age=31536000, immutable` — bump the `?v=` query string to invalidate.
+- `/healthz` returns `{status, locations}` after a `SELECT 1` against PG. Good for uptime checks.
+- `/robots.txt` and `/sitemap.xml` generated per host.
+- Graceful shutdown on SIGTERM/SIGINT (drains HTTP server + closes PG pool, 10s force-exit safety).
+- `pool.on('error', …)` prevents process crash on dropped DB connections.
+- Per-location SEO: canonical URL, OG image, Twitter card, JSON-LD `LocalBusiness` schema with `areaServed` array.
+- `views/index.ejs` images now have `width`/`height` (CLS fix), `decoding="async"`, hero gets `fetchpriority="high"` + `<link rel=preload>`.
+- Mobile menu toggle now sets `aria-expanded`.
+- Form errors render inline (no more `alert()`) and the success card is built via DOM `textContent` (XSS-safe).
+- Added `text:` plaintext alongside HTML in both Resend emails for better deliverability.
+- Per-location `ogImage` and `areaServed` fields in `locations.json`.
+
 ## Workflow
 
 `Start application` runs `node server.js` on port 5000.
