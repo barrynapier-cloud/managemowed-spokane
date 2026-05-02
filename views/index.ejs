@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/
-        Created with Perplexity Computer
-        https://www.perplexity.ai/computer
--->
-<meta name="generator" content="Perplexity Computer">
-<meta name="author" content="Perplexity Computer">
-<meta property="og:see_also" content="https://www.perplexity.ai/computer">
-<link rel="author" href="https://www.perplexity.ai/computer">
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ManageMowed Spokane | Commercial Landscape Management for the Spokane Area</title>
-<meta name="description" content="Professional commercial landscape management for Spokane, Spokane Valley, Coeur d'Alene, Liberty Lake and the greater Spokane area. Free site assessments for businesses and property managers.">
+<title><%= loc.pageTitle %></title>
+<meta name="description" content="<%= loc.metaDescription %>">
 
 <!-- Open Graph -->
-<meta property="og:title" content="ManageMowed Spokane | Commercial Landscape Management">
-<meta property="og:description" content="Premium grounds management for businesses across the greater Spokane area. Get your free site assessment today.">
+<meta property="og:title" content="<%= loc.ogTitle %>">
+<meta property="og:description" content="<%= loc.ogDescription %>">
 <meta property="og:type" content="website">
 
 <!-- Fonts -->
@@ -35,15 +20,15 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-<link rel="stylesheet" href="./style.css?v=20260430c">
+<link rel="stylesheet" href="/style.css?v=20260502a">
 </head>
-<body>
+<body data-location="<%= loc.key %>" data-contact-phone="<%= loc.contact.phone %>">
 
 <!-- NAVIGATION -->
 <nav id="navbar" class="navbar">
   <div class="nav-inner">
     <a href="#" class="logo-link">
-      <img src="./assets/logo-official.png?v=20260423c" alt="ManageMowed" class="nav-logo-img">
+      <img src="/assets/logo-official.png?v=20260423c" alt="ManageMowed" class="nav-logo-img">
     </a>
 
     <div class="nav-links">
@@ -54,9 +39,9 @@
     </div>
 
     <div class="nav-actions">
-      <a href="tel:5092592933" class="nav-phone">
+      <a href="tel:<%= loc.contact.phoneRaw %>" class="nav-phone">
         <span class="material-symbols-outlined">call</span>
-        (509) 259-2933
+        <%= loc.contact.phone %>
       </a>
       <a href="#contact" class="btn-primary btn-sm">Request a Quote
         <span class="material-symbols-outlined btn-icon">arrow_forward</span>
@@ -74,7 +59,7 @@
     <a href="#about">About</a>
     <a href="#areas">Service Areas</a>
     <a href="#news">In the Press</a>
-    <a href="tel:5092592933" class="mobile-phone"><span class="material-symbols-outlined">call</span> (509) 259-2933</a>
+    <a href="tel:<%= loc.contact.phoneRaw %>" class="mobile-phone"><span class="material-symbols-outlined">call</span> <%= loc.contact.phone %></a>
     <a href="#contact" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Request a Quote</a>
   </div>
 </nav>
@@ -82,20 +67,20 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="./assets/hero.png" alt="Aerial view of a beautifully maintained commercial property in the Spokane area" class="hero-img" loading="eager">
+    <img src="<%= loc.heroImage %>" alt="<%= loc.heroImageAlt %>" class="hero-img" loading="eager">
     <div class="hero-overlay"></div>
   </div>
 
   <div class="hero-content">
     <h1 class="hero-title">
       <span class="line line-eyebrow">ManageMowed</span>
-      <span class="line line-1">Spokane's Premier</span>
+      <span class="line line-1"><%= loc.heroHeadlinePrefix %></span>
       <span class="line line-2">Commercial</span>
       <span class="line line-3 accent">Landscape Partner.</span>
     </h1>
 
     <p class="hero-description">
-      Full-service grounds management for businesses, property management companies, apartments, and commercial properties across the greater Spokane area. Responsive, reliable, and easy to work with.
+      <%= loc.heroSubtitle %>
     </p>
 
     <div class="hero-ctas">
@@ -103,8 +88,8 @@
         Request a Quote
         <span class="material-symbols-outlined btn-icon">arrow_forward</span>
       </a>
-      <a href="tel:5092592933" class="btn-outline btn-lg">
-        Call (509) 259-2933
+      <a href="tel:<%= loc.contact.phoneRaw %>" class="btn-outline btn-lg">
+        Call <%= loc.contact.phone %>
         <span class="material-symbols-outlined btn-icon">call</span>
       </a>
     </div>
@@ -112,7 +97,7 @@
     <div class="hero-trust">
       <div class="trust-item">
         <span class="material-symbols-outlined">group</span>
-        Local Spokane Account Managers
+        <%= loc.trustItemAccountManagers %>
       </div>
       <div class="trust-item">
         <span class="material-symbols-outlined">calendar_month</span>
@@ -149,11 +134,11 @@
 
 <!-- WEATHER / RELIABILITY SECTION -->
 <section class="snow-break">
-  <img src="./assets/action-rain.jpg" alt="ManageMowed crew working a commercial property in challenging Spokane-area weather" loading="lazy">
+  <img src="<%= loc.weatherImage %>" alt="<%= loc.weatherImageAlt %>" loading="lazy">
   <div class="snow-overlay"></div>
   <div class="snow-content">
-    <h2>Spokane Weather is Unpredictable.<br><span class="accent">Your Landscaper Shouldn't Be.</span></h2>
-    <p>ManageMowed crews show up on schedule, every time. 24/7 winter monitoring, proactive communication, and a local account manager mean your property is maintained consistently no matter what Spokane weather throws at it.</p>
+    <h2><%= loc.weatherHeadline %><br><span class="accent"><%= loc.weatherSubhead %></span></h2>
+    <p><%= loc.weatherBody %></p>
   </div>
 </section>
 
@@ -184,7 +169,7 @@
 <!-- ABOUT / DIFFERENTIATOR -->
 <section class="about-section" id="about">
   <div class="about-image-col">
-    <img src="./assets/about-snow.png?v=20260424b" alt="ManageMowed crew operating a snowblower clearing heavy snow at a Spokane commercial property" loading="lazy" style="object-position: 38% center;">
+    <img src="<%= loc.aboutImage %>" alt="<%= loc.aboutImageAlt %>" loading="lazy" style="object-position: <%= loc.aboutImageObjectPosition || 'center center' %>;">
     <div class="about-image-overlay"></div>
     <div class="about-image-border"></div>
   </div>
@@ -192,7 +177,7 @@
     <div class="about-inner">
       <span class="section-label"><span class="material-symbols-outlined" style="font-size:1rem;">verified</span> The ManageMowed Difference</span>
       <h2 class="section-title">We Manage Your Property,<br><span class="accent">Regardless of the Weather.</span></h2>
-      <p class="about-description">From spring green-up and summer mowing to fall cleanup and 24/7 winter snow &amp; ice response, our crews show up through every Spokane-area season. One call, one Account Manager, one team handling the full year — so your property always makes the right first impression, no matter what the forecast says.</p>
+      <p class="about-description"><%= loc.aboutDescription %></p>
 
       <div class="about-features">
         <div class="about-feature">
@@ -213,7 +198,7 @@
           <div class="feature-dot"></div>
           <div>
             <strong>National Network, Local Crews</strong>
-            <span>24 locations strong with boots on the ground in Spokane</span>
+            <span><%= loc.aboutBootsLine %></span>
           </div>
         </div>
       </div>
@@ -275,7 +260,7 @@
         </div>
         <div class="service-number">03</div>
         <h3>Seasonal Services</h3>
-        <p>Year-round readiness for whatever Spokane weather throws at your property — from heavy snow plowing and de-icing to fall cleanup and spring renovation.</p>
+        <p><%= loc.seasonalServicesBody %></p>
         <ul class="service-features">
           <li>24/7 snow plowing &amp; removal</li>
           <li>De-icing &amp; salt application</li>
@@ -299,11 +284,11 @@
     <div class="ba-slider-wrapper">
       <div class="ba-slider" id="baSlider">
         <div class="ba-image ba-after">
-          <img src="./assets/after-property.png" alt="Property after ManageMowed service" loading="lazy">
+          <img src="/assets/after-property.png" alt="Property after ManageMowed service" loading="lazy">
           <span class="ba-label ba-label-after"><span class="material-symbols-outlined">check_circle</span> After</span>
         </div>
         <div class="ba-image ba-before">
-          <img src="./assets/before-property.png" alt="Property before ManageMowed service" loading="lazy">
+          <img src="/assets/before-property.png" alt="Property before ManageMowed service" loading="lazy">
           <span class="ba-label ba-label-before"><span class="material-symbols-outlined">warning</span> Before</span>
         </div>
         <div class="ba-handle" id="baHandle">
@@ -322,12 +307,12 @@
 <!-- "YOUR PROPERTY DESERVES BETTER" CTA BANNER -->
 <section class="deserves-cta">
   <div class="deserves-bg">
-    <img src="./assets/cta-bg.jpg" alt="Pristine commercial landscape maintained by ManageMowed in the Spokane area" loading="lazy">
+    <img src="<%= loc.deservesCtaImage %>" alt="<%= loc.deservesCtaImageAlt %>" loading="lazy">
     <div class="deserves-overlay"></div>
   </div>
   <div class="deserves-content">
     <h2>Your Property Deserves <span class="accent-bright">Better.</span></h2>
-    <p>Join the Spokane-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.</p>
+    <p><%= loc.deservesCtaBody %></p>
     <a href="#contact" class="btn-primary btn-lg">Request a Quote <span class="material-symbols-outlined btn-icon">arrow_forward</span></a>
   </div>
 </section>
@@ -335,77 +320,27 @@
 <!-- SERVICE AREAS -->
 <section class="service-areas" id="areas">
   <div class="areas-bg-image">
-    <img src="./assets/areas-bg.jpg" alt="Aerial view of the Spokane River and downtown Spokane at dusk" loading="lazy">
+    <img src="<%= loc.areasBgImage %>" alt="<%= loc.areasBgImageAlt %>" loading="lazy">
     <div class="areas-bg-overlay"></div>
   </div>
   <div class="container">
     <div class="section-header center">
       <span class="section-label"><span class="label-line"></span> Coverage</span>
-      <h2 class="section-title">Greater Spokane Service Area</h2>
-      <p class="section-subtitle">From the West Plains to North Idaho, the Palouse to North Spokane County — ManageMowed has the greater Spokane region covered.</p>
+      <h2 class="section-title"><%= loc.areasHeadline %></h2>
+      <p class="section-subtitle"><%= loc.areasSubtitle %></p>
     </div>
 
     <div class="areas-grid">
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">location_city</span> Spokane Metro</h3>
-        <ul>
-          <li>Downtown Spokane (HQ)</li>
-          <li>South Hill</li>
-          <li>North Side</li>
-          <li>Hillyard</li>
-          <li>Logan / Gonzaga</li>
-        </ul>
-      </div>
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">business</span> Spokane Valley</h3>
-        <ul>
-          <li>Spokane Valley</li>
-          <li>Liberty Lake</li>
-          <li>Greenacres</li>
-          <li>Veradale</li>
-          <li>Otis Orchards</li>
-        </ul>
-      </div>
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">forest</span> North Idaho</h3>
-        <ul>
-          <li>Coeur d'Alene</li>
-          <li>Post Falls</li>
-          <li>Hayden</li>
-          <li>Rathdrum</li>
-          <li>Athol</li>
-        </ul>
-      </div>
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">west</span> West Plains</h3>
-        <ul>
-          <li>Cheney</li>
-          <li>Airway Heights</li>
-          <li>Medical Lake</li>
-          <li>Four Lakes</li>
-          <li>Tyler</li>
-        </ul>
-      </div>
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">south</span> Palouse &amp; South County</h3>
-        <ul>
-          <li>Pullman</li>
-          <li>Colfax</li>
-          <li>Rosalia</li>
-          <li>Tekoa</li>
-          <li>Garfield</li>
-        </ul>
-      </div>
-      <div class="area-group">
-        <h3><span class="material-symbols-outlined">north</span> North Spokane County</h3>
-        <ul>
-          <li>Mead</li>
-          <li>Colbert</li>
-          <li>Deer Park</li>
-          <li>Chattaroy</li>
-          <li>Nine Mile Falls</li>
-        </ul>
-      </div>
+      <% loc.areaGroups.forEach(function(group) { %>
+        <div class="area-group">
+          <h3><span class="material-symbols-outlined"><%= group.icon %></span> <%= group.name %></h3>
+          <ul>
+            <% group.items.forEach(function(item) { %>
+              <li><%= item %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% }); %>
     </div>
   </div>
 </section>
@@ -425,8 +360,8 @@
                 <span class="material-symbols-outlined">person</span>
               </div>
               <div>
-                <span class="contact-label">Your Account Manager</span>
-                <span class="contact-value">Cort Flynn</span>
+                <span class="contact-label">Your <%= loc.contact.title %></span>
+                <span class="contact-value"><%= loc.contact.name %></span>
               </div>
             </div>
 
@@ -436,7 +371,7 @@
               </div>
               <div>
                 <span class="contact-label">Call Direct</span>
-                <a href="tel:5092592933" class="contact-value">(509) 259-2933</a>
+                <a href="tel:<%= loc.contact.phoneRaw %>" class="contact-value"><%= loc.contact.phone %></a>
               </div>
             </div>
 
@@ -446,7 +381,7 @@
               </div>
               <div>
                 <span class="contact-label">Email</span>
-                <a href="mailto:Cort.f@managemowed.com" class="contact-value">Cort.f@managemowed.com</a>
+                <a href="mailto:<%= loc.contact.email %>" class="contact-value"><%= loc.contact.email %></a>
               </div>
             </div>
 
@@ -456,7 +391,7 @@
               </div>
               <div>
                 <span class="contact-label">Website</span>
-                <a href="https://www.managemowedspokane.com" target="_blank" rel="noopener noreferrer" class="contact-value">www.managemowedspokane.com</a>
+                <a href="<%= loc.contact.websiteUrl %>" target="_blank" rel="noopener noreferrer" class="contact-value"><%= loc.contact.website %></a>
               </div>
             </div>
           </div>
@@ -485,7 +420,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="text" id="phone" name="phone" placeholder="(509) 555-0123" inputmode="tel" autocomplete="tel">
+              <input type="text" id="phone" name="phone" placeholder="<%= loc.phonePlaceholder || '(555) 555-0123' %>" inputmode="tel" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="company">Company / Property</label>
@@ -626,11 +561,11 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
-          <span>How do you handle Spokane-area weather?</span>
+          <span><%= loc.faqWeatherQuestion %></span>
           <span class="material-symbols-outlined faq-icon">expand_more</span>
         </button>
         <div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
-          <p>Our crews are built for Spokane-area conditions. We operate in rain, wind, and cold. During ice and snow events, we provide 24/7 monitoring and proactive de-icing. Your Account Manager communicates schedule adjustments in advance so you're never left wondering.</p>
+          <p><%= loc.faqWeatherAnswer %></p>
         </div>
       </div>
       <div class="faq-item">
@@ -661,9 +596,9 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo-link" style="margin-bottom:1rem;">
-          <img src="./assets/logo-official.png?v=20260423c" alt="ManageMowed" class="nav-logo-img footer-logo-img">
+          <img src="/assets/logo-official.png?v=20260423c" alt="ManageMowed" class="nav-logo-img footer-logo-img">
         </div>
-        <p>Professional commercial landscape management for the greater Spokane area. Member of the National Association of Landscape Professionals.</p>
+        <p><%= loc.footerDescription %></p>
       </div>
 
       <div class="footer-col">
@@ -689,11 +624,11 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li>Cort Flynn — Account Manager</li>
-          <li><a href="tel:5092592933">(509) 259-2933</a></li>
-          <li><a href="mailto:Cort.f@managemowed.com">Cort.f@managemowed.com</a></li>
-          <li><a href="https://www.managemowedspokane.com" target="_blank" rel="noopener noreferrer">www.managemowedspokane.com</a></li>
-          <li>Spokane, WA</li>
+          <li><%= loc.contact.name %> — <%= loc.contact.title %></li>
+          <li><a href="tel:<%= loc.contact.phoneRaw %>"><%= loc.contact.phone %></a></li>
+          <li><a href="mailto:<%= loc.contact.email %>"><%= loc.contact.email %></a></li>
+          <li><a href="<%= loc.contact.websiteUrl %>" target="_blank" rel="noopener noreferrer"><%= loc.contact.website %></a></li>
+          <li><%= loc.footerCity %></li>
         </ul>
       </div>
     </div>
@@ -705,6 +640,6 @@
   </div>
 </footer>
 
-<script src="./app.js?v=20260430a"></script>
+<script src="/app.js?v=20260502a"></script>
 </body>
 </html>

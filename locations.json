@@ -1,0 +1,74 @@
+{
+  "_comment": "Multi-tenant config. To add a new location: copy the spokane block, change the key (e.g. 'seattle'), update all fields, add the domain(s), and create a new Resend API key secret named like RESEND_API_KEY_SEATTLE. Then add the new domain in Replit Deployments.",
+  "defaultLocation": "spokane",
+  "locations": {
+    "spokane": {
+      "domains": ["managemowedspokane.com", "www.managemowedspokane.com"],
+      "city": "Spokane",
+      "cityPossessive": "Spokane's",
+      "state": "WA",
+      "regionLong": "greater Spokane area",
+      "regionShort": "Spokane area",
+      "areaAdjective": "Spokane-area",
+      "pageTitle": "ManageMowed Spokane | Commercial Landscape Management for the Spokane Area",
+      "metaDescription": "Professional commercial landscape management for Spokane, Spokane Valley, Coeur d'Alene, Liberty Lake and the greater Spokane area. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Spokane | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across the greater Spokane area. Get your free site assessment today.",
+      "heroImage": "/assets/hero.png",
+      "heroImageAlt": "Aerial view of a beautifully maintained commercial property in the Spokane area",
+      "heroHeadlinePrefix": "Spokane's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, apartments, and commercial properties across the greater Spokane area. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-rain.jpg",
+      "weatherImageAlt": "ManageMowed crew working a commercial property in challenging Spokane-area weather",
+      "weatherHeadline": "Spokane Weather is Unpredictable.",
+      "weatherSubhead": "Your Landscaper Shouldn't Be.",
+      "weatherBody": "ManageMowed crews show up on schedule, every time. 24/7 winter monitoring, proactive communication, and a local account manager mean your property is maintained consistently no matter what Spokane weather throws at it.",
+      "aboutImage": "/assets/about-snow.png?v=20260424b",
+      "aboutImageAlt": "ManageMowed crew operating a snowblower clearing heavy snow at a Spokane commercial property",
+      "aboutImageObjectPosition": "38% center",
+      "aboutDescription": "From spring green-up and summer mowing to fall cleanup and 24/7 winter snow & ice response, our crews show up through every Spokane-area season. One call, one Account Manager, one team handling the full year — so your property always makes the right first impression, no matter what the forecast says.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Spokane",
+      "seasonalServicesBody": "Year-round readiness for whatever Spokane weather throws at your property — from heavy snow plowing and de-icing to fall cleanup and spring renovation.",
+      "deservesCtaImage": "/assets/cta-bg.jpg",
+      "deservesCtaImageAlt": "Pristine commercial landscape maintained by ManageMowed in the Spokane area",
+      "deservesCtaBody": "Join the Spokane-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg.jpg",
+      "areasBgImageAlt": "Aerial view of the Spokane River and downtown Spokane at dusk",
+      "areasHeadline": "Greater Spokane Service Area",
+      "areasSubtitle": "From the West Plains to North Idaho, the Palouse to North Spokane County — ManageMowed has the greater Spokane region covered.",
+      "areaGroups": [
+        { "icon": "location_city", "name": "Spokane Metro",          "items": ["Downtown Spokane (HQ)", "South Hill", "North Side", "Hillyard", "Logan / Gonzaga"] },
+        { "icon": "business",      "name": "Spokane Valley",         "items": ["Spokane Valley", "Liberty Lake", "Greenacres", "Veradale", "Otis Orchards"] },
+        { "icon": "forest",        "name": "North Idaho",            "items": ["Coeur d'Alene", "Post Falls", "Hayden", "Rathdrum", "Athol"] },
+        { "icon": "west",          "name": "West Plains",            "items": ["Cheney", "Airway Heights", "Medical Lake", "Four Lakes", "Tyler"] },
+        { "icon": "south",         "name": "Palouse & South County", "items": ["Pullman", "Colfax", "Rosalia", "Tekoa", "Garfield"] },
+        { "icon": "north",         "name": "North Spokane County",   "items": ["Mead", "Colbert", "Deer Park", "Chattaroy", "Nine Mile Falls"] }
+      ],
+      "faqWeatherQuestion": "How do you handle Spokane-area weather?",
+      "faqWeatherAnswer": "Our crews are built for Spokane-area conditions. We operate in rain, wind, and cold. During ice and snow events, we provide 24/7 monitoring and proactive de-icing. Your Account Manager communicates schedule adjustments in advance so you're never left wondering.",
+      "footerDescription": "Professional commercial landscape management for the greater Spokane area. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Spokane, WA",
+      "trustItemAccountManagers": "Local Spokane Account Managers",
+      "phonePlaceholder": "(509) 555-0123",
+      "contact": {
+        "name": "Cort Flynn",
+        "title": "Account Manager",
+        "phone": "(509) 259-2933",
+        "phoneRaw": "5092592933",
+        "email": "Cort.f@managemowed.com",
+        "website": "www.managemowedspokane.com",
+        "websiteUrl": "https://www.managemowedspokane.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Spokane <leads@managemowedspokane.com>",
+        "notificationEmails": [
+          "Cort.f@managemowed.com",
+          "james.j@managemowed.com",
+          "peter.r@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
+    }
+  }
+}
