@@ -2,6 +2,10 @@
    ManageMowed Spokane — Light Theme
    ======================================== */
 
+/* === ICON FONT FLASH PREVENTION === */
+.material-symbols-outlined { opacity: 0; transition: opacity 0.15s ease; }
+html.icons-loaded .material-symbols-outlined { opacity: 1; }
+
 /* === RESET & BASE === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

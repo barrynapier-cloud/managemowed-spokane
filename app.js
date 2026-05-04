@@ -2,6 +2,19 @@
    ManageMowed — App JS (multi-tenant)
    ======================================== */
 
+// === ICON FONT LOADING (prevent raw text flash) ===
+(function () {
+  if (document.fonts && document.fonts.load) {
+    document.fonts.load('24px "Material Symbols Outlined"').then(function () {
+      document.documentElement.classList.add('icons-loaded');
+    }).catch(function () {
+      document.documentElement.classList.add('icons-loaded');
+    });
+  } else {
+    document.documentElement.classList.add('icons-loaded');
+  }
+})();
+
 // === NAVBAR SCROLL BEHAVIOR ===
 (function () {
   const nav = document.getElementById('navbar');
