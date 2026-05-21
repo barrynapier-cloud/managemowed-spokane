@@ -138,8 +138,14 @@ app.get('/sitemap.xml', (req, res) => {
 });
 
 // Render the landing page
+// ?preview=lajolla overrides location on the dev URL (ignored if host already matches a domain)
 function renderLanding(req, res) {
-  const loc = resolveLocation(req.headers.host);
+  let loc = resolveLocation(req.headers.host);
+  const previewKey = req.query.preview;
+  if (previewKey && loc && loc.key !== previewKey) {
+    const all = allLocations();
+    if (all[previewKey]) loc = { ...all[previewKey], key: previewKey };
+  }
   if (!loc) return res.status(500).send('No location configured');
   const host = (req.headers.host || '').split(':')[0];
   res.render('index', { loc, host });
