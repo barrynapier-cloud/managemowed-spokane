@@ -72,5 +72,73 @@
         ]
       }
     }
+    ,
+    "lajolla": {
+      "domains": ["managemowedlajolla.com", "www.managemowedlajolla.com"],
+      "city": "La Jolla",
+      "cityPossessive": "La Jolla's",
+      "state": "CA",
+      "regionLong": "greater San Diego area",
+      "regionShort": "San Diego area",
+      "areaAdjective": "San Diego-area",
+      "pageTitle": "ManageMowed La Jolla | Commercial Landscape Management for San Diego",
+      "metaDescription": "Professional commercial landscape management for La Jolla, Mission Valley, UTC, Sorrento Valley and greater San Diego. Year-round service, drought-smart programs, and free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed La Jolla | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across greater San Diego. Drought-smart programs, Santa Ana wind response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-lajolla.jpg",
+      "heroImageAlt": "Aerial view of La Jolla coastline and pristine commercial properties along the San Diego coast",
+      "heroHeadlinePrefix": "La Jolla's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, biotech campuses, property management companies, and commercial properties across greater San Diego. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-lajolla.jpg",
+      "weatherImageAlt": "ManageMowed crew maintaining a San Diego commercial property after Santa Ana wind event",
+      "weatherHeadline": "San Diego Landscapes Never Stop Growing.",
+      "weatherSubhead": "Your Landscaper Shouldn't Either.",
+      "weatherBody": "No off-season. No excuses. San Diego's year-round growing season means your property needs consistent, professional maintenance every single month — not just spring and summer. From Santa Ana wind cleanups and drought-smart irrigation adjustments to May Gray fungal prevention and coastal salt-spray care, ManageMowed crews show up on schedule and handle what San Diego throws at your property. One Account Manager. One team. All year.",
+      "aboutImage": "/assets/about-lajolla.jpg",
+      "aboutImageAlt": "ManageMowed crew maintaining a La Jolla commercial property with Pacific coastline in the background",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "San Diego's Mediterranean climate is beautiful — and demanding. With plants growing twelve months a year, drought restrictions tightening, and Santa Ana events turning a manicured property into a debris field overnight, commercial landscape management here requires a higher standard of responsiveness. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and a network of vetted local crews to keep your La Jolla, Mission Valley, or Sorrento Valley property looking its best — always.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in La Jolla",
+      "seasonalServicesBody": "Year-round readiness for San Diego's unique conditions — drought-smart irrigation, Santa Ana wind debris cleanup, coastal salt-spray management, and monthly quality control checks every season.",
+      "deservesCtaImage": "/assets/cta-bg-lajolla.jpg",
+      "deservesCtaImageAlt": "Immaculate commercial landscape maintained by ManageMowed in the La Jolla area",
+      "deservesCtaBody": "Join the San Diego-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-lajolla.jpg",
+      "areasBgImageAlt": "Aerial view of La Jolla coastline and greater San Diego at dusk",
+      "areasHeadline": "Greater San Diego Service Area",
+      "areasSubtitle": "From the Village to Mission Valley, Sorrento Mesa to the 56 Corridor — ManageMowed has greater San Diego covered.",
+      "areaGroups": [
+        { "icon": "location_city", "name": "La Jolla Core",         "items": ["La Jolla Village", "La Jolla Shores", "Bird Rock", "Torrey Pines", "UCSD / Scripps Research"] },
+        { "icon": "business",      "name": "UTC / University City", "items": ["University Towne Centre", "University City", "Westfield UTC", "Rose Canyon", "Miramar Road"] },
+        { "icon": "science",       "name": "Sorrento Valley",       "items": ["Sorrento Valley", "Sorrento Mesa", "Scripps Ranch", "Mira Mesa", "Rancho Bernardo"] },
+        { "icon": "storefront",    "name": "Mission Valley",        "items": ["Mission Valley", "Mission Hills", "Fashion Valley", "Old Town", "Kearny Mesa"] },
+        { "icon": "waves",         "name": "Coastal Corridor",      "items": ["Carmel Valley", "Del Mar", "Solana Beach", "Pacific Beach", "Ocean Beach"] },
+        { "icon": "north",         "name": "North County",          "items": ["Encinitas", "Carlsbad", "Vista", "San Marcos", "Escondido"] }
+      ],
+      "faqWeatherQuestion": "How do you handle Santa Ana winds and drought conditions?",
+      "faqWeatherAnswer": "Santa Ana events can turn a pristine property into a debris field in hours. Our crews mobilize quickly for post-wind cleanups — palm fronds, down branches, irrigation checks — so your property looks right when business opens. On drought compliance, your Account Manager stays current on SDCWA water restrictions and proactively adjusts irrigation schedules to keep you compliant and your landscape healthy.",
+      "footerDescription": "Professional commercial landscape management for La Jolla, Mission Valley, UTC, and greater San Diego. Member of the National Association of Landscape Professionals.",
+      "footerCity": "La Jolla, CA",
+      "trustItemAccountManagers": "Local San Diego Account Managers",
+      "phonePlaceholder": "(858) 555-0123",
+      "ogImage": "/assets/hero-lajolla.jpg",
+      "areaServed": ["La Jolla", "San Diego", "Mission Valley", "UTC", "Sorrento Valley", "Carmel Valley", "Del Mar", "Kearny Mesa", "Mira Mesa", "Pacific Beach", "Scripps Ranch", "Encinitas"],
+      "contact": {
+        "name": "Grant",
+        "title": "Account Manager",
+        "phone": "(844) 535-0505",
+        "phoneRaw": "8445350505",
+        "email": "info@managemowed.com",
+        "website": "www.managemowedlajolla.com",
+        "websiteUrl": "https://www.managemowedlajolla.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY_LAJOLLA",
+        "fromEmail": "ManageMowed La Jolla <leads@managemowedlajolla.com>",
+        "notificationEmails": [
+          "info@managemowed.com"
+        ]
+      }
+    }
   }
 }
