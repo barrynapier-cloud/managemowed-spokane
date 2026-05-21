@@ -50,6 +50,12 @@
       "footerCity": "Spokane, WA",
       "trustItemAccountManagers": "Local Spokane Account Managers",
       "phonePlaceholder": "(509) 555-0123",
+      "seasonalServiceItems": [
+        "24/7 snow plowing &amp; removal",
+        "De-icing &amp; salt application",
+        "Fall leaf removal programs",
+        "Spring renovation &amp; aeration"
+      ],
       "ogImage": "/assets/hero.png",
       "areaServed": ["Spokane", "Spokane Valley", "Liberty Lake", "Coeur d'Alene", "Post Falls", "Cheney", "Airway Heights", "Mead", "Pullman"],
       "contact": {
@@ -121,6 +127,12 @@
       "footerCity": "La Jolla, CA",
       "trustItemAccountManagers": "Local San Diego Account Managers",
       "phonePlaceholder": "(619) 555-0123",
+      "seasonalServiceItems": [
+        "Santa Ana wind cleanup &amp; debris removal",
+        "Drought-smart irrigation adjustments",
+        "Fall &amp; winter storm response",
+        "Spring renovation &amp; color refresh"
+      ],
       "ogImage": "/assets/hero-lajolla.jpg",
       "areaServed": ["La Jolla", "San Diego", "Mission Valley", "UTC", "Sorrento Valley", "Carmel Valley", "Del Mar", "Kearny Mesa", "Mira Mesa", "Pacific Beach", "Scripps Ranch", "Encinitas"],
       "contact": {

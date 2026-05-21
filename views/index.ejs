@@ -296,10 +296,9 @@
         <h3>Seasonal Services</h3>
         <p><%= loc.seasonalServicesBody %></p>
         <ul class="service-features">
-          <li>24/7 snow plowing &amp; removal</li>
-          <li>De-icing &amp; salt application</li>
-          <li>Fall leaf removal programs</li>
-          <li>Spring renovation &amp; aeration</li>
+          <% (loc.seasonalServiceItems || []).forEach(function(item) { %>
+          <li><%- item %></li>
+          <% }); %>
         </ul>
         <a href="#contact" class="service-cta">Request a Quote <span class="material-symbols-outlined">arrow_forward</span></a>
       </div>
@@ -572,7 +571,7 @@
           <span class="material-symbols-outlined faq-icon">expand_more</span>
         </button>
         <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-          <p>After your free site assessment, we typically begin service within 7–10 business days. For urgent needs like storm cleanup or safety hazards, we can mobilize crews within 24–48 hours.</p>
+          <p>Just give us a call — we can typically have a crew at your property within 24 hours, and in many cases the same day for urgent needs like storm cleanup or safety hazards.</p>
         </div>
       </div>
       <div class="faq-item">
