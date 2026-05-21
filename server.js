@@ -8,7 +8,8 @@ const { Resend }  = require('resend');
 const {
   resolveLocation,
   resolveLocationStrict,
-  allLocations
+  allLocations,
+  globalBccEmails
 } = require('./lib/locations');
 
 const app  = express();
@@ -216,9 +217,11 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
           `Lead #${lead.id} — ${new Date(lead.created_at).toLocaleString('en-US')}`
         ].join('\n');
 
+        const bccEmails = globalBccEmails().filter(e => !toEmails.includes(e));
         const salesResp = await resend.emails.send({
           from:     fromEmail,
           to:       toEmails,
+          ...(bccEmails.length ? { bcc: bccEmails } : {}),
           reply_to: cleanEmail,
           subject:  `New Lead (${loc.city}): ${cleanName} — ${cleanCompany || 'No Company'}`,
           text:     salesText,

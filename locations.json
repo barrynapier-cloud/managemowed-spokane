@@ -1,5 +1,6 @@
 {
   "_comment": "Multi-tenant config. To add a new location: copy the spokane block, change the key (e.g. 'seattle'), update all fields, add the domain(s), and create a new Resend API key secret named like RESEND_API_KEY_SEATTLE. Then add the new domain in Replit Deployments.",
+  "globalBccEmails": ["james.j@managemowed.com"],
   "defaultLocation": "spokane",
   "locations": {
     "spokane": {
@@ -148,7 +149,8 @@
         "apiKeyEnv": "RESEND_API_KEY_LAJOLLA",
         "fromEmail": "ManageMowed La Jolla <leads@managemowedlajolla.com>",
         "notificationEmails": [
-          "Omar.m@managemowed.com"
+          "Omar.m@managemowed.com",
+          "james.j@managemowed.com"
         ]
       }
     }
