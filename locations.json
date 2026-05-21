@@ -120,15 +120,15 @@
       "footerDescription": "Professional commercial landscape management for La Jolla, Mission Valley, UTC, and greater San Diego. Member of the National Association of Landscape Professionals.",
       "footerCity": "La Jolla, CA",
       "trustItemAccountManagers": "Local San Diego Account Managers",
-      "phonePlaceholder": "(858) 555-0123",
+      "phonePlaceholder": "(619) 555-0123",
       "ogImage": "/assets/hero-lajolla.jpg",
       "areaServed": ["La Jolla", "San Diego", "Mission Valley", "UTC", "Sorrento Valley", "Carmel Valley", "Del Mar", "Kearny Mesa", "Mira Mesa", "Pacific Beach", "Scripps Ranch", "Encinitas"],
       "contact": {
-        "name": "Grant",
+        "name": "Omar Meza",
         "title": "Account Manager",
-        "phone": "(844) 535-0505",
-        "phoneRaw": "8445350505",
-        "email": "info@managemowed.com",
+        "phone": "(619) 323-4582",
+        "phoneRaw": "6193234582",
+        "email": "Omar.m@managemowed.com",
         "website": "www.managemowedlajolla.com",
         "websiteUrl": "https://www.managemowedlajolla.com"
       },
@@ -136,7 +136,7 @@
         "apiKeyEnv": "RESEND_API_KEY_LAJOLLA",
         "fromEmail": "ManageMowed La Jolla <leads@managemowedlajolla.com>",
         "notificationEmails": [
-          "info@managemowed.com"
+          "Omar.m@managemowed.com"
         ]
       }
     }
