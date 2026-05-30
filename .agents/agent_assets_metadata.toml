@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "0N30pUiBradYrSdzNgwfA"
+uri = "file://VA-NEW-LOCATION-GUIDE.md"
+type = "text"
+title = "VA Training Guide — Adding a New Location"
