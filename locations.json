@@ -212,11 +212,11 @@
       "ogImage": "/assets/hero-spartanburg.jpg",
       "areaServed": ["Spartanburg", "Greer", "Duncan", "Greenville", "Boiling Springs", "Gaffney", "Inman", "Landrum", "Moore", "Woodruff", "Mauldin", "Simpsonville"],
       "contact": {
-        "name": "TBD",
+        "name": "Spartanburg Account Manager",
         "title": "Account Manager",
         "phone": "(864) 555-0100",
         "phoneRaw": "8645550100",
-        "email": "TBD@managemowed.com",
+        "email": "spartanburg@managemowed.com",
         "website": "www.managemowedspartanburg.com",
         "websiteUrl": "https://www.managemowedspartanburg.com"
       },
@@ -224,7 +224,7 @@
         "apiKeyEnv": "RESEND_API_KEY_SPARTANBURG",
         "fromEmail": "ManageMowed Spartanburg <leads@managemowedspartanburg.com>",
         "notificationEmails": [
-          "TBD@managemowed.com"
+          "james.j@managemowed.com"
         ]
       }
     }
