@@ -154,5 +154,79 @@
         ]
       }
     }
+    ,
+    "spartanburg": {
+      "domains": ["managemowedspartanburg.com", "www.managemowedspartanburg.com"],
+      "city": "Spartanburg",
+      "cityPossessive": "Spartanburg's",
+      "state": "SC",
+      "regionLong": "greater Spartanburg area",
+      "regionShort": "Spartanburg area",
+      "areaAdjective": "Spartanburg-area",
+      "pageTitle": "ManageMowed Spartanburg | Commercial Landscape Management for Upstate SC",
+      "metaDescription": "Professional commercial landscape management for Spartanburg, Greenville, Greer, Duncan, and Upstate South Carolina. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Spartanburg | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across Upstate South Carolina. Year-round service, storm response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-spartanburg.jpg",
+      "heroImageAlt": "Aerial view of a beautifully maintained commercial property in the Spartanburg area",
+      "heroHeadlinePrefix": "Spartanburg's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, industrial campuses, and commercial properties across Upstate South Carolina. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-spartanburg.jpg",
+      "weatherImageAlt": "ManageMowed crew maintaining a Spartanburg commercial property after a summer storm",
+      "weatherHeadline": "Upstate SC Never Gets an Off-Season.",
+      "weatherSubhead": "Neither Do We.",
+      "weatherBody": "Spartanburg's heat, humidity, and year-round growing season mean your commercial property needs consistent, professional maintenance every single month. Summer thunderstorms drop debris overnight. High humidity turns a neglected lawn into a fungal problem fast. Winter ice events arrive with little warning. ManageMowed crews are built for all of it — showing up on schedule, communicating proactively, and keeping your property looking right no matter what Upstate South Carolina throws at it.",
+      "aboutImage": "/assets/about-spartanburg.jpg",
+      "aboutImageAlt": "ManageMowed crew maintaining a commercial property in the Spartanburg area",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Upstate South Carolina's climate is relentless — plants grow twelve months a year, summer storms can undo a week of work overnight, and humidity demands a higher standard of turf management. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who know exactly what Spartanburg-area properties need in every season. One call, one team, one consistent result.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Spartanburg",
+      "seasonalServicesBody": "Year-round readiness for Upstate SC's climate — summer storm cleanups, humidity and fungal turf programs, winter ice response, and spring renovation to keep your property looking its best every season.",
+      "deservesCtaImage": "/assets/cta-bg-spartanburg.jpg",
+      "deservesCtaImageAlt": "Pristine commercial landscape maintained by ManageMowed in the Spartanburg area",
+      "deservesCtaBody": "Join the Spartanburg-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-spartanburg.jpg",
+      "areasBgImageAlt": "Aerial view of downtown Spartanburg and the Upstate South Carolina foothills at dusk",
+      "areasHeadline": "Greater Spartanburg Service Area",
+      "areasSubtitle": "From Downtown Spartanburg to the I-85 Corridor, Greenville County to Cherokee County — ManageMowed has Upstate South Carolina covered.",
+      "areaGroups": [
+        { "icon": "location_city", "name": "Spartanburg Core",       "items": ["Downtown Spartanburg", "Converse Heights", "Arcadia", "Drayton", "Saxon"] },
+        { "icon": "business",      "name": "I-85 Corridor",          "items": ["Greer", "Duncan", "Lyman", "Wellford", "Inman"] },
+        { "icon": "storefront",    "name": "Greenville Area",        "items": ["Greenville", "Mauldin", "Simpsonville", "Taylors", "Fountain Inn"] },
+        { "icon": "north",         "name": "Boiling Springs / Cherokee", "items": ["Boiling Springs", "Gaffney", "Chesnee", "Cowpens", "Blacksburg"] },
+        { "icon": "forest",        "name": "Upstate Suburbs",        "items": ["Landrum", "Campobello", "Moore", "Roebuck", "Woodruff"] },
+        { "icon": "south",         "name": "Union / Laurens County", "items": ["Union", "Jonesville", "Laurens", "Clinton", "Pacolet"] }
+      ],
+      "faqWeatherQuestion": "How do you handle Spartanburg's heat, humidity, and summer storms?",
+      "faqWeatherAnswer": "Upstate SC is a year-round operation — there's no slow season here. Our crews are built for heat and humidity, and we respond quickly after summer thunderstorms to clear debris and assess any turf damage. For winter ice events, your Account Manager will communicate proactively so your property is handled before your tenants or customers arrive in the morning.",
+      "footerDescription": "Professional commercial landscape management for Spartanburg, Greenville, and Upstate South Carolina. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Spartanburg, SC",
+      "trustItemAccountManagers": "Local Spartanburg Account Managers",
+      "phonePlaceholder": "(864) 555-0123",
+      "seasonalServiceItems": [
+        "Summer storm cleanup &amp; debris removal",
+        "Humidity &amp; fungal turf management",
+        "Winter ice &amp; frost response",
+        "Spring renovation &amp; color programs"
+      ],
+      "ogImage": "/assets/hero-spartanburg.jpg",
+      "areaServed": ["Spartanburg", "Greer", "Duncan", "Greenville", "Boiling Springs", "Gaffney", "Inman", "Landrum", "Moore", "Woodruff", "Mauldin", "Simpsonville"],
+      "contact": {
+        "name": "TBD",
+        "title": "Account Manager",
+        "phone": "(864) 555-0100",
+        "phoneRaw": "8645550100",
+        "email": "TBD@managemowed.com",
+        "website": "www.managemowedspartanburg.com",
+        "websiteUrl": "https://www.managemowedspartanburg.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY_SPARTANBURG",
+        "fromEmail": "ManageMowed Spartanburg <leads@managemowedspartanburg.com>",
+        "notificationEmails": [
+          "TBD@managemowed.com"
+        ]
+      }
+    }
   }
 }
