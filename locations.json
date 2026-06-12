@@ -603,6 +603,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "boulder": {
+      "domains": [
+        "managemowedboulder.com",
+        "www.managemowedboulder.com"
+      ],
+      "city": "Boulder",
+      "cityPossessive": "Boulder's",
+      "state": "CO",
+      "regionLong": "greater Boulder area",
+      "regionShort": "Boulder area",
+      "areaAdjective": "Boulder-area",
+      "pageTitle": "ManageMowed Boulder | Commercial Landscape Management for Boulder County",
+      "metaDescription": "Professional commercial landscape management for Boulder, Gunbarrel, Louisville, Lafayette, Superior, Longmont and all of Boulder County. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Boulder | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across Boulder County. Water-smart programs, hail and storm response, 24/7 snow and ice service, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-boulder.jpg",
+      "heroImageAlt": "Aerial view of downtown Boulder commercial properties with the Flatirons rising in the background",
+      "heroHeadlinePrefix": "Boulder's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, apartments, retail centers, and commercial properties across Boulder County. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-boulder.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and clearing turf at a Boulder open-air retail center with the foothills behind",
+      "weatherHeadline": "Boulder Weather Changes by the Hour.",
+      "weatherSubhead": "Your Landscaper Shouldn't.",
+      "weatherBody": "At 5,300 feet on the Front Range, your property can see summer hail, a chinook windstorm, and a foot of wet spring snow in the same quarter. ManageMowed crews are built for it - post-storm debris cleanup, 24/7 winter snow and ice monitoring, water-smart irrigation adjustments through the dry months, and a local Account Manager who communicates before, during, and after every weather event.",
+      "aboutImage": "/assets/about-boulder.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a commercial planting bed near downtown Boulder's red-brick storefronts",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Boulder's high-altitude climate is demanding. Intense sun and a semi-arid summer stress cool-season turf, hail and chinook winds can undo a manicured property overnight, and heavy spring snows snap branches just as everything greens up. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who keep Kentucky bluegrass and tall fescue properties healthy within Boulder's watering guidelines - from Pearl Street to Gunbarrel to the US-36 corridor.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Boulder",
+      "seasonalServicesBody": "Year-round readiness for Front Range conditions - hail and wind debris cleanup, water-smart irrigation management, fall leaf removal, and 24/7 snow plowing and de-icing through Boulder's heaviest months.",
+      "deservesCtaImage": "/assets/cta-bg-boulder.jpg",
+      "deservesCtaImageAlt": "Pristine commercial office exterior maintained by ManageMowed with golden Boulder foothills in the distance",
+      "deservesCtaBody": "Join the Boulder-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-boulder.jpg",
+      "areasBgImageAlt": "View across the Boulder Valley toward the Flatirons from a commercial corridor along US-36",
+      "areasHeadline": "Boulder County Service Area",
+      "areasSubtitle": "From downtown Boulder to Gunbarrel, the US-36 corridor to Longmont - ManageMowed has Boulder County covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Boulder Core",
+          "items": [
+            "Downtown Boulder",
+            "Pearl Street District",
+            "University Hill",
+            "Twenty Ninth Street",
+            "North Boulder"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "East Boulder & Gunbarrel",
+          "items": [
+            "Gunbarrel",
+            "Flatiron Park",
+            "Boulder Junction",
+            "East Arapahoe Corridor",
+            "Airport Road"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "US-36 Corridor",
+          "items": [
+            "Superior",
+            "Louisville",
+            "Broomfield",
+            "Interlocken",
+            "Flatiron Crossing"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "East County",
+          "items": [
+            "Lafayette",
+            "Erie",
+            "Dacono",
+            "Frederick",
+            "Firestone"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Longmont & North County",
+          "items": [
+            "Longmont",
+            "Niwot",
+            "Hygiene",
+            "Lyons",
+            "Mead"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Foothills Communities",
+          "items": [
+            "Eldorado Springs",
+            "Nederland",
+            "Gold Hill",
+            "Jamestown",
+            "Pinebrook Hills"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Boulder's hail, chinook winds, and heavy spring snows?",
+      "faqWeatherAnswer": "Front Range weather is fast and extreme, and our programs are built around it. After summer hail or a winter chinook windstorm, crews mobilize to clear branches and debris so your property looks right when business opens. During snow events - including Boulder's heavy, wet March storms - we provide 24/7 monitoring, plowing, and de-icing. Through the dry season, we manage irrigation to keep cool-season bluegrass and fescue turf healthy within local watering guidelines, and your Account Manager communicates schedule adjustments in advance so you're never left wondering.",
+      "footerDescription": "Professional commercial landscape management for Boulder, Gunbarrel, Louisville, Lafayette, and all of Boulder County. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Boulder, CO",
+      "trustItemAccountManagers": "Local Boulder Account Managers",
+      "phonePlaceholder": "(303) 555-0123",
+      "seasonalServiceItems": [
+        "24/7 snow plowing &amp; de-icing",
+        "Hail &amp; wind debris cleanup",
+        "Water-smart irrigation management",
+        "Fall leaf removal &amp; spring aeration"
+      ],
+      "ogImage": "/assets/hero-boulder.jpg",
+      "areaServed": [
+        "Boulder",
+        "Gunbarrel",
+        "Louisville",
+        "Lafayette",
+        "Superior",
+        "Broomfield",
+        "Longmont",
+        "Niwot",
+        "Erie"
+      ],
+      "contact": {
+        "name": "Alex McCoy",
+        "title": "Account Manager",
+        "phone": "(720) 678-3418",
+        "phoneRaw": "7206783418",
+        "email": "Alex.m@managemowed.com",
+        "website": "www.managemowedboulder.com",
+        "websiteUrl": "https://www.managemowedboulder.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Boulder <leads@managemowedboulder.com>",
+        "notificationEmails": [
+          "Alex.m@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
