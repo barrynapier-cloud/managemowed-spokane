@@ -751,6 +751,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "coloradosprings": {
+      "domains": [
+        "managemowedcoloradosprings.com",
+        "www.managemowedcoloradosprings.com"
+      ],
+      "city": "Colorado Springs",
+      "cityPossessive": "Colorado Springs'",
+      "state": "CO",
+      "regionLong": "greater Colorado Springs area",
+      "regionShort": "Pikes Peak region",
+      "areaAdjective": "Colorado Springs-area",
+      "pageTitle": "ManageMowed Colorado Springs | Commercial Landscape Management for the Pikes Peak Region",
+      "metaDescription": "Professional commercial landscape management for Colorado Springs, Monument, Manitou Springs, Fountain and the Pikes Peak region. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Colorado Springs | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across the Pikes Peak region. Hail and storm response, water-wise irrigation, 24/7 snow and ice service, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-coloradosprings.jpg",
+      "heroImageAlt": "Snow-capped Pikes Peak rising behind a beautifully maintained commercial property in Colorado Springs",
+      "heroHeadlinePrefix": "Colorado Springs' Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, shopping centers, HOAs, and commercial properties across the greater Colorado Springs area. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-coloradosprings.jpg",
+      "weatherImageAlt": "ManageMowed crew servicing a Colorado Springs commercial retail property with the Front Range in the background",
+      "weatherHeadline": "Colorado Springs Weather Changes by the Hour.",
+      "weatherSubhead": "Your Landscaper Shouldn't.",
+      "weatherBody": "At 6,000 feet, your property gets it all - summer hailstorms that shred turf and strip trees in minutes, late spring snows, chinook winds, intense high-altitude sun, and a semi-arid climate that punishes neglected irrigation. ManageMowed crews show up on schedule through all of it, with rapid hail and storm cleanup, 24/7 winter snow and ice response, and a local Account Manager who communicates schedule adjustments before you have to ask.",
+      "aboutImage": "/assets/about-coloradosprings.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a commercial planting bed with Garden of the Gods red rock formations in the distance",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Commercial landscapes in the Pikes Peak region face conditions most markets never see - alkaline soils, intense UV at elevation, hail that can undo a season of work in one afternoon, and watering restrictions that demand smart irrigation management. ManageMowed pairs a dedicated local Account Manager with vetted local crews, monthly quality control walkthroughs, and seasonal recommendations brought to your property well in advance, so your Colorado Springs, Monument, or Fountain property is protected and presentable year-round.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Colorado Springs",
+      "seasonalServicesBody": "Year-round readiness for the Front Range - hail and storm debris cleanup, water-wise irrigation programs for dry summers, fall leaf removal, and 24/7 snow plowing and de-icing when winter rolls off the mountains.",
+      "deservesCtaImage": "/assets/cta-bg-coloradosprings.jpg",
+      "deservesCtaImageAlt": "Pristine commercial landscape maintained by ManageMowed with Cheyenne Mountain in the background",
+      "deservesCtaBody": "Join the Colorado Springs-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-coloradosprings.jpg",
+      "areasBgImageAlt": "Elevated view of downtown Colorado Springs and Tejon Street with the Rocky Mountain Front Range beyond",
+      "areasHeadline": "Pikes Peak Region Service Area",
+      "areasSubtitle": "From Monument and the Tri-Lakes to Fountain, Manitou Springs to the Powers Corridor - ManageMowed has the Pikes Peak region covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Colorado Springs Core",
+          "items": [
+            "Downtown / Tejon Street",
+            "Old North End",
+            "Knob Hill",
+            "Ivywild",
+            "Patty Jewett"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Powers Corridor",
+          "items": [
+            "Powers Boulevard",
+            "First & Main Town Center",
+            "Stetson Hills",
+            "Cimarron Hills",
+            "Marksheffel"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Tri-Lakes & Black Forest",
+          "items": [
+            "Monument",
+            "Palmer Lake",
+            "Woodmoor",
+            "Gleneagle",
+            "Black Forest"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Westside & Manitou",
+          "items": [
+            "Manitou Springs",
+            "Old Colorado City",
+            "Garden of the Gods Road",
+            "Pleasant Valley",
+            "Rockrimmon"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "South Springs & Fountain",
+          "items": [
+            "Fountain",
+            "Security-Widefield",
+            "Broadmoor",
+            "Cheyenne Mountain",
+            "Stratmoor"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "North Springs",
+          "items": [
+            "Briargate",
+            "InterQuest",
+            "Northgate",
+            "Flying Horse",
+            "University Village"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Colorado Springs hail, late snows, and watering restrictions?",
+      "faqWeatherAnswer": "The Pikes Peak region is one of the most hail-prone metros in the country, so our crews mobilize quickly after storms to clear shredded leaves, downed limbs, and bed debris, and to assess turf and irrigation damage. Our cool-season turf programs are built for 6,000 feet - taller summer mowing heights to protect Kentucky bluegrass and tall fescue from high-altitude sun, aeration for compacted alkaline soils, and water-wise irrigation scheduling that keeps you compliant with Colorado Springs Utilities watering rules. When snow arrives, even in April or May, we provide 24/7 monitoring, plowing, and de-icing with proactive communication from your Account Manager.",
+      "footerDescription": "Professional commercial landscape management for Colorado Springs, Monument, Manitou Springs, Fountain and the Pikes Peak region. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Colorado Springs, CO",
+      "trustItemAccountManagers": "Local Colorado Springs Account Managers",
+      "phonePlaceholder": "(719) 555-0123",
+      "seasonalServiceItems": [
+        "Hail &amp; storm debris cleanup",
+        "24/7 snow plowing &amp; de-icing",
+        "Water-wise irrigation &amp; drought programs",
+        "Fall leaf removal &amp; spring aeration"
+      ],
+      "ogImage": "/assets/hero-coloradosprings.jpg",
+      "areaServed": [
+        "Colorado Springs",
+        "Monument",
+        "Manitou Springs",
+        "Fountain",
+        "Briargate",
+        "Security-Widefield",
+        "Black Forest",
+        "Old Colorado City",
+        "Palmer Lake"
+      ],
+      "contact": {
+        "name": "Kirk Kucin",
+        "title": "Owner / Operator",
+        "phone": "(719) 299-2577",
+        "phoneRaw": "7192992577",
+        "email": "Kirk.k@managemowed.com",
+        "website": "www.managemowedcoloradosprings.com",
+        "websiteUrl": "https://www.managemowedcoloradosprings.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Colorado Springs <leads@managemowedcoloradosprings.com>",
+        "notificationEmails": [
+          "Kirk.k@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
