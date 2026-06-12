@@ -1639,6 +1639,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "nerichmond": {
+      "domains": [
+        "managemowednerichmond.com",
+        "www.managemowednerichmond.com"
+      ],
+      "city": "NE Richmond",
+      "cityPossessive": "NE Richmond's",
+      "state": "VA",
+      "regionLong": "northeast Richmond area",
+      "regionShort": "NE Richmond area",
+      "areaAdjective": "Richmond-area",
+      "pageTitle": "ManageMowed NE Richmond | Commercial Landscape Management for the Northeast Richmond Area",
+      "metaDescription": "Professional commercial landscape management for NE Richmond, Mechanicsville, Glen Allen, Ashland, and East Henrico. Year-round transition-zone turf programs and free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed NE Richmond | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across northeast Richmond, Hanover, and East Henrico. A dedicated local Account Manager and crews built for Virginia's demanding transition-zone climate. Get your free site assessment today.",
+      "heroImage": "/assets/hero-nerichmond.jpg",
+      "heroImageAlt": "Elevated view of the downtown Richmond skyline across the James River with a pristine commercial property lawn in the foreground",
+      "heroHeadlinePrefix": "NE Richmond's Premier",
+      "heroSubtitle": "Full-service grounds management for shopping centers, apartment complexes, HOAs, banks, and commercial properties across northeast Richmond, Hanover, and East Henrico. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-nerichmond.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and blowing turf at a brick retail center along a Mechanicsville commercial corridor",
+      "weatherHeadline": "Richmond Weather Never Takes a Season Off.",
+      "weatherSubhead": "Neither Do We.",
+      "weatherBody": "Central Virginia sits in the turf transition zone, and it shows. Humid 90-degree summers push tall fescue toward brown patch, July thunderstorms and tropical remnants drop limbs overnight, October buries parking lots in oak and maple leaves, and a January ice storm can shut a property down by sunrise. ManageMowed crews are built for all of it - showing up on schedule, communicating proactively, and keeping your property looking right in every season.",
+      "aboutImage": "/assets/about-nerichmond.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a dark mulch bed with historic Richmond brick architecture in the background",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Northeast Richmond's climate demands more than a mow-and-go crew. Heavy red clay soils compact under summer heat, fescue needs disease management and fall aeration to survive Virginia's transition zone, and storm debris can undo a week of work overnight. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who know exactly what Hanover, East Henrico, and Richmond-area properties need in every season.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in NE Richmond",
+      "seasonalServicesBody": "Year-round readiness for Central Virginia's transition-zone climate - summer storm cleanup, fall leaf and aeration programs, winter ice response, and spring renovation to keep your property looking its best every season.",
+      "deservesCtaImage": "/assets/cta-bg-nerichmond.jpg",
+      "deservesCtaImageAlt": "Polished commercial office exterior with manicured landscaping in the Glen Allen area at golden hour",
+      "deservesCtaBody": "Join the Richmond-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-nerichmond.jpg",
+      "areasBgImageAlt": "Historic railside commercial street in Ashland, Virginia with tidy storefront landscaping and soft morning light",
+      "areasHeadline": "Northeast Richmond Service Area",
+      "areasSubtitle": "From Church Hill to Mechanicsville, Glen Allen to Ashland, and across East Henrico - ManageMowed has northeast Richmond covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Richmond East End",
+          "items": [
+            "Church Hill",
+            "Shockoe Bottom",
+            "Union Hill",
+            "Fulton",
+            "Rocketts Landing"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Mechanicsville / Hanover",
+          "items": [
+            "Mechanicsville",
+            "Atlee",
+            "Cold Harbor",
+            "Studley",
+            "Old Church"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Northside & Lakeside",
+          "items": [
+            "Lakeside",
+            "Bellevue",
+            "Ginter Park",
+            "Chamberlayne",
+            "Highland Park"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Glen Allen / Brook Road",
+          "items": [
+            "Glen Allen",
+            "Innsbrook",
+            "Brook Road Corridor",
+            "Virginia Center",
+            "Wyndham"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "East Henrico",
+          "items": [
+            "Highland Springs",
+            "Sandston",
+            "Varina",
+            "Montrose",
+            "Seven Pines"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Ashland & North Hanover",
+          "items": [
+            "Ashland",
+            "Hanover Courthouse",
+            "Doswell",
+            "Montpelier",
+            "Beaverdam"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Richmond's heat, humidity, and transition-zone turf?",
+      "faqWeatherAnswer": "Central Virginia's transition zone is hard on turf - humid summers put tall fescue under brown patch pressure, and our red clay soils compact and drain poorly without regular aeration. Our crews manage mowing heights and turf health through the heat, respond quickly after summer thunderstorms and tropical remnants to clear debris, run aggressive leaf programs through Richmond's heavy fall drop, and mobilize for the occasional winter ice event so your property is safe and presentable when business opens.",
+      "footerDescription": "Professional commercial landscape management for NE Richmond, Mechanicsville, Glen Allen, Ashland, and East Henrico. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Richmond, VA",
+      "trustItemAccountManagers": "Local Richmond Account Managers",
+      "phonePlaceholder": "(804) 555-0123",
+      "seasonalServiceItems": [
+        "Summer storm &amp; debris cleanup",
+        "Fall leaf removal &amp; aeration programs",
+        "Winter ice &amp; frost response",
+        "Spring renovation, mulch &amp; seasonal color"
+      ],
+      "ogImage": "/assets/hero-nerichmond.jpg",
+      "areaServed": [
+        "NE Richmond",
+        "Mechanicsville",
+        "Glen Allen",
+        "Ashland",
+        "Highland Springs",
+        "Sandston",
+        "Varina",
+        "Lakeside",
+        "Church Hill"
+      ],
+      "contact": {
+        "name": "Matt Thomas",
+        "title": "Account Manager",
+        "phone": "(804) 500-7669",
+        "phoneRaw": "8045007669",
+        "email": "Matt.t@managemowed.com",
+        "website": "www.managemowednerichmond.com",
+        "websiteUrl": "https://www.managemowednerichmond.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed NE Richmond <leads@managemowednerichmond.com>",
+        "notificationEmails": [
+          "Matt.t@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
