@@ -1195,6 +1195,153 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "plymouth": {
+      "domains": [
+        "managemowedplymouth.com",
+        "www.managemowedplymouth.com"
+      ],
+      "city": "Plymouth",
+      "cityPossessive": "Plymouth's",
+      "state": "MN",
+      "regionLong": "Twin Cities west metro",
+      "regionShort": "west metro",
+      "areaAdjective": "west-metro",
+      "pageTitle": "ManageMowed Plymouth | Commercial Landscape Management for the Twin Cities West Metro",
+      "metaDescription": "Professional commercial landscape management for Plymouth, Maple Grove, Minnetonka, Wayzata, Golden Valley and the Twin Cities west metro. Year-round service with 24/7 snow response. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Plymouth | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across the Twin Cities west metro. Four-season programs, 24/7 snow and ice response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-plymouth.jpg",
+      "heroImageAlt": "Aerial view of a pristine commercial campus on the wooded shoreline of Medicine Lake in Plymouth, Minnesota",
+      "heroHeadlinePrefix": "Plymouth's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, corporate campuses, retail centers, and HOAs across the Twin Cities west metro. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-plymouth.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and clearing walkways at a Highway 55 commercial property in Plymouth",
+      "weatherHeadline": "Minnesota Weather Plays for Keeps.",
+      "weatherSubhead": "So Does Your Landscape Team.",
+      "weatherBody": "Plymouth properties take everything zone 4 Minnesota can deliver: fifty-plus inches of snow, ice and salt on every walkway, snow mold emerging at spring melt, summer thunderstorms and hail dropping debris overnight, and August heat stressing bluegrass turf. ManageMowed crews show up on schedule through all of it - 24/7 winter monitoring, proactive storm response, and a local Account Manager who communicates before you have to ask.",
+      "aboutImage": "/assets/about-plymouth.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a commercial planting bed with fall maple color in Plymouth",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "The Twin Cities west metro demands true four-season landscape management. Cool-season turf needs spring renovation after months under snow, consistent mowing and irrigation oversight through the growing season, aggressive leaf programs under mature oaks and maples in fall, and reliable 24/7 snow and ice response all winter. Local owners Tom and Allison lead the Plymouth team with a dedicated Account Manager, monthly quality control walkthroughs, and vetted local crews - one call, one team, one consistent result all year.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Plymouth",
+      "seasonalServicesBody": "Year-round readiness for Minnesota's four hard seasons - 24/7 snow plowing and de-icing, spring snow mold recovery and turf renovation, summer storm cleanup, and fall leaf programs that keep your property sharp through every forecast.",
+      "deservesCtaImage": "/assets/cta-bg-plymouth.jpg",
+      "deservesCtaImageAlt": "Polished brick and glass commercial office exterior with manicured landscaping in the Plymouth area at golden hour",
+      "deservesCtaBody": "Join the west-metro commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-plymouth.jpg",
+      "areasBgImageAlt": "Elevated late-afternoon view of a west-metro office corridor with ponds, wetlands, and tree-lined parkways near I-494",
+      "areasHeadline": "Twin Cities West Metro Service Area",
+      "areasSubtitle": "From Medicine Lake to Maple Grove, the Highway 55 corridor to Lake Minnetonka - ManageMowed has the Twin Cities west metro covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Plymouth Core",
+          "items": [
+            "Plymouth City Center",
+            "Medicine Lake",
+            "Plymouth Creek",
+            "Bass Lake area",
+            "Vicksburg Lane corridor"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Hwy 55 / I-494 Corridor",
+          "items": [
+            "Highway 55 corridor",
+            "I-494 business parks",
+            "Northwest Business Campus",
+            "Plymouth Station",
+            "Nathan Lane industrial area"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Medina & West",
+          "items": [
+            "Medina",
+            "Hamel",
+            "Corcoran",
+            "Loretto",
+            "Long Lake"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Lake Minnetonka Area",
+          "items": [
+            "Wayzata",
+            "Minnetonka",
+            "Orono",
+            "Minnetonka Beach",
+            "Deephaven"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Southwest Metro",
+          "items": [
+            "Golden Valley",
+            "St. Louis Park",
+            "Hopkins",
+            "Eden Prairie"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Northwest Suburbs",
+          "items": [
+            "Maple Grove",
+            "Brooklyn Park",
+            "New Hope",
+            "Crystal",
+            "Champlin"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Minnesota winters and west-metro weather?",
+      "faqWeatherAnswer": "Plymouth sits in USDA zone 4, and our programs are built for it. All winter we provide 24/7 snow and ice monitoring with proactive plowing and de-icing so your lots and walks are clear before business opens. At spring melt we address snow mold, salt-damaged turf edges, and plow repairs. Summer brings thunderstorms and occasional hail - crews mobilize quickly for debris cleanup - and we manage irrigation through August heat to keep bluegrass turf from going dormant. In fall, scheduled leaf removal under mature oaks and maples keeps turf healthy and storm drains clear. Your Account Manager communicates schedule adjustments in advance so you're never left wondering.",
+      "footerDescription": "Professional commercial landscape management for Plymouth, Maple Grove, Minnetonka, and the Twin Cities west metro. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Plymouth, MN",
+      "trustItemAccountManagers": "Local Plymouth Account Managers",
+      "phonePlaceholder": "(763) 555-0123",
+      "seasonalServiceItems": [
+        "24/7 snow plowing &amp; ice management",
+        "Spring cleanup &amp; snow mold recovery",
+        "Summer storm &amp; hail debris cleanup",
+        "Fall leaf removal &amp; turf renovation"
+      ],
+      "ogImage": "/assets/hero-plymouth.jpg",
+      "areaServed": [
+        "Plymouth",
+        "Maple Grove",
+        "Minnetonka",
+        "Wayzata",
+        "Golden Valley",
+        "Medina",
+        "New Hope",
+        "Crystal",
+        "St. Louis Park"
+      ],
+      "contact": {
+        "name": "Tom Bruckner",
+        "title": "Owner",
+        "phone": "(651) 300-1717",
+        "phoneRaw": "6513001717",
+        "email": "Tom.b@managemowed.com",
+        "website": "www.managemowedplymouth.com",
+        "websiteUrl": "https://www.managemowedplymouth.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Plymouth <leads@managemowedplymouth.com>",
+        "notificationEmails": [
+          "Tom.b@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
