@@ -1,10 +1,15 @@
 {
   "_comment": "Multi-tenant config. To add a new location: copy the spokane block, change the key (e.g. 'seattle'), update all fields, add the domain(s), and create a new Resend API key secret named like RESEND_API_KEY_SEATTLE. Then add the new domain in Replit Deployments.",
-  "globalBccEmails": ["james.j@managemowed.com"],
+  "globalBccEmails": [
+    "james.j@managemowed.com"
+  ],
   "defaultLocation": "spokane",
   "locations": {
     "spokane": {
-      "domains": ["managemowedspokane.com", "www.managemowedspokane.com"],
+      "domains": [
+        "managemowedspokane.com",
+        "www.managemowedspokane.com"
+      ],
       "city": "Spokane",
       "cityPossessive": "Spokane's",
       "state": "WA",
@@ -38,12 +43,72 @@
       "areasHeadline": "Greater Spokane Service Area",
       "areasSubtitle": "From the West Plains to North Idaho, the Palouse to North Spokane County — ManageMowed has the greater Spokane region covered.",
       "areaGroups": [
-        { "icon": "location_city", "name": "Spokane Metro",          "items": ["Downtown Spokane (HQ)", "South Hill", "North Side", "Hillyard", "Logan / Gonzaga"] },
-        { "icon": "business",      "name": "Spokane Valley",         "items": ["Spokane Valley", "Liberty Lake", "Greenacres", "Veradale", "Otis Orchards"] },
-        { "icon": "forest",        "name": "North Idaho",            "items": ["Coeur d'Alene", "Post Falls", "Hayden", "Rathdrum", "Athol"] },
-        { "icon": "west",          "name": "West Plains",            "items": ["Cheney", "Airway Heights", "Medical Lake", "Four Lakes", "Tyler"] },
-        { "icon": "south",         "name": "Palouse & South County", "items": ["Pullman", "Colfax", "Rosalia", "Tekoa", "Garfield"] },
-        { "icon": "north",         "name": "North Spokane County",   "items": ["Mead", "Colbert", "Deer Park", "Chattaroy", "Nine Mile Falls"] }
+        {
+          "icon": "location_city",
+          "name": "Spokane Metro",
+          "items": [
+            "Downtown Spokane (HQ)",
+            "South Hill",
+            "North Side",
+            "Hillyard",
+            "Logan / Gonzaga"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Spokane Valley",
+          "items": [
+            "Spokane Valley",
+            "Liberty Lake",
+            "Greenacres",
+            "Veradale",
+            "Otis Orchards"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "North Idaho",
+          "items": [
+            "Coeur d'Alene",
+            "Post Falls",
+            "Hayden",
+            "Rathdrum",
+            "Athol"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "West Plains",
+          "items": [
+            "Cheney",
+            "Airway Heights",
+            "Medical Lake",
+            "Four Lakes",
+            "Tyler"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Palouse & South County",
+          "items": [
+            "Pullman",
+            "Colfax",
+            "Rosalia",
+            "Tekoa",
+            "Garfield"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "North Spokane County",
+          "items": [
+            "Mead",
+            "Colbert",
+            "Deer Park",
+            "Chattaroy",
+            "Nine Mile Falls"
+          ]
+        }
       ],
       "faqWeatherQuestion": "How do you handle Spokane-area weather?",
       "faqWeatherAnswer": "Our crews are built for Spokane-area conditions. We operate in rain, wind, and cold. During ice and snow events, we provide 24/7 monitoring and proactive de-icing. Your Account Manager communicates schedule adjustments in advance so you're never left wondering.",
@@ -58,7 +123,17 @@
         "Spring renovation &amp; aeration"
       ],
       "ogImage": "/assets/hero.png",
-      "areaServed": ["Spokane", "Spokane Valley", "Liberty Lake", "Coeur d'Alene", "Post Falls", "Cheney", "Airway Heights", "Mead", "Pullman"],
+      "areaServed": [
+        "Spokane",
+        "Spokane Valley",
+        "Liberty Lake",
+        "Coeur d'Alene",
+        "Post Falls",
+        "Cheney",
+        "Airway Heights",
+        "Mead",
+        "Pullman"
+      ],
       "contact": {
         "name": "Cort Flynn",
         "title": "Account Manager",
@@ -78,10 +153,12 @@
           "barrynapier@gmail.com"
         ]
       }
-    }
-    ,
+    },
     "lajolla": {
-      "domains": ["managemowedlajolla.com", "www.managemowedlajolla.com"],
+      "domains": [
+        "managemowedlajolla.com",
+        "www.managemowedlajolla.com"
+      ],
       "city": "La Jolla",
       "cityPossessive": "La Jolla's",
       "state": "CA",
@@ -115,12 +192,72 @@
       "areasHeadline": "Greater San Diego Service Area",
       "areasSubtitle": "From the Village to Mission Valley, Sorrento Mesa to the 56 Corridor — ManageMowed has greater San Diego covered.",
       "areaGroups": [
-        { "icon": "location_city", "name": "La Jolla Core",         "items": ["La Jolla Village", "La Jolla Shores", "Bird Rock", "Torrey Pines", "UCSD / Scripps Research"] },
-        { "icon": "business",      "name": "UTC / University City", "items": ["University Towne Centre", "University City", "Westfield UTC", "Rose Canyon", "Miramar Road"] },
-        { "icon": "science",       "name": "Sorrento Valley",       "items": ["Sorrento Valley", "Sorrento Mesa", "Scripps Ranch", "Mira Mesa", "Rancho Bernardo"] },
-        { "icon": "storefront",    "name": "Mission Valley",        "items": ["Mission Valley", "Mission Hills", "Fashion Valley", "Old Town", "Kearny Mesa"] },
-        { "icon": "waves",         "name": "Coastal Corridor",      "items": ["Carmel Valley", "Del Mar", "Solana Beach", "Pacific Beach", "Ocean Beach"] },
-        { "icon": "north",         "name": "North County",          "items": ["Encinitas", "Carlsbad", "Vista", "San Marcos", "Escondido"] }
+        {
+          "icon": "location_city",
+          "name": "La Jolla Core",
+          "items": [
+            "La Jolla Village",
+            "La Jolla Shores",
+            "Bird Rock",
+            "Torrey Pines",
+            "UCSD / Scripps Research"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "UTC / University City",
+          "items": [
+            "University Towne Centre",
+            "University City",
+            "Westfield UTC",
+            "Rose Canyon",
+            "Miramar Road"
+          ]
+        },
+        {
+          "icon": "science",
+          "name": "Sorrento Valley",
+          "items": [
+            "Sorrento Valley",
+            "Sorrento Mesa",
+            "Scripps Ranch",
+            "Mira Mesa",
+            "Rancho Bernardo"
+          ]
+        },
+        {
+          "icon": "storefront",
+          "name": "Mission Valley",
+          "items": [
+            "Mission Valley",
+            "Mission Hills",
+            "Fashion Valley",
+            "Old Town",
+            "Kearny Mesa"
+          ]
+        },
+        {
+          "icon": "waves",
+          "name": "Coastal Corridor",
+          "items": [
+            "Carmel Valley",
+            "Del Mar",
+            "Solana Beach",
+            "Pacific Beach",
+            "Ocean Beach"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "North County",
+          "items": [
+            "Encinitas",
+            "Carlsbad",
+            "Vista",
+            "San Marcos",
+            "Escondido"
+          ]
+        }
       ],
       "faqWeatherQuestion": "How do you handle Santa Ana winds and drought conditions?",
       "faqWeatherAnswer": "Santa Ana events can turn a pristine property into a debris field in hours. Our crews mobilize quickly for post-wind cleanups — palm fronds, down branches, irrigation checks — so your property looks right when business opens. On drought compliance, your Account Manager stays current on SDCWA water restrictions and proactively adjusts irrigation schedules to keep you compliant and your landscape healthy.",
@@ -135,7 +272,20 @@
         "Spring renovation &amp; color refresh"
       ],
       "ogImage": "/assets/hero-lajolla.jpg",
-      "areaServed": ["La Jolla", "San Diego", "Mission Valley", "UTC", "Sorrento Valley", "Carmel Valley", "Del Mar", "Kearny Mesa", "Mira Mesa", "Pacific Beach", "Scripps Ranch", "Encinitas"],
+      "areaServed": [
+        "La Jolla",
+        "San Diego",
+        "Mission Valley",
+        "UTC",
+        "Sorrento Valley",
+        "Carmel Valley",
+        "Del Mar",
+        "Kearny Mesa",
+        "Mira Mesa",
+        "Pacific Beach",
+        "Scripps Ranch",
+        "Encinitas"
+      ],
       "contact": {
         "name": "Omar Meza",
         "title": "Account Manager",
@@ -153,10 +303,12 @@
           "james.j@managemowed.com"
         ]
       }
-    }
-    ,
+    },
     "spartanburg": {
-      "domains": ["managemowedspartanburg.com", "www.managemowedspartanburg.com"],
+      "domains": [
+        "managemowedspartanburg.com",
+        "www.managemowedspartanburg.com"
+      ],
       "city": "Spartanburg",
       "cityPossessive": "Spartanburg's",
       "state": "SC",
@@ -190,12 +342,72 @@
       "areasHeadline": "Greater Spartanburg Service Area",
       "areasSubtitle": "From Downtown Spartanburg to the I-85 Corridor, Greenville County to Cherokee County — ManageMowed has Upstate South Carolina covered.",
       "areaGroups": [
-        { "icon": "location_city", "name": "Spartanburg Core",       "items": ["Downtown Spartanburg", "Converse Heights", "Arcadia", "Drayton", "Saxon"] },
-        { "icon": "business",      "name": "I-85 Corridor",          "items": ["Greer", "Duncan", "Lyman", "Wellford", "Inman"] },
-        { "icon": "storefront",    "name": "Greenville Area",        "items": ["Greenville", "Mauldin", "Simpsonville", "Taylors", "Fountain Inn"] },
-        { "icon": "north",         "name": "Boiling Springs / Cherokee", "items": ["Boiling Springs", "Gaffney", "Chesnee", "Cowpens", "Blacksburg"] },
-        { "icon": "forest",        "name": "Upstate Suburbs",        "items": ["Landrum", "Campobello", "Moore", "Roebuck", "Woodruff"] },
-        { "icon": "south",         "name": "Union / Laurens County", "items": ["Union", "Jonesville", "Laurens", "Clinton", "Pacolet"] }
+        {
+          "icon": "location_city",
+          "name": "Spartanburg Core",
+          "items": [
+            "Downtown Spartanburg",
+            "Converse Heights",
+            "Arcadia",
+            "Drayton",
+            "Saxon"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "I-85 Corridor",
+          "items": [
+            "Greer",
+            "Duncan",
+            "Lyman",
+            "Wellford",
+            "Inman"
+          ]
+        },
+        {
+          "icon": "storefront",
+          "name": "Greenville Area",
+          "items": [
+            "Greenville",
+            "Mauldin",
+            "Simpsonville",
+            "Taylors",
+            "Fountain Inn"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Boiling Springs / Cherokee",
+          "items": [
+            "Boiling Springs",
+            "Gaffney",
+            "Chesnee",
+            "Cowpens",
+            "Blacksburg"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Upstate Suburbs",
+          "items": [
+            "Landrum",
+            "Campobello",
+            "Moore",
+            "Roebuck",
+            "Woodruff"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Union / Laurens County",
+          "items": [
+            "Union",
+            "Jonesville",
+            "Laurens",
+            "Clinton",
+            "Pacolet"
+          ]
+        }
       ],
       "faqWeatherQuestion": "How do you handle Spartanburg's heat, humidity, and summer storms?",
       "faqWeatherAnswer": "Upstate SC is a year-round operation — there's no slow season here. Our crews are built for heat and humidity, and we respond quickly after summer thunderstorms to clear debris and assess any turf damage. For winter ice events, your Account Manager will communicate proactively so your property is handled before your tenants or customers arrive in the morning.",
@@ -210,7 +422,20 @@
         "Spring renovation &amp; color programs"
       ],
       "ogImage": "/assets/hero-spartanburg.jpg",
-      "areaServed": ["Spartanburg", "Greer", "Duncan", "Greenville", "Boiling Springs", "Gaffney", "Inman", "Landrum", "Moore", "Woodruff", "Mauldin", "Simpsonville"],
+      "areaServed": [
+        "Spartanburg",
+        "Greer",
+        "Duncan",
+        "Greenville",
+        "Boiling Springs",
+        "Gaffney",
+        "Inman",
+        "Landrum",
+        "Moore",
+        "Woodruff",
+        "Mauldin",
+        "Simpsonville"
+      ],
       "contact": {
         "name": "Spartanburg Account Manager",
         "title": "Account Manager",
@@ -225,6 +450,157 @@
         "fromEmail": "ManageMowed Spartanburg <leads@managemowedspartanburg.com>",
         "notificationEmails": [
           "james.j@managemowed.com"
+        ]
+      }
+    },
+    "ranchocucamonga": {
+      "domains": [
+        "managemowedranchocucamonga.com",
+        "www.managemowedranchocucamonga.com"
+      ],
+      "city": "Rancho Cucamonga",
+      "cityPossessive": "Rancho Cucamonga's",
+      "state": "CA",
+      "regionLong": "greater Inland Empire",
+      "regionShort": "Inland Empire",
+      "areaAdjective": "Inland Empire",
+      "pageTitle": "ManageMowed Rancho Cucamonga | Commercial Landscape Management for the Inland Empire",
+      "metaDescription": "Professional commercial landscape management for Rancho Cucamonga, Ontario, Upland, Fontana and the greater Inland Empire. Drought-smart programs, Santa Ana wind response, and free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Rancho Cucamonga | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across the Inland Empire. Drought-compliant irrigation, Santa Ana wind cleanup, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-ranchocucamonga.jpg",
+      "heroImageAlt": "Manicured commercial office property in Rancho Cucamonga with snow-capped Cucamonga Peak and the San Gabriel Mountains rising behind it",
+      "heroHeadlinePrefix": "Rancho Cucamonga's Premier",
+      "heroSubtitle": "Full-service grounds management for shopping centers, business parks, apartment complexes, HOAs, and commercial properties across Rancho Cucamonga, Ontario, and the Inland Empire. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-ranchocucamonga.jpg",
+      "weatherImageAlt": "ManageMowed crew edging turf and clearing wind-blown debris at a Rancho Cucamonga retail center after a Santa Ana wind event",
+      "weatherHeadline": "Inland Empire Landscapes Never Stop Growing.",
+      "weatherSubhead": "Your Landscaper Shouldn't Either.",
+      "weatherBody": "Rancho Cucamonga has no off-season. A twelve-month growing season, 100-degree summer heat that stresses tall fescue turf, Santa Ana winds that strip the eucalyptus windrows and bury parking lots in debris overnight, and tightening drought rules from the Cucamonga Valley Water District all demand consistent, professional attention. ManageMowed crews show up on schedule, adjust irrigation before the watering-day rules change, and clear wind damage before your tenants arrive. One Account Manager. One team. All year.",
+      "aboutImage": "/assets/about-ranchocucamonga.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting a drip irrigation line in a dark mulch bed at a Rancho Cucamonga commercial property with the San Gabriel foothills in the background",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "From the foothills of Alta Loma to the logistics corridors of Ontario, Inland Empire commercial properties take a beating - intense summer heat, Santa Ana wind events, alkaline soils, and some of the strictest water-efficiency rules in Southern California. ManageMowed pairs a dedicated local Account Manager with monthly quality control walkthroughs and vetted local crews, so your shopping center, office park, HOA, or storage facility looks sharp twelve months a year without you ever chasing a landscaper.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Rancho Cucamonga",
+      "seasonalServicesBody": "Year-round readiness for Inland Empire conditions - drought-compliant irrigation management, Santa Ana wind cleanups, summer heat-stress turf programs, and winter storm response when the rain finally comes off the San Gabriels.",
+      "deservesCtaImage": "/assets/cta-bg-ranchocucamonga.jpg",
+      "deservesCtaImageAlt": "Pristine commercial plaza landscape maintained by ManageMowed in Rancho Cucamonga at golden hour with old vineyard rows in the distance",
+      "deservesCtaBody": "Join the Inland Empire commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-ranchocucamonga.jpg",
+      "areasBgImageAlt": "Historic Route 66 commercial corridor along Foothill Boulevard in Rancho Cucamonga with mountain backdrop and clean landscaped frontage",
+      "areasHeadline": "Greater Inland Empire Service Area",
+      "areasSubtitle": "From the Route 66 corridor to the Ontario airport district, the foothills to the Chino Valley - ManageMowed has the Inland Empire covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Rancho Cucamonga Core",
+          "items": [
+            "Victoria Gardens District",
+            "Haven Avenue Corridor",
+            "Terra Vista",
+            "Foothill Boulevard / Route 66",
+            "Day Creek"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Ontario & Airport Area",
+          "items": [
+            "Ontario",
+            "Ontario Mills",
+            "Ontario Ranch",
+            "Guasti",
+            "Ontario Airport District"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Foothill Communities",
+          "items": [
+            "Alta Loma",
+            "Etiwanda",
+            "Upland",
+            "San Antonio Heights",
+            "Claremont"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "West Valley",
+          "items": [
+            "Montclair",
+            "Pomona",
+            "La Verne",
+            "Chino",
+            "Chino Hills"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Chino Valley & Riverside County",
+          "items": [
+            "Eastvale",
+            "Jurupa Valley",
+            "Mira Loma",
+            "Norco",
+            "Corona"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "East Valley",
+          "items": [
+            "Fontana",
+            "Rialto",
+            "Bloomington",
+            "Colton",
+            "San Bernardino"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Santa Ana winds, summer heat, and drought restrictions in Rancho Cucamonga?",
+      "faqWeatherAnswer": "All three are part of our standard playbook. After Santa Ana wind events we mobilize quickly to clear eucalyptus litter, palm fronds, and down limbs, and we check every irrigation head before the system runs again. Through 100-degree summers we manage tall fescue at taller mowing heights and shift watering to early-morning cycles so turf survives heat stress, while hybrid bermuda areas get the feeding they need during peak growth. Your Account Manager stays current on Cucamonga Valley Water District watering rules and adjusts controllers proactively, so your property stays compliant, healthy, and green.",
+      "footerDescription": "Professional commercial landscape management for Rancho Cucamonga, Ontario, and the greater Inland Empire. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Rancho Cucamonga, CA",
+      "trustItemAccountManagers": "Local Rancho Cucamonga Account Managers",
+      "phonePlaceholder": "(909) 555-0123",
+      "seasonalServiceItems": [
+        "Santa Ana wind cleanup &amp; debris removal",
+        "Drought-compliant irrigation &amp; controller management",
+        "Summer heat-stress turf &amp; fertilization programs",
+        "Winter storm response &amp; drainage checks"
+      ],
+      "ogImage": "/assets/hero-ranchocucamonga.jpg",
+      "areaServed": [
+        "Rancho Cucamonga",
+        "Ontario",
+        "Upland",
+        "Fontana",
+        "Alta Loma",
+        "Etiwanda",
+        "Claremont",
+        "Montclair",
+        "Chino",
+        "Chino Hills",
+        "Eastvale",
+        "Riverside"
+      ],
+      "contact": {
+        "name": "Brian DeMoulpied",
+        "title": "Owner & Account Manager",
+        "phone": "(714) 410-0168",
+        "phoneRaw": "7144100168",
+        "email": "Brian.d@managemowed.com",
+        "website": "www.managemowedranchocucamonga.com",
+        "websiteUrl": "https://www.managemowedranchocucamonga.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Rancho Cucamonga <leads@managemowedranchocucamonga.com>",
+        "notificationEmails": [
+          "Brian.d@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
         ]
       }
     }
