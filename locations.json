@@ -1490,6 +1490,155 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "henrico": {
+      "domains": [
+        "managemowedhenrico.com",
+        "www.managemowedhenrico.com"
+      ],
+      "city": "Henrico",
+      "cityPossessive": "Henrico's",
+      "state": "VA",
+      "regionLong": "greater Richmond area",
+      "regionShort": "Richmond area",
+      "areaAdjective": "Richmond-area",
+      "pageTitle": "ManageMowed Henrico | Commercial Landscape Management for Greater Richmond",
+      "metaDescription": "Professional commercial landscape management for Henrico, Short Pump, Innsbrook, Glen Allen, Sandston and the greater Richmond area. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Henrico | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across Henrico County and greater Richmond. Year-round transition-zone turf programs, storm response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-henrico.jpg",
+      "heroImageAlt": "Elevated view of a brick office campus and lake at an Innsbrook-style corporate center in Henrico's West End",
+      "heroHeadlinePrefix": "Henrico's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, shopping centers, apartment communities, HOAs, and commercial properties across Henrico County and greater Richmond. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-henrico.jpg",
+      "weatherImageAlt": "ManageMowed crew edging turf and blowing walkways at an open-air retail center on Henrico's West Broad Street corridor",
+      "weatherHeadline": "Henrico Swings From Heat Waves to Ice Storms.",
+      "weatherSubhead": "Your Landscaper Shouldn't Miss a Beat.",
+      "weatherBody": "Henrico sits squarely in the mid-Atlantic transition zone, the toughest place in America to keep commercial turf looking right. Tall fescue lawns battle 95-degree July humidity and brown patch fungus, summer thunderstorms and tropical-storm remnants drop limbs and debris overnight, heavy red clay soil compacts under traffic, and a massive fall oak leaf drop gives way to the occasional winter ice storm. ManageMowed crews show up on schedule through all of it, with proactive communication and a local Account Manager who knows exactly what each Richmond-area season demands.",
+      "aboutImage": "/assets/about-henrico.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting an irrigation head in a mulched bed outside a red-brick Henrico office building",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Central Virginia's transition-zone climate is demanding. Tall fescue turf needs summer heat protection and fall aeration and overseeding, red clay soil punishes shortcuts, and storm seasons can undo a month of work in one night. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and proactive seasonal recommendations to keep your Short Pump, Innsbrook, or East Henrico property looking its best in every season. One call, one team, one consistent result.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Henrico",
+      "seasonalServicesBody": "Year-round readiness for central Virginia's transition-zone climate - summer storm cleanups, brown patch and fungal turf programs, fall leaf removal under Henrico's heavy oak canopy, winter ice response, and spring fescue renovation.",
+      "deservesCtaImage": "/assets/cta-bg-henrico.jpg",
+      "deservesCtaImageAlt": "Clean modern mixed-use commercial exterior with manicured landscaping in Henrico's Libbie Mill area",
+      "deservesCtaBody": "Join the Richmond-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-henrico.jpg",
+      "areasBgImageAlt": "Soft elevated view of the tree-lined West Broad Street commercial corridor in Henrico with the Richmond skyline in the distance",
+      "areasHeadline": "Henrico & Greater Richmond Service Area",
+      "areasSubtitle": "From Short Pump to Sandston, Lakeside to Varina - ManageMowed has Henrico County and the greater Richmond area covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "West End / Short Pump",
+          "items": [
+            "Short Pump",
+            "Innsbrook",
+            "Glen Allen",
+            "Wyndham",
+            "Twin Hickory"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Broad Street Corridor",
+          "items": [
+            "West Broad Street",
+            "Willow Lawn",
+            "Libbie Mill Midtown",
+            "Regency",
+            "Staples Mill Road"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "North Henrico",
+          "items": [
+            "Lakeside",
+            "Dumbarton",
+            "Laurel",
+            "Longdale",
+            "Virginia Center Commons"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Tuckahoe & Near West End",
+          "items": [
+            "Tuckahoe",
+            "Three Chopt",
+            "Gayton",
+            "Pemberton",
+            "Westham"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "East Henrico",
+          "items": [
+            "Sandston",
+            "Highland Springs",
+            "Varina",
+            "Montrose",
+            "White Oak"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Greater Richmond Metro",
+          "items": [
+            "Richmond",
+            "Mechanicsville",
+            "Ashland",
+            "Atlee",
+            "Hanover"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Henrico's transition-zone climate?",
+      "faqWeatherAnswer": "Central Virginia's transition zone is hard on turf, and our programs are built for it. We raise tall fescue mowing heights through summer heat to protect roots, monitor for brown patch when humidity spikes, and hit the September-October window for core aeration and overseeding in Henrico's compacted clay soils. Crews mobilize quickly after thunderstorms and tropical-storm remnants to clear limbs and debris, run fall leaf programs under the area's heavy oak canopy, and respond to winter ice events so your property is safe and presentable when business opens.",
+      "footerDescription": "Professional commercial landscape management for Henrico County and the greater Richmond area. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Henrico, VA",
+      "trustItemAccountManagers": "Local Henrico Account Managers",
+      "phonePlaceholder": "(804) 555-0123",
+      "seasonalServiceItems": [
+        "Summer storm &amp; tropical-remnant cleanup",
+        "Brown patch &amp; fungal turf management",
+        "Fall leaf removal &amp; oak canopy programs",
+        "Winter ice response &amp; spring fescue renovation"
+      ],
+      "ogImage": "/assets/hero-henrico.jpg",
+      "areaServed": [
+        "Henrico",
+        "Short Pump",
+        "Innsbrook",
+        "Glen Allen",
+        "Tuckahoe",
+        "Lakeside",
+        "Sandston",
+        "Highland Springs",
+        "Varina",
+        "Richmond"
+      ],
+      "contact": {
+        "name": "Matt Thomas",
+        "title": "Account Manager",
+        "phone": "(804) 500-7669",
+        "phoneRaw": "8045007669",
+        "email": "Matt.t@managemowed.com",
+        "website": "www.managemowedhenrico.com",
+        "websiteUrl": "https://www.managemowedhenrico.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Henrico <leads@managemowedhenrico.com>",
+        "notificationEmails": [
+          "Matt.t@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
