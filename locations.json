@@ -899,6 +899,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "capecoral": {
+      "domains": [
+        "managemowedcapecoral.com",
+        "www.managemowedcapecoral.com"
+      ],
+      "city": "Cape Coral",
+      "cityPossessive": "Cape Coral's",
+      "state": "FL",
+      "regionLong": "greater Cape Coral and Fort Myers area",
+      "regionShort": "Cape Coral area",
+      "areaAdjective": "Cape Coral-area",
+      "pageTitle": "ManageMowed Cape Coral | Commercial Landscape Management for Southwest Florida",
+      "metaDescription": "Professional commercial landscape management for Cape Coral, Fort Myers, North Fort Myers, Matlacha, Pine Island and Southwest Florida. Year-round tropical turf care, storm response, and free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Cape Coral | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across Cape Coral and Southwest Florida. Year-round St. Augustine turf care, hurricane season response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-capecoral.jpg",
+      "heroImageAlt": "Aerial view of Cape Coral's canal network and a pristine palm-lined commercial plaza near the Caloosahatchee River",
+      "heroHeadlinePrefix": "Cape Coral's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, HOAs, retail centers, and commercial properties across Cape Coral and Southwest Florida. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-capecoral.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and clearing a Cape Coral commercial property after a summer afternoon thunderstorm",
+      "weatherHeadline": "Cape Coral Grass Never Takes a Day Off.",
+      "weatherSubhead": "Neither Do We.",
+      "weatherBody": "Southwest Florida runs on two seasons, and both keep your property growing. Summer rains push St. Augustine turf to a weekly mow whether it is convenient or not, afternoon thunderstorms drop palm fronds and debris overnight, and hurricane season demands a team that preps before the storm and mobilizes right after it. In the dry season, irrigation has to be dialed in around Cape Coral's two-day-per-week watering schedule to keep turf alive on sandy soil. ManageMowed crews show up on schedule, communicate proactively, and keep your property looking right twelve months a year.",
+      "aboutImage": "/assets/about-capecoral.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting an irrigation zone in a mulched commercial bed with Cape Coral waterfront towers in the background",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Cape Coral's tropical climate is beautiful - and relentless. St. Augustine turf grows twelve months a year, summer storms can undo a week of work in an afternoon, chinch bugs and fungus thrive in the humidity, and dry-season watering restrictions punish anyone who is not paying attention to irrigation. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and vetted local crews who know exactly what Southwest Florida properties need in every season. One call, one team, one consistent result.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Cape Coral",
+      "seasonalServicesBody": "Year-round readiness for Southwest Florida's climate - hurricane season prep and storm debris cleanup, rainy season turf and fungus management, dry season irrigation compliance, and palm and tropical bed care every season.",
+      "deservesCtaImage": "/assets/cta-bg-capecoral.jpg",
+      "deservesCtaImageAlt": "Immaculate palm-lined commercial exterior maintained by ManageMowed in the Cape Coral area",
+      "deservesCtaBody": "Join the Cape Coral-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-capecoral.jpg",
+      "areasBgImageAlt": "Elevated view of the Cape Coral Bridge crossing the Caloosahatchee River on a bright Southwest Florida morning",
+      "areasHeadline": "Greater Cape Coral Service Area",
+      "areasSubtitle": "From the South Cape to Burnt Store Road, Pine Island to the Fort Myers river district - ManageMowed has Southwest Florida covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "South Cape & Downtown",
+          "items": [
+            "Downtown South Cape",
+            "Cape Coral Parkway",
+            "Yacht Club",
+            "Coronado Parkway",
+            "Savona"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Del Prado & Pine Island Rd",
+          "items": [
+            "Del Prado Boulevard",
+            "Pine Island Road Corridor",
+            "Hancock Bridge Parkway",
+            "Santa Barbara Boulevard",
+            "Mid Cape"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Southwest Cape",
+          "items": [
+            "Pelican",
+            "Tarpon Point",
+            "Cape Harbour",
+            "Rose Garden",
+            "Sandoval"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Northwest Cape & Islands",
+          "items": [
+            "Burnt Store Road Corridor",
+            "Matlacha",
+            "Pine Island",
+            "Bokeelia",
+            "St. James City"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Fort Myers",
+          "items": [
+            "Downtown Fort Myers",
+            "McGregor Boulevard",
+            "College Parkway",
+            "Iona",
+            "Cypress Lake"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "North Fort Myers & Beyond",
+          "items": [
+            "North Fort Myers",
+            "Bayshore",
+            "Suncoast Estates",
+            "Punta Gorda",
+            "Lehigh Acres"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Cape Coral's rainy season, hurricanes, and watering restrictions?",
+      "faqWeatherAnswer": "Cape Coral turf is a year-round operation. During the summer rainy season, St. Augustine grass grows fast enough to need weekly mowing, and our crews hold that schedule rain or shine while watching for chinch bugs and fungal outbreaks the humidity invites. Ahead of hurricane season we recommend proactive palm trimming and site hardening, and after a storm we mobilize quickly to clear fronds, limbs, and debris. In the dry season, your Account Manager keeps irrigation tuned to the City of Cape Coral's two-day-per-week watering schedule so your landscape stays healthy and compliant.",
+      "footerDescription": "Professional commercial landscape management for Cape Coral, Fort Myers, and Southwest Florida. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Cape Coral, FL",
+      "trustItemAccountManagers": "Local Cape Coral Account Managers",
+      "phonePlaceholder": "(239) 555-0123",
+      "seasonalServiceItems": [
+        "Hurricane prep &amp; storm debris cleanup",
+        "Rainy season mowing &amp; fungus control",
+        "Dry season irrigation &amp; watering compliance",
+        "Palm trimming &amp; tropical bed refresh"
+      ],
+      "ogImage": "/assets/hero-capecoral.jpg",
+      "areaServed": [
+        "Cape Coral",
+        "Fort Myers",
+        "North Fort Myers",
+        "Matlacha",
+        "Pine Island",
+        "Lehigh Acres",
+        "Estero",
+        "Bonita Springs",
+        "Punta Gorda"
+      ],
+      "contact": {
+        "name": "Kristin",
+        "title": "Owner",
+        "phone": "(239) 898-3177",
+        "phoneRaw": "2398983177",
+        "email": "Kristin@managemowed.com",
+        "website": "www.managemowedcapecoral.com",
+        "websiteUrl": "https://www.managemowedcapecoral.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Cape Coral <leads@managemowedcapecoral.com>",
+        "notificationEmails": [
+          "Kristin@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
