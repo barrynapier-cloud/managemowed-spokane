@@ -54,8 +54,23 @@ app.use('/assets', express.static(path.join(__dirname, 'assets'), {
   maxAge:     '1y',
   immutable:  true
 }));
+
+// Whitelist which root-level files are publicly servable. Mounting
+// express.static at the project root would otherwise expose locations.json,
+// server.js, lib/, views/, package.json, etc. robots.txt and sitemap.xml are
+// allowed through so their routes (below) can answer.
+const PUBLIC_FILE_PATTERN = /^\/(assets\/[^?#]+|style\.css|app\.js|favicon\.ico|robots\.txt|sitemap\.xml)$/;
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (PUBLIC_FILE_PATTERN.test(req.path)) return next();
+  // Anything else that looks like a file (has an extension) is blocked.
+  if (/\.[a-z0-9]+$/i.test(req.path)) return res.status(404).end();
+  next();
+});
+
 app.use(express.static(path.join(__dirname), {
   index: false, // never auto-serve index.html — render through EJS
+  dotfiles: 'deny',
   setHeaders: setStaticCache
 }));
 
@@ -88,6 +103,14 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
 }
 function truncate(str, max) { return str ? String(str).substring(0, max) : ''; }
+
+// Extract the bare address from a "Name <addr>" from-string, so replies to the
+// prospect confirmation stay on the location's own domain (received via the
+// domain's inbound routing, which forwards to the Account Manager).
+function bareAddress(fromEmail) {
+  const m = /<([^>]+)>/.exec(fromEmail || '');
+  return m ? m[1] : fromEmail;
+}
 
 // Per-location Resend client
 function getResendForLocation(loc) {
@@ -222,6 +245,7 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
           from:     fromEmail,
           to:       toEmails,
           ...(bccEmails.length ? { bcc: bccEmails } : {}),
+          replyTo:  cleanEmail,
           reply_to: cleanEmail,
           subject:  `New Lead (${loc.city}): ${cleanName} — ${cleanCompany || 'No Company'}`,
           text:     salesText,
@@ -270,10 +294,12 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
         ``,
         `— ManageMowed ${loc.city}`
       ].join('\n');
+      const confirmReplyTo = bareAddress(fromEmail) || toEmails[0] || undefined;
       const confirmResp = await resend.emails.send({
         from:     fromEmail,
         to:       [cleanEmail],
-        reply_to: toEmails[0] || undefined,
+        replyTo:  confirmReplyTo,
+        reply_to: confirmReplyTo,
         subject:  'Thanks for reaching out to ManageMowed',
         text:     confirmText,
         html: `
