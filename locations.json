@@ -1787,6 +1787,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "richmondsouth": {
+      "domains": [
+        "managemowedrichmondsouth.com",
+        "www.managemowedrichmondsouth.com"
+      ],
+      "city": "Richmond South",
+      "cityPossessive": "South Richmond's",
+      "state": "VA",
+      "regionLong": "greater Richmond and Chesterfield area",
+      "regionShort": "Richmond area",
+      "areaAdjective": "Richmond-area",
+      "pageTitle": "ManageMowed Richmond South | Commercial Landscape Management for the Greater Richmond and Chesterfield Area",
+      "metaDescription": "Professional commercial landscape management for South Richmond, Midlothian, Chesterfield, Chester, Bon Air and the greater Richmond area. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Richmond South | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across South Richmond and Chesterfield County. Year-round fescue turf programs, storm response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-richmondsouth.jpg",
+      "heroImageAlt": "Richmond skyline across the James River behind a pristine commercial property on the south bank",
+      "heroHeadlinePrefix": "South Richmond's Premier",
+      "heroSubtitle": "Full-service grounds management for shopping centers, apartment complexes, business centers, banks, HOAs, and commercial properties across South Richmond and Chesterfield County. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-richmondsouth.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and clearing a Midlothian Turnpike retail property after a summer thunderstorm",
+      "weatherHeadline": "Richmond's Transition-Zone Climate is Demanding.",
+      "weatherSubhead": "Your Landscaper Shouldn't Be.",
+      "weatherBody": "Central Virginia sits in the turf transition zone, which means your property fights both directions of the calendar. Humid 90-degree summers push brown patch fungus into fescue turf, red clay soil compacts and sheds water, thunderstorms and hurricane remnants drop debris overnight, and heavy oak and maple leaf drop buries sidewalks every fall. ManageMowed crews show up on schedule through all of it, with a local Account Manager communicating proactively so your property always opens for business looking right.",
+      "aboutImage": "/assets/about-richmondsouth.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a mulched commercial bed near Manchester's brick warehouse district",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "Managing commercial turf in the transition zone takes real local knowledge. Tall fescue needs fall aeration and overseeding to survive Richmond summers, clay soil needs drainage attention, and brown patch pressure demands smart mowing and irrigation timing - not guesswork. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who know exactly what South Richmond, Midlothian, and Chesterfield properties need in every season. One call, one team, one consistent result.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Richmond South",
+      "seasonalServicesBody": "Year-round readiness for Central Virginia's transition-zone climate - summer storm cleanups, brown patch and fungal turf programs, fall leaf removal with aeration and overseeding, and winter ice response.",
+      "deservesCtaImage": "/assets/cta-bg-richmondsouth.jpg",
+      "deservesCtaImageAlt": "Immaculate brick commercial office exterior maintained by ManageMowed in Chesterfield County",
+      "deservesCtaBody": "Join the Richmond-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-richmondsouth.jpg",
+      "areasBgImageAlt": "Aerial view of Swift Creek Reservoir and the Brandermill area of Chesterfield County at dusk",
+      "areasHeadline": "Greater Richmond Service Area",
+      "areasSubtitle": "From Manchester to Midlothian, the Hull Street Corridor to the Tri-Cities - ManageMowed has South Richmond and Chesterfield County covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "South Richmond",
+          "items": [
+            "Manchester",
+            "Forest Hill",
+            "Westover Hills",
+            "Stratford Hills",
+            "Swansboro"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Midlothian Corridor",
+          "items": [
+            "Midlothian",
+            "Bon Air",
+            "Robious",
+            "Salisbury",
+            "Stony Point"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Chesterfield County",
+          "items": [
+            "Chester",
+            "Chesterfield Court House",
+            "Bensley",
+            "Meadowbrook",
+            "Enon"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "Hull Street Corridor",
+          "items": [
+            "Brandermill",
+            "Woodlake",
+            "Swift Creek",
+            "Genito",
+            "Clover Hill"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "Tri-Cities",
+          "items": [
+            "Colonial Heights",
+            "Petersburg",
+            "Hopewell",
+            "Ettrick",
+            "Prince George"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "Richmond & Tuckahoe",
+          "items": [
+            "Downtown Richmond",
+            "Tuckahoe",
+            "Carytown",
+            "The Fan",
+            "Scott's Addition"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Richmond's humidity, brown patch, and storm seasons?",
+      "faqWeatherAnswer": "Central Virginia's transition-zone climate is tough on commercial turf. In humid summer stretches we manage tall fescue against brown patch with proper mowing heights and morning irrigation timing, and our fall programs include the aeration and overseeding fescue needs to recover in clay soil. After thunderstorms or hurricane remnants, crews mobilize quickly to clear limbs and debris, and during winter ice events your Account Manager communicates proactively so your property is handled before tenants and customers arrive.",
+      "footerDescription": "Professional commercial landscape management for South Richmond, Midlothian, and Chesterfield County. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Richmond, VA",
+      "trustItemAccountManagers": "Local Richmond Account Managers",
+      "phonePlaceholder": "(804) 555-0123",
+      "seasonalServiceItems": [
+        "Summer storm cleanup &amp; debris removal",
+        "Brown patch &amp; fungal turf management",
+        "Fall leaf removal, aeration &amp; overseeding",
+        "Winter ice &amp; frost response"
+      ],
+      "ogImage": "/assets/hero-richmondsouth.jpg",
+      "areaServed": [
+        "South Richmond",
+        "Midlothian",
+        "Chesterfield",
+        "Chester",
+        "Bon Air",
+        "Brandermill",
+        "Woodlake",
+        "Colonial Heights",
+        "Tuckahoe"
+      ],
+      "contact": {
+        "name": "Lynette Brinkerhoff",
+        "title": "Account Manager",
+        "phone": "(804) 331-1550",
+        "phoneRaw": "8043311550",
+        "email": "Lynette.b@managemowed.com",
+        "website": "www.managemowedrichmondsouth.com",
+        "websiteUrl": "https://www.managemowedrichmondsouth.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Richmond South <leads@managemowedrichmondsouth.com>",
+        "notificationEmails": [
+          "Lynette.b@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
