@@ -1342,6 +1342,154 @@
           "barrynapier@gmail.com"
         ]
       }
+    },
+    "eugene": {
+      "domains": [
+        "managemowedeugene.com",
+        "www.managemowedeugene.com"
+      ],
+      "city": "Eugene",
+      "cityPossessive": "Eugene's",
+      "state": "OR",
+      "regionLong": "greater Eugene-Springfield area",
+      "regionShort": "Eugene area",
+      "areaAdjective": "Eugene-area",
+      "pageTitle": "ManageMowed Eugene | Commercial Landscape Management for the Eugene-Springfield Area",
+      "metaDescription": "Professional commercial landscape management for Eugene, Springfield, Coburg, Junction City and the greater Eugene-Springfield area. Free site assessments for businesses and property managers.",
+      "ogTitle": "ManageMowed Eugene | Commercial Landscape Management",
+      "ogDescription": "Premium grounds management for businesses across the southern Willamette Valley. Year-round service, winter storm response, and a dedicated local Account Manager. Get your free site assessment today.",
+      "heroImage": "/assets/hero-eugene.jpg",
+      "heroImageAlt": "Aerial view of downtown Eugene with Skinner Butte and the Willamette River behind a pristine commercial property",
+      "heroHeadlinePrefix": "Eugene's Premier",
+      "heroSubtitle": "Full-service grounds management for businesses, property management companies, apartment complexes, retail centers, and commercial properties across the greater Eugene-Springfield area. Responsive, reliable, and easy to work with.",
+      "weatherImage": "/assets/action-eugene.jpg",
+      "weatherImageAlt": "ManageMowed crew edging and clearing leaves at a Eugene-area commercial retail center beneath Douglas firs",
+      "weatherHeadline": "Willamette Valley Turf Never Stops Growing.",
+      "weatherSubhead": "Neither Do We.",
+      "weatherBody": "Eugene's mild Zone 8b climate means perennial ryegrass keeps growing through most of the winter, and 45 inches of rain between October and May brings saturated soils, moss creep, and relentless leaf drop from the valley's mature canopy. Then summer flips the script with weeks of dry heat that punish neglected irrigation. ManageMowed crews show up on schedule through all of it, with winter storm and ice response, proactive drainage and moss management, and a local Account Manager who communicates before weather becomes a problem for your property.",
+      "aboutImage": "/assets/about-eugene.jpg",
+      "aboutImageAlt": "ManageMowed technician inspecting irrigation in a dark mulch bed at a Eugene commercial property",
+      "aboutImageObjectPosition": "center center",
+      "aboutDescription": "The southern Willamette Valley is the grass seed capital of the world, and the same conditions that grow world-class ryegrass make commercial grounds here a twelve-month job. Wet-season mowing, moss and drainage management, fall leaf programs under heavy oak and maple canopy, occasional ice storm cleanup, and summer irrigation care all demand a team that never goes dormant. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and vetted local crews to keep your Eugene or Springfield property looking right in every season.",
+      "aboutBootsLine": "24 locations strong with boots on the ground in Eugene",
+      "seasonalServicesBody": "Year-round readiness for the southern Willamette Valley, from fall leaf programs and moss and drainage management to winter ice response and summer irrigation care.",
+      "deservesCtaImage": "/assets/cta-bg-eugene.jpg",
+      "deservesCtaImageAlt": "Immaculate commercial office exterior maintained by ManageMowed in the Eugene-Springfield area",
+      "deservesCtaBody": "Join the Eugene-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
+      "areasBgImage": "/assets/areas-bg-eugene.jpg",
+      "areasBgImageAlt": "Willamette River and riverfront path with a pedestrian bridge near downtown Eugene at golden hour",
+      "areasHeadline": "Greater Eugene-Springfield Service Area",
+      "areasSubtitle": "From downtown Eugene to the Gateway district, Junction City to Cottage Grove - ManageMowed has the southern Willamette Valley covered.",
+      "areaGroups": [
+        {
+          "icon": "location_city",
+          "name": "Eugene Core",
+          "items": [
+            "Downtown Eugene",
+            "University District",
+            "Whiteaker",
+            "South Eugene",
+            "Friendly Area"
+          ]
+        },
+        {
+          "icon": "business",
+          "name": "Coburg Rd & Valley River",
+          "items": [
+            "Coburg Road Corridor",
+            "Valley River",
+            "Oakway",
+            "Cal Young",
+            "Ferry Street Bridge"
+          ]
+        },
+        {
+          "icon": "forest",
+          "name": "Springfield",
+          "items": [
+            "Downtown Springfield",
+            "Gateway / RiverBend",
+            "Mohawk",
+            "Thurston",
+            "Glenwood"
+          ]
+        },
+        {
+          "icon": "west",
+          "name": "West Eugene & Fern Ridge",
+          "items": [
+            "West Eugene",
+            "Bethel",
+            "Danebo",
+            "Veneta",
+            "Elmira"
+          ]
+        },
+        {
+          "icon": "south",
+          "name": "South Lane County",
+          "items": [
+            "Creswell",
+            "Cottage Grove",
+            "Pleasant Hill",
+            "Goshen",
+            "Lowell"
+          ]
+        },
+        {
+          "icon": "north",
+          "name": "North Valley",
+          "items": [
+            "Coburg",
+            "Junction City",
+            "Harrisburg",
+            "Santa Clara",
+            "River Road"
+          ]
+        }
+      ],
+      "faqWeatherQuestion": "How do you handle Eugene's wet winters and dry summers?",
+      "faqWeatherAnswer": "Eugene's turf is cool-season grass, mostly perennial ryegrass, and in this mild Zone 8b climate it keeps growing through much of the winter, so our crews keep mowing, managing moss, clearing leaf drop, and checking drainage right through the rainy season. When occasional ice or snow events hit the valley, we respond with monitoring and cleanup. In summer, your Account Manager makes sure irrigation is dialed in before the dry weeks arrive, so your turf stays green while unmanaged properties brown out.",
+      "footerDescription": "Professional commercial landscape management for the greater Eugene-Springfield area. Member of the National Association of Landscape Professionals.",
+      "footerCity": "Eugene, OR",
+      "trustItemAccountManagers": "Local Eugene Account Managers",
+      "phonePlaceholder": "(541) 555-0123",
+      "seasonalServiceItems": [
+        "Fall leaf removal &amp; debris cleanup",
+        "Moss control &amp; drainage management",
+        "Winter storm &amp; ice response",
+        "Spring renovation &amp; summer irrigation care"
+      ],
+      "ogImage": "/assets/hero-eugene.jpg",
+      "areaServed": [
+        "Eugene",
+        "Springfield",
+        "Coburg",
+        "Junction City",
+        "Santa Clara",
+        "Veneta",
+        "Creswell",
+        "Cottage Grove",
+        "Pleasant Hill"
+      ],
+      "contact": {
+        "name": "Jeremy Pond",
+        "title": "Account Manager",
+        "phone": "(541) 216-7366",
+        "phoneRaw": "5412167366",
+        "email": "Jeremy.p@managemowed.com",
+        "website": "www.managemowedeugene.com",
+        "websiteUrl": "https://www.managemowedeugene.com"
+      },
+      "resend": {
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Eugene <leads@managemowedeugene.com>",
+        "notificationEmails": [
+          "Jeremy.p@managemowed.com",
+          "james.j@managemowed.com",
+          "barrynapier@gmail.com"
+        ]
+      }
     }
   }
 }
