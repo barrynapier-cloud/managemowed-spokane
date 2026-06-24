@@ -596,7 +596,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Rancho Cucamonga <leads@managemowedranchocucamonga.com>",
+        "fromEmail": "ManageMowed Rancho Cucamonga <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Brian.d@managemowed.com",
           "james.j@managemowed.com",
@@ -892,7 +892,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Colorado Springs <leads@managemowedcoloradosprings.com>",
+        "fromEmail": "ManageMowed Colorado Springs <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Kirk.k@managemowed.com",
           "james.j@managemowed.com",
@@ -1040,7 +1040,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Cape Coral <leads@managemowedcapecoral.com>",
+        "fromEmail": "ManageMowed Cape Coral <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Kristin@managemowed.com",
           "james.j@managemowed.com",
@@ -1188,7 +1188,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Covington-Conyers <leads@managemowedcovingtonconyers.com>",
+        "fromEmail": "ManageMowed Covington-Conyers <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Porter.r@managemowed.com",
           "james.j@managemowed.com",
@@ -1335,7 +1335,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Plymouth <leads@managemowedplymouth.com>",
+        "fromEmail": "ManageMowed Plymouth <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Tom.b@managemowed.com",
           "james.j@managemowed.com",
@@ -1483,7 +1483,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Eugene <leads@managemowedeugene.com>",
+        "fromEmail": "ManageMowed Eugene <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Jeremy.p@managemowed.com",
           "james.j@managemowed.com",
@@ -1632,7 +1632,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Henrico <leads@managemowedhenrico.com>",
+        "fromEmail": "ManageMowed Henrico <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Matt.t@managemowed.com",
           "james.j@managemowed.com",
@@ -1780,7 +1780,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed NE Richmond <leads@managemowednerichmond.com>",
+        "fromEmail": "ManageMowed NE Richmond <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Matt.t@managemowed.com",
           "james.j@managemowed.com",
@@ -1928,7 +1928,7 @@
       },
       "resend": {
         "apiKeyEnv": "RESEND_API_KEY",
-        "fromEmail": "ManageMowed Richmond South <leads@managemowedrichmondsouth.com>",
+        "fromEmail": "ManageMowed Richmond South <leads@managemowedcorp.com>",
         "notificationEmails": [
           "Lynette.b@managemowed.com",
           "james.j@managemowed.com",
