@@ -104,14 +104,6 @@ function escapeHtml(str) {
 }
 function truncate(str, max) { return str ? String(str).substring(0, max) : ''; }
 
-// Extract the bare address from a "Name <addr>" from-string, so replies to the
-// prospect confirmation stay on the location's own domain (received via the
-// domain's inbound routing, which forwards to the Account Manager).
-function bareAddress(fromEmail) {
-  const m = /<([^>]+)>/.exec(fromEmail || '');
-  return m ? m[1] : fromEmail;
-}
-
 // Per-location Resend client
 function getResendForLocation(loc) {
   const envName = loc.resend?.apiKeyEnv;
@@ -294,7 +286,9 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
         ``,
         `— ManageMowed ${loc.city}`
       ].join('\n');
-      const confirmReplyTo = bareAddress(fromEmail) || toEmails[0] || undefined;
+      // Replies to the prospect confirmation go to the Account Manager's real
+      // inbox (Resend only sends — nothing receives mail at the location domain).
+      const confirmReplyTo = toEmails[0] || undefined;
       const confirmResp = await resend.emails.send({
         from:     fromEmail,
         to:       [cleanEmail],
