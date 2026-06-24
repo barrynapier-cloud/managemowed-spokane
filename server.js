@@ -358,30 +358,36 @@ app.get('/api/leads', async (req, res) => {
 // Catch-all → render landing page
 app.get('*', renderLanding);
 
-const server = app.listen(PORT, '0.0.0.0', () => {
-  const locs = Object.keys(allLocations());
-  console.log(`ManageMowed multi-tenant server running on port ${PORT}`);
-  console.log(`Loaded ${locs.length} location(s): ${locs.join(', ')}`);
-});
-
-// Graceful shutdown — drain in-flight requests, close DB pool
-function shutdown(signal) {
-  console.log(`Received ${signal}, shutting down gracefully...`);
-  server.close((err) => {
-    if (err) { console.error('Error closing server:', err); process.exit(1); }
-    pool.end().then(() => {
-      console.log('Server + DB pool closed cleanly. Exiting.');
-      process.exit(0);
-    }).catch((e) => {
-      console.error('Error closing pool:', e);
-      process.exit(1);
-    });
+// Start a real HTTP listener only when run directly (Replit / local). On
+// Vercel the app is imported as a serverless handler, so we just export it.
+if (require.main === module) {
+  const server = app.listen(PORT, '0.0.0.0', () => {
+    const locs = Object.keys(allLocations());
+    console.log(`ManageMowed multi-tenant server running on port ${PORT}`);
+    console.log(`Loaded ${locs.length} location(s): ${locs.join(', ')}`);
   });
-  // Force-exit if shutdown takes too long
-  setTimeout(() => {
-    console.warn('Forced shutdown after 10s timeout');
-    process.exit(1);
-  }, 10000).unref();
+
+  // Graceful shutdown — drain in-flight requests, close DB pool
+  const shutdown = (signal) => {
+    console.log(`Received ${signal}, shutting down gracefully...`);
+    server.close((err) => {
+      if (err) { console.error('Error closing server:', err); process.exit(1); }
+      pool.end().then(() => {
+        console.log('Server + DB pool closed cleanly. Exiting.');
+        process.exit(0);
+      }).catch((e) => {
+        console.error('Error closing pool:', e);
+        process.exit(1);
+      });
+    });
+    // Force-exit if shutdown takes too long
+    setTimeout(() => {
+      console.warn('Forced shutdown after 10s timeout');
+      process.exit(1);
+    }, 10000).unref();
+  };
+  process.on('SIGTERM', () => shutdown('SIGTERM'));
+  process.on('SIGINT',  () => shutdown('SIGINT'));
 }
-process.on('SIGTERM', () => shutdown('SIGTERM'));
-process.on('SIGINT',  () => shutdown('SIGINT'));
+
+module.exports = app;
