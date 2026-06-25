@@ -86,12 +86,40 @@ const leadLimiter = rateLimit({
 // ───── DB ─────
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false,
+  // Neon (Vercel Postgres) requires TLS; Replit's Postgres does not. Enable SSL
+  // only for Neon hosts so the same code works in both deployments.
+  ssl: /neon\.tech/.test(process.env.DATABASE_URL || '') ? { rejectUnauthorized: false } : false,
   max: 10
 });
 pool.on('error', (err) => {
   console.error('[pg] unexpected pool error:', err);
 });
+
+// Ensure the leads table exists. Idempotent and memoized (runs once per process).
+// Needed for fresh databases (e.g. Vercel/Neon) that start empty.
+let _schemaReady = null;
+function ensureSchema() {
+  if (!_schemaReady) {
+    _schemaReady = pool.query(`
+      CREATE TABLE IF NOT EXISTS leads (
+        id               SERIAL PRIMARY KEY,
+        full_name        VARCHAR(200) NOT NULL,
+        email            VARCHAR(254) NOT NULL,
+        phone            VARCHAR(30),
+        company          VARCHAR(200),
+        property_type    VARCHAR(50),
+        service_interest VARCHAR(50),
+        details          TEXT,
+        location         VARCHAR(100),
+        created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      );
+    `)
+      .then(() => pool.query('CREATE INDEX IF NOT EXISTS leads_created_at_idx ON leads (created_at DESC)'))
+      .then(() => pool.query('CREATE INDEX IF NOT EXISTS idx_leads_location ON leads (location)'))
+      .catch((err) => { _schemaReady = null; throw err; });
+  }
+  return _schemaReady;
+}
 
 const ADMIN_KEY = process.env.ADMIN_API_KEY || '';
 
@@ -195,6 +223,7 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
       return res.status(400).json({ error: 'Invalid email address' });
     }
 
+    await ensureSchema();
     const result = await pool.query(
       `INSERT INTO leads (full_name, email, phone, company, property_type, service_interest, details, location)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
