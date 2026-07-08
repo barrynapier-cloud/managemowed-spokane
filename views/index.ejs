@@ -317,11 +317,11 @@
     <div class="ba-slider-wrapper">
       <div class="ba-slider" id="baSlider">
         <div class="ba-image ba-after">
-          <img src="/assets/after-property.png" alt="Property after ManageMowed service" loading="lazy" decoding="async" width="1376" height="768">
+          <img src="<%= loc.sliderAfter || '/assets/after-property.png' %>" alt="Property after ManageMowed service" loading="lazy" decoding="async" width="1920" height="1080">
           <span class="ba-label ba-label-after"><span class="material-symbols-outlined">check_circle</span> After</span>
         </div>
         <div class="ba-image ba-before">
-          <img src="/assets/before-property.png" alt="Property before ManageMowed service" loading="lazy" decoding="async" width="2752" height="1536">
+          <img src="<%= loc.sliderBefore || '/assets/before-property.png' %>" alt="Property before ManageMowed service" loading="lazy" decoding="async" width="1920" height="1080">
           <span class="ba-label ba-label-before"><span class="material-symbols-outlined">warning</span> Before</span>
         </div>
         <div class="ba-handle" id="baHandle">

@@ -152,7 +152,9 @@
           "peter.r@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-xeriscape-before.jpg",
+      "sliderAfter": "/assets/slider-xeriscape-after.jpg"
     },
     "lajolla": {
       "domains": [
@@ -302,7 +304,9 @@
           "Omar.m@managemowed.com",
           "james.j@managemowed.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-xeriscape-before.jpg",
+      "sliderAfter": "/assets/slider-xeriscape-after.jpg"
     },
     "spartanburg": {
       "domains": [
@@ -451,7 +455,9 @@
         "notificationEmails": [
           "james.j@managemowed.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
+      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
     },
     "ranchocucamonga": {
       "domains": [
@@ -602,7 +608,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-xeriscape-before.jpg",
+      "sliderAfter": "/assets/slider-xeriscape-after.jpg"
     },
     "boulder": {
       "domains": [
@@ -750,7 +758,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-xeriscape-before.jpg",
+      "sliderAfter": "/assets/slider-xeriscape-after.jpg"
     },
     "coloradosprings": {
       "domains": [
@@ -898,7 +908,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-xeriscape-before.jpg",
+      "sliderAfter": "/assets/slider-xeriscape-after.jpg"
     },
     "capecoral": {
       "domains": [
@@ -1046,7 +1058,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-tropical-before.jpg",
+      "sliderAfter": "/assets/slider-tropical-after.jpg"
     },
     "covingtonconyers": {
       "domains": [
@@ -1194,7 +1208,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
+      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
     },
     "plymouth": {
       "domains": [
@@ -1341,7 +1357,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-pnw-before.jpg",
+      "sliderAfter": "/assets/slider-pnw-after.jpg"
     },
     "eugene": {
       "domains": [
@@ -1489,7 +1507,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-pnw-before.jpg",
+      "sliderAfter": "/assets/slider-pnw-after.jpg"
     },
     "henrico": {
       "domains": [
@@ -1638,7 +1658,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
+      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
     },
     "nerichmond": {
       "domains": [
@@ -1786,7 +1808,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
+      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
     },
     "richmondsouth": {
       "domains": [
@@ -1934,7 +1958,9 @@
           "james.j@managemowed.com",
           "barrynapier@gmail.com"
         ]
-      }
+      },
+      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
+      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
     }
   }
 }

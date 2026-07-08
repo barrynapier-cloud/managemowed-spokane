@@ -232,6 +232,8 @@
   if (!slider || !handle) return;
   var beforeEl = slider.querySelector('.ba-before');
   var isDragging = false;
+  var sweepRaf = null;
+  var hasSwept = false;
   function getPosition(e) {
     var rect = slider.getBoundingClientRect();
     var x = e.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
@@ -242,8 +244,40 @@
     beforeEl.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
     handle.style.left = pct + '%';
   }
-  slider.addEventListener('mousedown',  function (e) { e.preventDefault(); isDragging = true; updateSlider(getPosition(e)); });
-  slider.addEventListener('touchstart', function (e) { isDragging = true; updateSlider(getPosition(e)); }, { passive: true });
+  function cancelSweep() {
+    hasSwept = true;
+    if (sweepRaf) { cancelAnimationFrame(sweepRaf); sweepRaf = null; }
+  }
+  // One-time auto-sweep when the slider scrolls into view: reveal the "before",
+  // then wipe it away to the "after", then settle at center. Any user
+  // interaction cancels it immediately.
+  function autoSweep() {
+    if (hasSwept) return;
+    hasSwept = true;
+    // keyframes: [target position 0..1, duration ms, pause-after ms]
+    var steps = [[0.97, 900, 350], [0.03, 1400, 350], [0.5, 700, 0]];
+    var from = 0.5, idx = 0, start = null, pauseUntil = 0;
+    function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function frame(now) {
+      if (idx >= steps.length) { sweepRaf = null; return; }
+      if (now < pauseUntil) { sweepRaf = requestAnimationFrame(frame); return; }
+      if (start === null) start = now;
+      var step = steps[idx];
+      var t = Math.min((now - start) / step[1], 1);
+      updateSlider(from + (step[0] - from) * ease(t));
+      if (t >= 1) { from = step[0]; idx++; start = null; pauseUntil = now + step[2]; }
+      sweepRaf = requestAnimationFrame(frame);
+    }
+    sweepRaf = requestAnimationFrame(frame);
+  }
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var sweepObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { sweepObserver.disconnect(); autoSweep(); }
+    }, { threshold: 0.55 });
+    sweepObserver.observe(slider);
+  }
+  slider.addEventListener('mousedown',  function (e) { e.preventDefault(); cancelSweep(); isDragging = true; updateSlider(getPosition(e)); });
+  slider.addEventListener('touchstart', function (e) { cancelSweep(); isDragging = true; updateSlider(getPosition(e)); }, { passive: true });
   window.addEventListener('mousemove',  function (e) { if (!isDragging) return; e.preventDefault(); updateSlider(getPosition(e)); });
   window.addEventListener('touchmove',  function (e) { if (!isDragging) return; updateSlider(getPosition(e)); }, { passive: true });
   window.addEventListener('mouseup',    function () { isDragging = false; });
