@@ -18,10 +18,18 @@ jobs:
           curl -fSL -o /tmp/about.png   "$base/hf_20260709_023750_53c1f552-91cf-45d2-baf1-d350ffd99b00.png"
           curl -fSL -o /tmp/ctabg.png   "$base/hf_20260709_023800_6d17dd41-16a8-40d2-9167-f8d1eb2e286e.png"
           curl -fSL -o /tmp/areasbg.png "$base/hf_20260709_023811_22e51fbd-81ff-484a-baf4-d2dd43626ef8.png"
-          convert /tmp/action.png  -quality 92 assets/action-spartanburg.jpg
-          convert /tmp/about.png   -quality 92 assets/about-spartanburg.jpg
-          convert /tmp/ctabg.png   -quality 92 assets/cta-bg-spartanburg.jpg
-          convert /tmp/areasbg.png -quality 92 assets/areas-bg-spartanburg.jpg
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          for src, dst in [
+              ('/tmp/action.png',  'assets/action-spartanburg.jpg'),
+              ('/tmp/about.png',   'assets/about-spartanburg.jpg'),
+              ('/tmp/ctabg.png',   'assets/cta-bg-spartanburg.jpg'),
+              ('/tmp/areasbg.png', 'assets/areas-bg-spartanburg.jpg'),
+          ]:
+              Image.open(src).convert('RGB').save(dst, 'JPEG', quality=92)
+              print('wrote', dst)
+          PY
           ls -la assets/*spartanburg*
       - name: Commit images to branch
         run: |
