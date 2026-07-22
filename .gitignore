@@ -17,3 +17,5 @@ node_modules/
 # Replit
 .replit.nix
 .cache/
+.vercel
+.env*

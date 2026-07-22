@@ -331,20 +331,20 @@
       "weatherImageAlt": "ManageMowed crew maintaining a Spartanburg commercial property after a summer storm",
       "weatherHeadline": "Upstate SC Never Gets an Off-Season.",
       "weatherSubhead": "Neither Do We.",
-      "weatherBody": "Spartanburg's heat, humidity, and year-round growing season mean your commercial property needs consistent, professional maintenance every single month. Summer thunderstorms drop debris overnight. High humidity turns a neglected lawn into a fungal problem fast. Winter ice events arrive with little warning. ManageMowed crews are built for all of it — showing up on schedule, communicating proactively, and keeping your property looking right no matter what Upstate South Carolina throws at it.",
+      "weatherBody": "Spartanburg's heat, humidity, and year-round growing season mean your commercial property needs consistent, professional maintenance every single month. Summer thunderstorms drop debris overnight. High humidity turns a neglected lawn into a fungal problem fast. Winter ice events arrive with little warning. ManageMowed crews are built for all of it, showing up on schedule, communicating proactively, and keeping your property looking right no matter what Upstate South Carolina throws at it.",
       "aboutImage": "/assets/about-spartanburg.jpg",
       "aboutImageAlt": "ManageMowed crew maintaining a commercial property in the Spartanburg area",
       "aboutImageObjectPosition": "center center",
-      "aboutDescription": "Upstate South Carolina's climate is relentless — plants grow twelve months a year, summer storms can undo a week of work overnight, and humidity demands a higher standard of turf management. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who know exactly what Spartanburg-area properties need in every season. One call, one team, one consistent result.",
+      "aboutDescription": "Upstate South Carolina's climate is relentless. Plants grow twelve months a year, summer storms can undo a week of work overnight, and humidity demands a higher standard of turf management. ManageMowed provides a dedicated local Account Manager, monthly quality control walkthroughs, and experienced crews who know exactly what Spartanburg-area properties need in every season. One call, one team, one consistent result.",
       "aboutBootsLine": "24 locations strong with boots on the ground in Spartanburg",
-      "seasonalServicesBody": "Year-round readiness for Upstate SC's climate — summer storm cleanups, humidity and fungal turf programs, winter ice response, and spring renovation to keep your property looking its best every season.",
+      "seasonalServicesBody": "Year-round readiness for Upstate SC's climate, including summer storm cleanups, humidity and fungal turf programs, winter ice response, and spring renovation to keep your property looking its best every season.",
       "deservesCtaImage": "/assets/cta-bg-spartanburg.jpg",
       "deservesCtaImageAlt": "Pristine commercial landscape maintained by ManageMowed in the Spartanburg area",
       "deservesCtaBody": "Join the Spartanburg-area commercial property managers who've switched to ManageMowed's structured, accountable landscape management.",
       "areasBgImage": "/assets/areas-bg-spartanburg.jpg",
       "areasBgImageAlt": "Aerial view of downtown Spartanburg and the Upstate South Carolina foothills at dusk",
       "areasHeadline": "Greater Spartanburg Service Area",
-      "areasSubtitle": "From Downtown Spartanburg to the I-85 Corridor, Greenville County to Cherokee County — ManageMowed has Upstate South Carolina covered.",
+      "areasSubtitle": "From Downtown Spartanburg to the I-85 Corridor, Greenville County to Cherokee County, ManageMowed has Upstate South Carolina covered.",
       "areaGroups": [
         {
           "icon": "location_city",
@@ -414,7 +414,7 @@
         }
       ],
       "faqWeatherQuestion": "How do you handle Spartanburg's heat, humidity, and summer storms?",
-      "faqWeatherAnswer": "Upstate SC is a year-round operation — there's no slow season here. Our crews are built for heat and humidity, and we respond quickly after summer thunderstorms to clear debris and assess any turf damage. For winter ice events, your Account Manager will communicate proactively so your property is handled before your tenants or customers arrive in the morning.",
+      "faqWeatherAnswer": "Upstate SC is a year-round operation. There is no slow season here. Our crews are built for heat and humidity, and we respond quickly after summer thunderstorms to clear debris and assess any turf damage. For winter ice events, your Account Manager will communicate proactively so your property is handled before your tenants or customers arrive in the morning.",
       "footerDescription": "Professional commercial landscape management for Spartanburg, Greenville, and Upstate South Carolina. Member of the National Association of Landscape Professionals.",
       "footerCity": "Spartanburg, SC",
       "trustItemAccountManagers": "Local Spartanburg Account Managers",
@@ -441,7 +441,7 @@
         "Simpsonville"
       ],
       "contact": {
-        "name": "Spartanburg Account Manager",
+        "name": "Jessi Ulmer",
         "title": "Account Manager",
         "phone": "(844) 535-0505",
         "phoneRaw": "8445350505",
@@ -450,9 +450,10 @@
         "websiteUrl": "https://www.managemowedspartanburg.com"
       },
       "resend": {
-        "apiKeyEnv": "RESEND_API_KEY_SPARTANBURG",
-        "fromEmail": "ManageMowed Spartanburg <leads@managemowedspartanburg.com>",
+        "apiKeyEnv": "RESEND_API_KEY",
+        "fromEmail": "ManageMowed Spartanburg <leads@managemowedcorp.com>",
         "notificationEmails": [
+          "jessi.u@managemowed.com",
           "james.j@managemowed.com"
         ]
       },
