@@ -457,8 +457,8 @@
           "james.j@managemowed.com"
         ]
       },
-      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
-      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
+      "sliderBefore": "/assets/slider-southeast-before.jpg",
+      "sliderAfter": "/assets/slider-southeast-after.jpg"
     },
     "ranchocucamonga": {
       "domains": [
@@ -1210,8 +1210,8 @@
           "barrynapier@gmail.com"
         ]
       },
-      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
-      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
+      "sliderBefore": "/assets/slider-southeast-before.jpg",
+      "sliderAfter": "/assets/slider-southeast-after.jpg"
     },
     "plymouth": {
       "domains": [
@@ -1660,8 +1660,8 @@
           "barrynapier@gmail.com"
         ]
       },
-      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
-      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
+      "sliderBefore": "/assets/slider-midatlantic-before.jpg",
+      "sliderAfter": "/assets/slider-midatlantic-after.jpg"
     },
     "nerichmond": {
       "domains": [
@@ -1810,8 +1810,8 @@
           "barrynapier@gmail.com"
         ]
       },
-      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
-      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
+      "sliderBefore": "/assets/slider-midatlantic-before.jpg",
+      "sliderAfter": "/assets/slider-midatlantic-after.jpg"
     },
     "richmondsouth": {
       "domains": [
@@ -1960,8 +1960,8 @@
           "barrynapier@gmail.com"
         ]
       },
-      "sliderBefore": "/assets/slider-eastcoast-before.jpg",
-      "sliderAfter": "/assets/slider-eastcoast-after.jpg"
+      "sliderBefore": "/assets/slider-midatlantic-before.jpg",
+      "sliderAfter": "/assets/slider-midatlantic-after.jpg"
     }
   }
 }
