@@ -40,9 +40,11 @@ Confirm the title/copy is the right city, and grep for leftover template words:
 (should only match where genuinely correct). Restart the server after editing
 `locations.json` — it's cached per process.
 
-## Commit / hand-off
-- One city per commit. Push to `master`. After push, the human runs `git pull` + Redeploy
-  in Replit (Replit owns the live domains + secrets).
-- Never commit API keys/passwords. Secrets live in Replit, not in git.
-- Touch only `locations.json` and `assets/` unless explicitly asked to change site code.
-- Generating real photos is NOT part of a config edit — if a new city needs images, say so.
+## Commit / hand-off (updated September 17, 2026)
+
+- Live hosting is Vercel. Older Replit/master deployment instructions are superseded.
+- The source-managed release branch is `codex/agent-workflow-20260917`. Fetch it and check for newer releases before branching. Never deploy an older default branch over live work.
+- Use a task branch and hand the reviewed commit to Barry's publishing agent. The VA does not need Barry's hosting credentials.
+- Website content comes from source files. Historical `lib/cms.js` is not used by the server; do not edit Sanity seed data or expect Sanity changes to publish.
+- Validate every affected location after shared template changes. Preserve lead routing and environment variables.
+- Never commit secrets. Ordinary edits do not need production database or mail credentials.

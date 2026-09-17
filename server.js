@@ -1,4 +1,3 @@
-const { renderPublished } = require('./lib/cms');
 const express     = require('express');
 const path        = require('path');
 const helmet      = require('helmet');
@@ -193,10 +192,10 @@ function renderLanding(req, res) {
   }
   if (!loc) return res.status(500).send('No location configured');
   const host = (req.headers.host || '').split(':')[0];
-  res.render('index', { loc, host }, async (error, html) => {
+  res.render('index', { loc, host }, (error, html) => {
     if (error) return res.status(500).send('Page unavailable');
-    res.setHeader('X-ManageMowed-Content', 'sanity-enabled');
-    res.send(await renderPublished(html, 'location-' + loc.key));
+    res.setHeader('X-ManageMowed-Content', 'source-managed');
+    res.send(html);
   });
 }
 app.get('/', renderLanding);
