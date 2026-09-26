@@ -114,6 +114,7 @@
 (function () {
   var form = document.getElementById('leadForm');
   if (!form) return;
+  var leadFormReadyAt = Date.now();
   var submitBtn  = form.querySelector('button[type="submit"]');
   var submitText = submitBtn ? submitBtn.querySelector('span:first-child') : null;
 
@@ -195,6 +196,12 @@
       service:      form.querySelector('#service')      ? form.querySelector('#service').value             : '',
       details:      form.querySelector('#details')      ? form.querySelector('#details').value.trim()      : ''
     };
+
+    data._mm = 'v1';
+
+    data._elapsed = Date.now() - leadFormReadyAt;
+
+    data.website = form.querySelector('#website') ? form.querySelector('#website').value : '';
 
     fetch('/api/leads', {
       method:  'POST',

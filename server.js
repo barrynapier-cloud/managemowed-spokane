@@ -11,6 +11,7 @@ const {
   allLocations,
   globalBccEmails
 } = require('./lib/locations');
+const { assessLead } = require('./lib/spam-guard');
 
 const app  = express();
 const PORT = process.env.PORT || 5000;
@@ -225,6 +226,28 @@ app.post('/api/leads', leadLimiter, async (req, res) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(cleanEmail)) {
       return res.status(400).json({ error: 'Invalid email address' });
+    }
+
+    // Quarantine spam: keep the record (location "spam:<key>", reasons in
+    // details) but send no emails, and answer like a normal success so the
+    // bot gets no signal. Real leads never reach this branch.
+    const verdict = assessLead({
+      fullName: cleanName, email: cleanEmail, phone: cleanPhone, company: cleanCompany, details: cleanDetails,
+      website: req.body.website, _mm: req.body._mm, _elapsed: req.body._elapsed
+    });
+    if (verdict.spam) {
+      await ensureSchema();
+      const q = await pool.query(
+        `INSERT INTO leads (full_name, email, phone, company, property_type, service_interest, details, location)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+         RETURNING id`,
+        [cleanName, cleanEmail, cleanPhone || null, cleanCompany || null,
+         cleanPropertyType || null, cleanService || null,
+         `[SPAM score ${verdict.score}: ${verdict.reasons.join(', ')}] ${cleanDetails}`.substring(0, 2100),
+         `spam:${loc.key}`.substring(0, 100)]
+      );
+      console.warn(`[${loc.key}] Lead #${q.rows[0].id} quarantined as spam (score ${verdict.score}: ${verdict.reasons.join(', ')})`);
+      return res.json({ success: true, message: 'Lead submitted successfully', leadId: q.rows[0].id, location: loc.key });
     }
 
     await ensureSchema();
