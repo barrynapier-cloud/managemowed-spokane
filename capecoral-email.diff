@@ -1,0 +1,13 @@
+diff --git a/locations.json b/locations.json
+index 88a82fc..3cfd73f 100644
+--- a/locations.json
++++ b/locations.json
+@@ -1047,7 +1047,7 @@
+         "title": "Owner",
+         "phone": "(239) 898-3177",
+         "phoneRaw": "2398983177",
+-        "email": "Kristin@managemowed.com",
++        "email": "Kristin.B@managemowed.com",
+         "website": "www.managemowedcapecoral.com",
+         "websiteUrl": "https://www.managemowedcapecoral.com"
+       },

@@ -1,0 +1,15 @@
+{
+  "base": "0d3cac7347675d12bc955e70d21580f88cc45074",
+  "changedField": "locations.capecoral.contact.email",
+  "old": "Kristin@managemowed.com",
+  "new": "Kristin.B@managemowed.com",
+  "mailtoLinks": [
+    "Kristin.B@managemowed.com",
+    "Kristin.B@managemowed.com"
+  ],
+  "structuredEmail": "Kristin.B@managemowed.com",
+  "allOtherJSONUnchanged": true,
+  "leadRecipientsUnchanged": true,
+  "desktopMobileVisualCheck": "Pending: browser tool failed to initialize",
+  "published": false
+}
