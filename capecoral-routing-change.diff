@@ -1,0 +1,22 @@
+diff --git a/locations.json b/locations.json
+index 88a82fc..82141ee 100644
+--- a/locations.json
++++ b/locations.json
+@@ -1047,7 +1047,7 @@
+         "title": "Owner",
+         "phone": "(239) 898-3177",
+         "phoneRaw": "2398983177",
+-        "email": "Kristin@managemowed.com",
++        "email": "Kristin.B@managemowed.com",
+         "website": "www.managemowedcapecoral.com",
+         "websiteUrl": "https://www.managemowedcapecoral.com"
+       },
+@@ -1055,7 +1055,7 @@
+         "apiKeyEnv": "RESEND_API_KEY",
+         "fromEmail": "ManageMowed Cape Coral <leads@managemowedcorp.com>",
+         "notificationEmails": [
+-          "Kristin@managemowed.com",
++          "Kristin.B@managemowed.com",
+           "james.j@managemowed.com",
+           "barrynapier@gmail.com"
+         ]

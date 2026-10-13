@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-13T12:22:46.999Z",
+  "routingTests": [
+    {
+      "location": "capecoral",
+      "notificationTo": [
+        "Kristin.B@managemowed.com",
+        "james.j@managemowed.com",
+        "barrynapier@gmail.com"
+      ],
+      "customerReplyTo": "Kristin.B@managemowed.com",
+      "status": "passed"
+    },
+    {
+      "location": "eugene",
+      "notificationTo": [
+        "Jeremy.p@managemowed.com",
+        "james.j@managemowed.com",
+        "barrynapier@gmail.com"
+      ],
+      "customerReplyTo": "Jeremy.p@managemowed.com",
+      "status": "passed"
+    },
+    {
+      "location": "spokane",
+      "notificationTo": [
+        "Cort.f@managemowed.com",
+        "james.j@managemowed.com",
+        "peter.r@managemowed.com",
+        "barrynapier@gmail.com"
+      ],
+      "customerReplyTo": "Cort.f@managemowed.com",
+      "status": "passed"
+    }
+  ],
+  "allOtherLocationObjectsUnchanged": 12,
+  "globalBccUnchanged": true,
+  "renderIdenticalToReviewedPublicEmailRevision": true,
+  "onlyAdditionalChangedField": "locations.capecoral.resend.notificationEmails[0]",
+  "database": "stubbed",
+  "emailDelivery": "intercepted; no real email sent",
+  "liveDeliveryVerified": false
+}
