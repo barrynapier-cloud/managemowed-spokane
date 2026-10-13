@@ -1099,17 +1099,17 @@
       "areasBgImage": "/assets/areas-bg-covingtonconyers.jpg",
       "areasBgImageAlt": "Elevated golden-hour view of rolling Georgia Piedmont pines and a commercial corridor near the Georgia International Horse Park in Conyers",
       "areasHeadline": "Greater Covington-Conyers Service Area",
-      "areasSubtitle": "From the Covington Square to Olde Town Conyers, the I-20 corridor to Lake Jackson - ManageMowed has East Metro Atlanta covered.",
+      "areasSubtitle": "Serving Newton, Rockdale, Walton, Henry, Jasper, and DeKalb counties, ManageMowed has East Metro Atlanta covered.",
       "areaGroups": [
         {
           "icon": "location_city",
           "name": "Covington Core",
           "items": [
             "Downtown Covington (The Square)",
-            "Clark's Grove",
-            "Covington Mill",
-            "Hwy 278 Corridor",
-            "Settlers Grove"
+            "Highway 278/142 Corridor",
+            "Alcovy Rd and I-20 Frontage",
+            "Industrial Blvd and Turner Lake",
+            "Hwy 36 Corridor and Covington Bypass"
           ]
         },
         {
@@ -1117,8 +1117,8 @@
           "name": "Conyers / Rockdale",
           "items": [
             "Olde Town Conyers",
-            "Dogwood Drive Corridor",
-            "Salem Road",
+            "Hwy 138 & I-20 Corridors",
+            "Fieldstone / Rockdale Industrial Parkway",
             "Honey Creek",
             "Milstead"
           ]
@@ -1136,7 +1136,7 @@
         },
         {
           "icon": "west",
-          "name": "I-20 West Corridor",
+          "name": "I-20 Corridor",
           "items": [
             "Stonecrest",
             "Lithonia",
@@ -1147,24 +1147,24 @@
         },
         {
           "icon": "north",
-          "name": "Walton County",
+          "name": "Other North Communities",
           "items": [
             "Loganville",
             "Monroe",
             "Social Circle",
             "Walnut Grove",
-            "Between"
+            "Snellville"
           ]
         },
         {
           "icon": "south",
-          "name": "South Newton & Jasper",
+          "name": "Other South Communities",
           "items": [
-            "Jackson Lake",
-            "Monticello",
-            "Shady Dale",
+            "Jackson Lake Area",
+            "McDonough",
+            "Locust Grove",
             "Jackson",
-            "Mechanicsville"
+            "Monticello"
           ]
         }
       ],
