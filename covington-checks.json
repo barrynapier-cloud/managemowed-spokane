@@ -1,0 +1,20 @@
+{
+  "base": "030780562af94e941b2537db72bc37f4fb7ffc47",
+  "checkedAt": "2026-10-13T17:02:50.224Z",
+  "changedScope": "Covington-Conyers areasSubtitle and areaGroups only",
+  "allOtherJSONUnchanged": true,
+  "otherLocationsPreserved": 12,
+  "iconsAndGroupOrderPreserved": true,
+  "htmlOutsideServiceAreaIdentical": true,
+  "contactAndLeadRoutingUnchanged": true,
+  "sectionId": "areas",
+  "visualDesktopMobile": "Passed browser inspection at 1440x1000 and 390x844; service-area section fits width, all six cards checked",
+  "published": false,
+  "head": "de58c41a8b9ee7297ff6ae4ad783c1f33839c8b8",
+  "screenshots": [
+    "covington-desktop.png",
+    "covington-mobile-top.png",
+    "covington-mobile-conyers.png",
+    "covington-mobile-middle.png"
+  ]
+}
